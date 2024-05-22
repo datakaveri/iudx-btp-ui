@@ -1,0 +1,32 @@
+[
+	{
+		"name": "BrigadeRd_MGR_JN3_FIX_1",
+		"longitude": 77.608,
+		"latitude": 12.9749,
+		"video": "https://fs-sample-file-bucket.s3.ap-south-1.amazonaws.com/public-access/bengaluru/cameras/video-camera-samples/BrigadeRd_MGR_JN3_FIX_1.mp4"
+	},
+	{
+		"name": "Bagaluru_Crs_JN_FIX_2",
+		"longitude": 77.61117,
+		"latitude": 13.121733,
+		"video": "https://fs-sample-file-bucket.s3.ap-south-1.amazonaws.com/public-access/bengaluru/cameras/video-camera-samples/Bagaluru_Crs_JN_FIX_2.mp4"
+	},
+	{
+		"name": "5Th_Main_Malleshpalya_FIX_1",
+		"longitude": 77.67311,
+		"latitude": 12.97413577,
+		"video": "https://fs-sample-file-bucket.s3.ap-south-1.amazonaws.com/public-access/bengaluru/cameras/video-camera-samples/5Th_Main_Malleshpalya_FIX_1.mp4"
+	},
+	{
+		"name": "Bellahalli_FIX_1",
+		"longitude": 77.634902,
+		"latitude": 13.10176,
+		"video": "https://fs-sample-file-bucket.s3.ap-south-1.amazonaws.com/public-access/bengaluru/cameras/video-camera-samples/Bellahalli_FIX_1.mp4"
+	},
+	{
+		"name": "Dwarakanagar_BsStp_FIX_1",
+		"longitude": 77.618015,
+		"latitude": 13.121329,
+		"video": "https://fs-sample-file-bucket.s3.ap-south-1.amazonaws.com/public-access/bengaluru/cameras/video-camera-samples/Dwarakanagar_BsStp_FIX_1.mp4"
+	}
+]
