@@ -1,6 +1,14 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
-
+import { MAPBOX_API_KEY } from "@/environments/environments";
+import React, {
+	Fragment,
+	MutableRefObject,
+	useCallback,
+	useMemo,
+	useRef,
+	useState,
+} from "react";
 import Map, {
 	FullscreenControl,
 	MapRef,
@@ -9,28 +17,11 @@ import Map, {
 	ScaleControl,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import {
-	MutableRefObject,
-	useCallback,
-	useMemo,
-	useRef,
-	useState,
-} from "react";
-
-import data from "./data.json";
+import data from "@/data/data.json";
 import Pin from "./Pin";
-import { Button, IconButton, ThemeProvider } from "@mui/material";
-import PopupComponent from "./PopupComponent";
-import { theme } from "./materialTheme";
+import IconButton from "@mui/material/IconButton";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
-import { MAPBOX_API_KEY } from "@/environments/environments";
-
-export type PopupInfo = {
-	name: string;
-	latitude: number;
-	longitude: number;
-	video: string;
-};
+import PopupComponent from "./PopupView";
 
 function calculateCentroid(coordinates: number[][]) {
 	let sumX = 0;
@@ -52,10 +43,21 @@ export interface Coordinate {
 	latitude: number;
 }
 
+export type PopupInfo = {
+	name: string;
+	latitude: number;
+	longitude: number;
+	video: string;
+};
+
 const page = () => {
-	const [popupInfo, setPopupInfo] = useState<PopupInfo | undefined | null>();
+	const coordinates: number[][] = [];
+
+	data.map((loc) => coordinates.push([loc.latitude, loc.longitude]));
 
 	const mapRef: MutableRefObject<MapRef | undefined> = useRef<MapRef>();
+
+	const [popupInfo, setPopupInfo] = useState<PopupInfo | undefined | null>();
 
 	const onSelectCity = useCallback(({ longitude, latitude }: Coordinate) => {
 		mapRef.current?.flyTo({
@@ -97,15 +99,11 @@ const page = () => {
 					<Pin />
 				</Marker>
 			)),
-		[onSelectCity]
+		[]
 	);
 
-	const coordinates: number[][] = [];
-
-	data.map((loc) => coordinates.push([loc.latitude, loc.longitude]));
-
 	return (
-		<ThemeProvider theme={theme}>
+		<Fragment>
 			<Map
 				mapboxAccessToken={MAPBOX_API_KEY}
 				initialViewState={{
@@ -115,11 +113,11 @@ const page = () => {
 					bearing: 0,
 					pitch: 0,
 				}}
-				ref={mapRef}
 				mapStyle="mapbox://styles/mapbox/dark-v9"
+				ref={mapRef}
 				style={{
 					width: "100%",
-					height: "100vh",
+					height: "70vh",
 					margin: 0,
 					padding: 0,
 				}}
@@ -154,7 +152,7 @@ const page = () => {
 					/>
 				)}
 			</Map>
-		</ThemeProvider>
+		</Fragment>
 	);
 };
 
