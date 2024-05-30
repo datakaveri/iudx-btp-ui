@@ -17,7 +17,7 @@ const VideoComponent = dynamic(() => import("./VideoComponent"), {
 	ssr: false,
 });
 interface Props {
-	popupInfo: any;
+	popupInfo: PopupInfo;
 	setPopupInfo: Dispatch<SetStateAction<PopupInfo | undefined | null>>;
 }
 
@@ -43,7 +43,7 @@ const PopupView = ({ popupInfo, setPopupInfo }: Props) => {
 			}}
 			anchor="left"
 			// ? Positioning pop-up to the right
-			longitude={+popupInfo.longitude + 0.015}
+			longitude={+popupInfo.longitude + 0.003}
 			latitude={Number(popupInfo.latitude)}
 			onClose={() => setPopupInfo(null)}
 		>

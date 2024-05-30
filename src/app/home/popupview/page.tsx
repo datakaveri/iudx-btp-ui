@@ -12,10 +12,12 @@ import React, {
 } from "react";
 import Map, {
 	FullscreenControl,
+	Layer,
 	MapRef,
 	Marker,
 	NavigationControl,
 	ScaleControl,
+	Source,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import data from "@/data/data.json";
@@ -26,6 +28,8 @@ import PopupComponent from "./PopupView";
 import cameraData from "@/data/cameraData.json";
 import cameraDataWithPaths from "@/data/cameraDataWithPaths.json";
 import axios from "axios";
+import { getLayerProps } from "./getLayerProps";
+import LineLayerComponent from "./LineLayerComponent";
 
 function calculateCentroid(coordinates: number[][]) {
 	let sumX = 0;
@@ -75,9 +79,9 @@ const page = () => {
 
 	const onSelectCity = useCallback(({ longitude, latitude }: Coordinate) => {
 		mapRef.current?.flyTo({
-			zoom: 15,
+			zoom: 17.5,
 			// ? Positioning the pin to the left to make room for the popup
-			center: [+longitude + 0.01, latitude],
+			center: [+longitude + 0.002, latitude],
 			duration: 2000,
 		});
 	}, []);
@@ -93,18 +97,6 @@ const page = () => {
 			duration: 2000,
 		});
 		setPopupInfo(null);
-	}, []);
-
-	useEffect(() => {
-		axios
-			.get(
-				encodeURI(
-					"https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/paths/Site 2 Camera 5849        80ft_Rd_RMV_2nd_Stage_FIX_1        80_FEET_RD_POOJARI_LAYT_RMV_2ND_STG 1st May 2024.json"
-				)
-			)
-			.then((res) => {
-				console.log(res.data);
-			});
 	}, []);
 
 	const pins = useMemo(
@@ -189,10 +181,13 @@ const page = () => {
 				{displayPins && pins}
 
 				{popupInfo && (
-					<PopupComponent
-						popupInfo={popupInfo}
-						setPopupInfo={setPopupInfo}
-					/>
+					<>
+						<PopupComponent
+							popupInfo={popupInfo}
+							setPopupInfo={setPopupInfo}
+						/>
+						<LineLayerComponent popupInfo={popupInfo} />
+					</>
 				)}
 			</Map>
 		</Fragment>

@@ -207,7 +207,11 @@ export default function MiniDrawer() {
 				</DrawerHeader>
 				<Divider />
 				<List>
-					{["Popup View", "Video Wall"].map((text, index) => (
+					{[
+						"Traffic Counts",
+						"Re-Identification",
+						"Traffic Prediction",
+					].map((text, index) => (
 						<Link
 							style={{
 								textDecoration: "none",
