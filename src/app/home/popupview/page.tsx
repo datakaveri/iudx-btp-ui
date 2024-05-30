@@ -5,6 +5,7 @@ import React, {
 	Fragment,
 	MutableRefObject,
 	useCallback,
+	useEffect,
 	useMemo,
 	useRef,
 	useState,
@@ -23,6 +24,8 @@ import IconButton from "@mui/material/IconButton";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import PopupComponent from "./PopupView";
 import cameraData from "@/data/cameraData.json";
+import cameraDataWithPaths from "@/data/cameraDataWithPaths.json";
+import axios from "axios";
 
 function calculateCentroid(coordinates: number[][]) {
 	let sumX = 0;
@@ -50,17 +53,18 @@ export type PopupInfo = {
 	latitude: string;
 	longitude: string;
 	s3links: string;
+	pathLinks: object;
 };
 
 const page = () => {
 	const coordinates: number[][] = [];
 	const selectedDate = "2024-05-15";
-	const cameraLocations = Object.keys(cameraData[selectedDate]);
+	const cameraLocations = Object.keys(cameraDataWithPaths[selectedDate]);
 
 	cameraLocations.map((cameraLocation, index) => {
 		coordinates.push([
-			+cameraData[selectedDate][cameraLocation].latitude,
-			+cameraData[selectedDate][cameraLocation].longitude,
+			+cameraDataWithPaths[selectedDate][cameraLocation].latitude,
+			+cameraDataWithPaths[selectedDate][cameraLocation].longitude,
 		]);
 	});
 
@@ -91,28 +95,48 @@ const page = () => {
 		setPopupInfo(null);
 	}, []);
 
+	useEffect(() => {
+		axios
+			.get(
+				encodeURI(
+					"https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/paths/Site 2 Camera 5849        80ft_Rd_RMV_2nd_Stage_FIX_1        80_FEET_RD_POOJARI_LAYT_RMV_2ND_STG 1st May 2024.json"
+				)
+			)
+			.then((res) => {
+				console.log(res.data);
+			});
+	}, []);
+
 	const pins = useMemo(
 		() =>
 			cameraLocations.map((cameraLocation, index) => (
 				<Marker
 					key={`marker-${index}`}
 					longitude={
-						cameraData[selectedDate][cameraLocation].longitude
+						cameraDataWithPaths[selectedDate][cameraLocation]
+							.longitude
 					}
-					latitude={cameraData[selectedDate][cameraLocation].latitude}
+					latitude={
+						cameraDataWithPaths[selectedDate][cameraLocation]
+							.latitude
+					}
 					anchor="bottom"
 					onClick={(e) => {
 						setDisplayPins(false);
 						onSelectCity({
 							latitude:
-								cameraData[selectedDate][cameraLocation]
-									.latitude,
+								cameraDataWithPaths[selectedDate][
+									cameraLocation
+								].latitude,
 							longitude:
-								cameraData[selectedDate][cameraLocation]
-									.longitude,
+								cameraDataWithPaths[selectedDate][
+									cameraLocation
+								].longitude,
 						});
 						e.originalEvent.stopPropagation();
-						setPopupInfo(cameraData[selectedDate][cameraLocation]);
+						setPopupInfo(
+							cameraDataWithPaths[selectedDate][cameraLocation]
+						);
 					}}
 				>
 					<Pin />

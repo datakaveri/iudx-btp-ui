@@ -17,18 +17,15 @@ const VideoComponent = ({ s3Links }: Props) => {
 		videoPlayers: [
 			{
 				id: "#video-0",
-				initialSrc:
-					"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-15/Kuvempu_Circle_FIX_1_time_2024-05-15T07:30:02_003.mp4",
+				initialSrc: s3Links[0],
 			},
 			{
 				id: "#video-1",
-				initialSrc:
-					"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
+				initialSrc: s3Links[1],
 			},
 			{
 				id: "#video-2",
-				initialSrc:
-					"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
+				initialSrc: s3Links[2],
 			},
 			{
 				id: "#video-3",
