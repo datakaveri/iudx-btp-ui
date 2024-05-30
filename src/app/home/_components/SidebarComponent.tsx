@@ -220,6 +220,7 @@ export default function MiniDrawer() {
 							key={index}
 							href={`/home/${text
 								.replace(" ", "")
+								.replace("-", "")
 								.toLowerCase()}`}
 						>
 							<ListItem
