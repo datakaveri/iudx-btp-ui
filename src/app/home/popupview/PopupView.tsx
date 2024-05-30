@@ -1,6 +1,6 @@
 "use client";
 
-import { PopupInfo } from "@/app/dashboard/page";
+import { PopupInfo } from "@/app/home/popupview/page";
 import { Box, Tab, Tabs, Typography } from "@mui/material";
 import React, {
 	Dispatch,
@@ -10,11 +10,14 @@ import React, {
 } from "react";
 import { Popup } from "react-map-gl";
 import { CustomTabPanel } from "./CustomTabPanel";
-import VideoComponent from "./VideoComponent";
 import TimeseriesComponent from "./TimeseriesComponent";
+import dynamic from "next/dynamic";
 
+const VideoComponent = dynamic(() => import("./VideoComponent"), {
+	ssr: false,
+});
 interface Props {
-	popupInfo: any;
+	popupInfo: PopupInfo;
 	setPopupInfo: Dispatch<SetStateAction<PopupInfo | undefined | null>>;
 }
 
@@ -39,7 +42,8 @@ const PopupView = ({ popupInfo, setPopupInfo }: Props) => {
 				maxWidth: "500px",
 			}}
 			anchor="left"
-			longitude={Number(popupInfo.longitude)}
+			// ? Positioning pop-up to the right
+			longitude={+popupInfo.longitude + 0.003}
 			latitude={Number(popupInfo.latitude)}
 			onClose={() => setPopupInfo(null)}
 		>
@@ -60,10 +64,10 @@ const PopupView = ({ popupInfo, setPopupInfo }: Props) => {
 					<Tab label="Chart" {...a11yProps(1)} />
 				</Tabs>
 				<CustomTabPanel value={value} index={0}>
-					<TimeseriesComponent />
+					<VideoComponent s3Links={popupInfo.s3links} />
 				</CustomTabPanel>
 				<CustomTabPanel value={value} index={1}>
-					<VideoComponent />
+					<TimeseriesComponent />
 				</CustomTabPanel>
 			</Box>
 		</Popup>

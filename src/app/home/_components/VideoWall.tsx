@@ -15,27 +15,27 @@ const VideoWall = () => {
 			{
 				id: "#video-0",
 				initialSrc:
-					"https://iudxcoedemo.s3.ap-south-1.amazonaws.com/BEL+Circuit/Site+2+Camera+5816++++++++Stn_HD_1++++++++STATION_JUNCTION+1st+May+2024.mp4",
+					"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
 			},
 			{
 				id: "#video-1",
 				initialSrc:
-					"https://iudxcoedemo.s3.ap-south-1.amazonaws.com/BEL+Circuit/Site+2+Camera+5816++++++++Stn_HD_1++++++++STATION_JUNCTION+1st+May+2024.mp4",
+					"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
 			},
 			{
 				id: "#video-2",
 				initialSrc:
-					"https://iudxcoedemo.s3.ap-south-1.amazonaws.com/BEL+Circuit/Site+2+Camera+5816++++++++Stn_HD_1++++++++STATION_JUNCTION+1st+May+2024.mp4",
+					"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
 			},
 			{
 				id: "#video-3",
 				initialSrc:
-					"https://iudxcoedemo.s3.ap-south-1.amazonaws.com/BEL+Circuit/Site+2+Camera+5816++++++++Stn_HD_1++++++++STATION_JUNCTION+1st+May+2024.mp4",
+					"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
 			},
 			{
 				id: "#video-4",
 				initialSrc:
-					"https://iudxcoedemo.s3.ap-south-1.amazonaws.com/BEL+Circuit/Site+2+Camera+5816++++++++Stn_HD_1++++++++STATION_JUNCTION+1st+May+2024.mp4",
+					"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
 			},
 			// {
 			// 	id: "#video-0",
@@ -96,6 +96,7 @@ const VideoWall = () => {
 				{ids.map((id, i) => (
 					<div
 						style={{
+							width: "100px",
 							margin: "20px",
 							height: "180px",
 						}}

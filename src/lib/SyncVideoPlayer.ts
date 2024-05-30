@@ -30,6 +30,7 @@ class SyncVideoPlayer {
 	private readyCount: number;
 	private state: PlayerState;
 	private currentTime: number;
+	private mounted: boolean;
 
 	constructor(options: MultiVideoPlayerOptions) {
 		this.options = {
@@ -47,11 +48,15 @@ class SyncVideoPlayer {
 
 		this.videoPlayers = [];
 		this.currentTime = 0;
+		this.mounted = false;
 	}
 
 	public mount() {
+		// if (!this.mounted) {
 		this.render();
 		this.addVideoPlayers(this.options.videoPlayers);
+		this.mounted = true;
+		// }
 	}
 
 	private render() {

@@ -5,16 +5,19 @@ import React, {
 	Fragment,
 	MutableRefObject,
 	useCallback,
+	useEffect,
 	useMemo,
 	useRef,
 	useState,
 } from "react";
 import Map, {
 	FullscreenControl,
+	Layer,
 	MapRef,
 	Marker,
 	NavigationControl,
 	ScaleControl,
+	Source,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import data from "@/data/data.json";
@@ -22,6 +25,11 @@ import Pin from "./Pin";
 import IconButton from "@mui/material/IconButton";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import PopupComponent from "./PopupView";
+import cameraData from "@/data/cameraData.json";
+import cameraDataWithPaths from "@/data/cameraDataWithPaths.json";
+import axios from "axios";
+import { getLayerProps } from "./getLayerProps";
+import LineLayerComponent from "./LineLayerComponent";
 
 function calculateCentroid(coordinates: number[][]) {
 	let sumX = 0;
@@ -45,31 +53,43 @@ export interface Coordinate {
 
 export type PopupInfo = {
 	name: string;
-	latitude: number;
-	longitude: number;
-	video: string;
+	junctionname: string;
+	latitude: string;
+	longitude: string;
+	s3links: string;
+	pathLinks: object;
 };
 
 const page = () => {
 	const coordinates: number[][] = [];
+	const selectedDate = "2024-05-15";
+	const cameraLocations = Object.keys(cameraDataWithPaths[selectedDate]);
 
-	data.map((loc) => coordinates.push([loc.latitude, loc.longitude]));
+	cameraLocations.map((cameraLocation, index) => {
+		coordinates.push([
+			+cameraDataWithPaths[selectedDate][cameraLocation].latitude,
+			+cameraDataWithPaths[selectedDate][cameraLocation].longitude,
+		]);
+	});
 
 	const mapRef: MutableRefObject<MapRef | undefined> = useRef<MapRef>();
 
-	const [popupInfo, setPopupInfo] = useState<PopupInfo | undefined | null>();
+	const [popupInfo, setPopupInfo] = useState<PopupInfo>();
+	const [displayPins, setDisplayPins] = useState(true);
 
 	const onSelectCity = useCallback(({ longitude, latitude }: Coordinate) => {
 		mapRef.current?.flyTo({
-			zoom: 15,
-			center: [longitude, latitude],
+			zoom: 17.5,
+			// ? Positioning the pin to the left to make room for the popup
+			center: [+longitude + 0.002, latitude],
 			duration: 2000,
 		});
 	}, []);
 
 	const onReset = useCallback(() => {
+		setDisplayPins(true);
 		mapRef.current?.flyTo({
-			zoom: 11.5,
+			zoom: 13,
 			center: [
 				calculateCentroid(coordinates)[1],
 				calculateCentroid(coordinates)[0],
@@ -81,19 +101,34 @@ const page = () => {
 
 	const pins = useMemo(
 		() =>
-			data.map((city, index) => (
+			cameraLocations.map((cameraLocation, index) => (
 				<Marker
 					key={`marker-${index}`}
-					longitude={city.longitude}
-					latitude={city.latitude}
+					longitude={
+						cameraDataWithPaths[selectedDate][cameraLocation]
+							.longitude
+					}
+					latitude={
+						cameraDataWithPaths[selectedDate][cameraLocation]
+							.latitude
+					}
 					anchor="bottom"
 					onClick={(e) => {
+						setDisplayPins(false);
 						onSelectCity({
-							latitude: city.latitude,
-							longitude: city.longitude,
+							latitude:
+								cameraDataWithPaths[selectedDate][
+									cameraLocation
+								].latitude,
+							longitude:
+								cameraDataWithPaths[selectedDate][
+									cameraLocation
+								].longitude,
 						});
 						e.originalEvent.stopPropagation();
-						setPopupInfo(city);
+						setPopupInfo(
+							cameraDataWithPaths[selectedDate][cameraLocation]
+						);
 					}}
 				>
 					<Pin />
@@ -109,7 +144,7 @@ const page = () => {
 				initialViewState={{
 					latitude: calculateCentroid(coordinates)[0],
 					longitude: calculateCentroid(coordinates)[1],
-					zoom: 11.5,
+					zoom: 13,
 					bearing: 0,
 					pitch: 0,
 				}}
@@ -143,13 +178,16 @@ const page = () => {
 					</IconButton>
 				</div>
 
-				{pins}
+				{displayPins && pins}
 
 				{popupInfo && (
-					<PopupComponent
-						popupInfo={popupInfo}
-						setPopupInfo={setPopupInfo}
-					/>
+					<>
+						<PopupComponent
+							popupInfo={popupInfo}
+							setPopupInfo={setPopupInfo}
+						/>
+						<LineLayerComponent popupInfo={popupInfo} />
+					</>
 				)}
 			</Map>
 		</Fragment>
