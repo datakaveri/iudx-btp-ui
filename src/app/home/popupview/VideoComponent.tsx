@@ -45,7 +45,6 @@ const VideoComponent = ({ s3Links }: Props) => {
 	useEffect(() => {
 		if (!addedContainers) return;
 		syncVideoPlayer.mount();
-
 	}, [syncVideoPlayer, addedContainers]);
 
 	const onPlay = async () => {
@@ -67,7 +66,11 @@ const VideoComponent = ({ s3Links }: Props) => {
 				flexWrap: "wrap",
 			}}
 		>
-			<VideoContainers ids={ids} syncVideoPlayer={syncVideoPlayer} addedContainers={setAddedContainers} />
+			<VideoContainers
+				ids={ids}
+				syncVideoPlayer={syncVideoPlayer}
+				addedContainers={setAddedContainers}
+			/>
 
 			<div
 				className="controlPanel"
