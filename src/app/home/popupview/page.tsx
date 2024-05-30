@@ -22,6 +22,7 @@ import Pin from "./Pin";
 import IconButton from "@mui/material/IconButton";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import PopupComponent from "./PopupView";
+import cameraData from "@/data/cameraData.json";
 
 function calculateCentroid(coordinates: number[][]) {
 	let sumX = 0;
@@ -45,31 +46,42 @@ export interface Coordinate {
 
 export type PopupInfo = {
 	name: string;
-	latitude: number;
-	longitude: number;
-	video: string;
+	junctionname: string;
+	latitude: string;
+	longitude: string;
+	s3links: string;
 };
 
 const page = () => {
 	const coordinates: number[][] = [];
+	const selectedDate = "2024-05-15";
+	const cameraLocations = Object.keys(cameraData[selectedDate]);
 
-	data.map((loc) => coordinates.push([loc.latitude, loc.longitude]));
+	cameraLocations.map((cameraLocation, index) => {
+		coordinates.push([
+			+cameraData[selectedDate][cameraLocation].latitude,
+			+cameraData[selectedDate][cameraLocation].longitude,
+		]);
+	});
 
 	const mapRef: MutableRefObject<MapRef | undefined> = useRef<MapRef>();
 
-	const [popupInfo, setPopupInfo] = useState<PopupInfo | undefined | null>();
+	const [popupInfo, setPopupInfo] = useState<PopupInfo>();
+	const [displayPins, setDisplayPins] = useState(true);
 
 	const onSelectCity = useCallback(({ longitude, latitude }: Coordinate) => {
 		mapRef.current?.flyTo({
 			zoom: 15,
-			center: [longitude, latitude],
+			// ? Positioning the pin to the left to make room for the popup
+			center: [+longitude + 0.01, latitude],
 			duration: 2000,
 		});
 	}, []);
 
 	const onReset = useCallback(() => {
+		setDisplayPins(true);
 		mapRef.current?.flyTo({
-			zoom: 11.5,
+			zoom: 13,
 			center: [
 				calculateCentroid(coordinates)[1],
 				calculateCentroid(coordinates)[0],
@@ -81,19 +93,26 @@ const page = () => {
 
 	const pins = useMemo(
 		() =>
-			data.map((city, index) => (
+			cameraLocations.map((cameraLocation, index) => (
 				<Marker
 					key={`marker-${index}`}
-					longitude={city.longitude}
-					latitude={city.latitude}
+					longitude={
+						cameraData[selectedDate][cameraLocation].longitude
+					}
+					latitude={cameraData[selectedDate][cameraLocation].latitude}
 					anchor="bottom"
 					onClick={(e) => {
+						setDisplayPins(false);
 						onSelectCity({
-							latitude: city.latitude,
-							longitude: city.longitude,
+							latitude:
+								cameraData[selectedDate][cameraLocation]
+									.latitude,
+							longitude:
+								cameraData[selectedDate][cameraLocation]
+									.longitude,
 						});
 						e.originalEvent.stopPropagation();
-						setPopupInfo(city);
+						setPopupInfo(cameraData[selectedDate][cameraLocation]);
 					}}
 				>
 					<Pin />
@@ -109,7 +128,7 @@ const page = () => {
 				initialViewState={{
 					latitude: calculateCentroid(coordinates)[0],
 					longitude: calculateCentroid(coordinates)[1],
-					zoom: 11.5,
+					zoom: 13,
 					bearing: 0,
 					pitch: 0,
 				}}
@@ -143,7 +162,7 @@ const page = () => {
 					</IconButton>
 				</div>
 
-				{pins}
+				{displayPins && pins}
 
 				{popupInfo && (
 					<PopupComponent
