@@ -1,6 +1,6 @@
 "use client";
 
-import { PopupInfo } from "@/app/home/popupview/page";
+import { PopupInfo } from "@/app/home/trafficcounts/page";
 import { Box, Tab, Tabs, Typography } from "@mui/material";
 import React, {
 	Dispatch,
@@ -43,7 +43,7 @@ const PopupView = ({ popupInfo, setPopupInfo }: Props) => {
 			}}
 			anchor="left"
 			// ? Positioning pop-up to the right
-			longitude={+popupInfo.longitude + 0.003}
+			longitude={+popupInfo.longitude + 0.00025}
 			latitude={Number(popupInfo.latitude)}
 			onClose={() => setPopupInfo(null)}
 		>
@@ -51,7 +51,7 @@ const PopupView = ({ popupInfo, setPopupInfo }: Props) => {
 				sx={{
 					borderBottom: 1,
 					borderColor: "Background",
-					width: "500px",
+					width: "750px",
 				}}
 			>
 				<Typography variant="caption">{popupInfo.name}</Typography>
@@ -67,7 +67,7 @@ const PopupView = ({ popupInfo, setPopupInfo }: Props) => {
 					<VideoComponent s3Links={popupInfo.s3links} />
 				</CustomTabPanel>
 				<CustomTabPanel value={value} index={1}>
-					<TimeseriesComponent />
+					<TimeseriesComponent tsLinks={popupInfo.tsLinks} />
 				</CustomTabPanel>
 			</Box>
 		</Popup>

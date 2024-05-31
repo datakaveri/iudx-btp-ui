@@ -1,78 +1,51 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import SyncVideoPlayer from "@/lib/sync-video-player/SyncVideoPlayer";
+import React, { useEffect, useState, useMemo } from "react";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
-import SyncVideoPlayer from "@/lib/SyncVideoPlayer";
+import VideoContainers from "./VideoContainers";
+import { VideoPlayerOptions } from "@/lib/sync-video-player/main";
 
-const VideoWall = () => {
-	const [ids] = useState(["video-0", "video-1", "video-2"]);
+const VideoComponent = () => {
+	const [ids] = useState([
+		...[1, 2, 3, 4].map((_, index) => `video-${index}`),
+	]);
+	const [addedContainers, setAddedContainers] = useState(false);
 
-	const syncVideoPlayer = new SyncVideoPlayer({
-		controls: false,
-		loop: true,
-		videoPlayers: [
-			{
-				id: "#video-0",
-				initialSrc:
-					"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
-			},
-			{
-				id: "#video-1",
-				initialSrc:
-					"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
-			},
-			{
-				id: "#video-2",
-				initialSrc:
-					"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
-			},
-			{
-				id: "#video-3",
-				initialSrc:
-					"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
-			},
-			{
-				id: "#video-4",
-				initialSrc:
-					"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
-			},
-			// {
-			// 	id: "#video-0",
-			// 	initialSrc:
-			// 		"https://static.videezy.com/system/resources/previews/000/050/817/original/002822-HD-SPECTRUM-COUNTDOWN-01.mp4",
-			// },
-			// {
-			// 	id: "#video-1",
-			// 	initialSrc:
-			// 		"https://static.videezy.com/system/resources/previews/000/051/313/original/002823-HD-SPECTRUM-COUNTDOWN-02.mp4",
-			// },
-			// {
-			// 	id: "#video-2",
-			// 	initialSrc:
-			// 		"https://static.videezy.com/system/resources/previews/000/049/943/original/002831-HD-COUNTDOWN-03.mp4",
-			// },
-			// {
-			// 	id: "#video-3",
-			// 	initialSrc:
-			// 		"https://static.videezy.com/system/resources/previews/000/004/294/original/18_20Dragon_20Coaster_20Part_202.mp4",
-			// },
-		],
-	});
-	useEffect(() => {
-		syncVideoPlayer.mount();
-
-		return () => {};
+	const syncVideoPlayer = useMemo(() => {
+		return new SyncVideoPlayer({
+			controls: false,
+			loop: true,
+			videoPlayers: [
+				{
+					id: "#video-0",
+					initialSrc:
+						"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-15/Devasandra_Sgnl_JN_FIX_1_time_2024-05-15T07:30:02_003.mp4",
+				},
+				{
+					id: "#video-1",
+					initialSrc:
+						"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-15/MS_Ramaiah_JN_FIX_1_time_2024-05-15T07:30:02_003.mp4",
+				},
+				{
+					id: "#video-2",
+					initialSrc:
+						"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-17/Isro_JN_FIX_02_time_2024-05-17T07:39:56_003.mp4",
+				},
+				{
+					id: "#video-3",
+					initialSrc:
+						"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-18/SBI_Bnk_JN_FIX_1_time_2024-05-18T07:30:02_003.mp4",
+				},
+			],
+		});
 	}, []);
 
-	const onClick = async (index: number) => {
-		await syncVideoPlayer.swapVideo(0, index);
-	};
-
-	const onChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-		const value = parseFloat(e.target.value);
-		await syncVideoPlayer.timeTo(value);
-	};
+	useEffect(() => {
+		if (!addedContainers) return;
+		syncVideoPlayer.mount();
+	}, [syncVideoPlayer, addedContainers]);
 
 	const onPlay = async () => {
 		await syncVideoPlayer.play();
@@ -83,33 +56,26 @@ const VideoWall = () => {
 	};
 
 	return (
-		<div>
-			<div
-				style={{
-					display: "flex",
-					flexDirection: "row",
-					width: "100%",
-					justifyContent: "center",
-					flexWrap: "wrap",
-				}}
-			>
-				{ids.map((id, i) => (
-					<div
-						style={{
-							width: "100px",
-							margin: "20px",
-							height: "180px",
-						}}
-						key={i}
-						id={id}
-						className="box"
-						onClick={() => onClick(i)}
-					/>
-				))}
-			</div>
+		<div
+			style={{
+				width: "100%",
+				height: "100%",
+				display: "flex",
+				flexDirection: "row",
+				justifyContent: "center",
+				flexWrap: "wrap",
+			}}
+		>
+			<VideoContainers
+				ids={ids}
+				syncVideoPlayer={syncVideoPlayer}
+				addedContainers={setAddedContainers}
+			/>
+
 			<div
 				className="controlPanel"
 				style={{
+					height: "100px",
 					padding: "20px",
 					width: "100%",
 					display: "flex",
@@ -123,18 +89,9 @@ const VideoWall = () => {
 				<button onClick={onPlay}>
 					<PlayArrowIcon />
 				</button>
-				{/* <input
-					type="range"
-					min="0"
-					max="60"
-					defaultValue="0"
-					className="slider"
-					id="myRange"
-					onInput={onChange}
-				/> */}
 			</div>
 		</div>
 	);
 };
 
-export default VideoWall;
+export default VideoComponent;

@@ -1,46 +1,34 @@
 "use client";
 
-import SyncVideoPlayer from "@/lib/SyncVideoPlayer";
+import SyncVideoPlayer from "@/lib/sync-video-player/SyncVideoPlayer";
 import React, { useEffect, useState, useMemo } from "react";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import VideoContainers from "./VideoContainers";
+import { VideoPlayerOptions } from "@/lib/sync-video-player/main";
 interface Props {
 	s3Links: string[];
 }
 
 const VideoComponent = ({ s3Links }: Props) => {
-	const [ids] = useState(["video-0", "video-1", "video-2"]);
+	const [ids] = useState([...s3Links.map((_, index) => `video-${index}`)]);
 	const [addedContainers, setAddedContainers] = useState(false);
 
 	const syncVideoPlayer = useMemo(() => {
+		const videoPlayers: VideoPlayerOptions[] = [];
+		s3Links.map((link, index) => {
+			videoPlayers.push({
+				id: `#video-${index}`,
+				initialSrc: link,
+			});
+		});
+
 		return new SyncVideoPlayer({
 			controls: false,
 			loop: true,
-			videoPlayers: [
-				{
-					id: "#video-0",
-					initialSrc:
-						"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-15/Kuvempu_Circle_FIX_1_time_2024-05-15T07:30:02_003.mp4",
-				},
-				{
-					id: "#video-1",
-					initialSrc:
-						"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
-				},
-				{
-					id: "#video-2",
-					initialSrc:
-						"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
-				},
-				{
-					id: "#video-3",
-					initialSrc:
-						"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-21/18th_Crs_BsStp_JN_FIX_1_time_2024-05-21T07%3A30%3A02_000.mp4",
-				},
-			],
+			videoPlayers,
 		});
-	}, []);
+	}, [s3Links]);
 
 	useEffect(() => {
 		if (!addedContainers) return;

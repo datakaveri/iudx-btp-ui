@@ -1,38 +1,32 @@
-import chroma from "chroma-js";
 import { LayerProps } from "react-map-gl";
 
 interface Props {
-	pollutantVal: number;
+	lineColors: string;
+	values: number[];
+	valueCounts: number;
 	min: number;
 	max: number;
-	average: number;
-	stddev: number;
 }
 
 export const getLayerProps = ({
-	pollutantVal,
+	values,
+	lineColors,
+	valueCounts,
 	min,
 	max,
-	average,
-	stddev,
 }: Props) => {
-	const scale = chroma
-		.scale(["green", "red"])
-		.classes([
-			min,
-			average - 0.625 * stddev,
-			average,
-			average + 0.625 * stddev,
-			max,
-		]);
+	console.log({
+		lineColors: lineColors,
+		valueCounts: valueCounts,
+	});
 
 	const layerStyle: LayerProps = {
 		type: "line",
 		source: "my_data",
 		layout: {},
 		paint: {
-			"line-color": scale(pollutantVal).hex(),
-			"line-width": 5,
+			"line-color": lineColors,
+			"line-width": valueCounts / 10,
 		},
 	};
 

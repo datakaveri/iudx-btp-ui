@@ -5,31 +5,28 @@ import React, {
 	Fragment,
 	MutableRefObject,
 	useCallback,
-	useEffect,
 	useMemo,
 	useRef,
 	useState,
 } from "react";
 import Map, {
 	FullscreenControl,
-	Layer,
 	MapRef,
 	Marker,
 	NavigationControl,
 	ScaleControl,
-	Source,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import data from "@/data/data.json";
 import Pin from "./Pin";
 import IconButton from "@mui/material/IconButton";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import PopupComponent from "./PopupView";
-import cameraData from "@/data/cameraData.json";
-import cameraDataWithPaths from "@/data/cameraDataWithPaths.json";
-import axios from "axios";
-import { getLayerProps } from "./getLayerProps";
+import cameraDataWithPathsAndTimeSeries from "@/data/cameraDataWithPathsAndTimeSeries.json";
 import LineLayerComponent from "./LineLayerComponent";
+import TimeSliderComponent from "./TimeSliderComponent";
+import { Provider } from "react-redux";
+import { store } from "@/lib/store/store";
+import { Typography } from "@mui/material";
 
 function calculateCentroid(coordinates: number[][]) {
 	let sumX = 0;
@@ -58,17 +55,22 @@ export type PopupInfo = {
 	longitude: string;
 	s3links: string;
 	pathLinks: object;
+	tsLinks: object;
 };
 
 const page = () => {
 	const coordinates: number[][] = [];
 	const selectedDate = "2024-05-15";
-	const cameraLocations = Object.keys(cameraDataWithPaths[selectedDate]);
+	const cameraLocations = Object.keys(
+		cameraDataWithPathsAndTimeSeries[selectedDate]
+	);
 
 	cameraLocations.map((cameraLocation, index) => {
 		coordinates.push([
-			+cameraDataWithPaths[selectedDate][cameraLocation].latitude,
-			+cameraDataWithPaths[selectedDate][cameraLocation].longitude,
+			+cameraDataWithPathsAndTimeSeries[selectedDate][cameraLocation]
+				.latitude,
+			+cameraDataWithPathsAndTimeSeries[selectedDate][cameraLocation]
+				.longitude,
 		]);
 	});
 
@@ -79,9 +81,9 @@ const page = () => {
 
 	const onSelectCity = useCallback(({ longitude, latitude }: Coordinate) => {
 		mapRef.current?.flyTo({
-			zoom: 17.5,
+			zoom: 19,
 			// ? Positioning the pin to the left to make room for the popup
-			center: [+longitude + 0.002, latitude],
+			center: [+longitude + 0.00025, latitude],
 			duration: 2000,
 		});
 	}, []);
@@ -105,29 +107,33 @@ const page = () => {
 				<Marker
 					key={`marker-${index}`}
 					longitude={
-						cameraDataWithPaths[selectedDate][cameraLocation]
-							.longitude
+						cameraDataWithPathsAndTimeSeries[selectedDate][
+							cameraLocation
+						].longitude
 					}
 					latitude={
-						cameraDataWithPaths[selectedDate][cameraLocation]
-							.latitude
+						cameraDataWithPathsAndTimeSeries[selectedDate][
+							cameraLocation
+						].latitude
 					}
 					anchor="bottom"
 					onClick={(e) => {
 						setDisplayPins(false);
 						onSelectCity({
 							latitude:
-								cameraDataWithPaths[selectedDate][
+								cameraDataWithPathsAndTimeSeries[selectedDate][
 									cameraLocation
 								].latitude,
 							longitude:
-								cameraDataWithPaths[selectedDate][
+								cameraDataWithPathsAndTimeSeries[selectedDate][
 									cameraLocation
 								].longitude,
 						});
 						e.originalEvent.stopPropagation();
 						setPopupInfo(
-							cameraDataWithPaths[selectedDate][cameraLocation]
+							cameraDataWithPathsAndTimeSeries[selectedDate][
+								cameraLocation
+							]
 						);
 					}}
 				>
@@ -138,59 +144,63 @@ const page = () => {
 	);
 
 	return (
-		<Fragment>
-			<Map
-				mapboxAccessToken={MAPBOX_API_KEY}
-				initialViewState={{
-					latitude: calculateCentroid(coordinates)[0],
-					longitude: calculateCentroid(coordinates)[1],
-					zoom: 13,
-					bearing: 0,
-					pitch: 0,
-				}}
-				mapStyle="mapbox://styles/mapbox/dark-v9"
-				ref={mapRef}
-				style={{
-					width: "100%",
-					height: "70vh",
-					margin: 0,
-					padding: 0,
-				}}
-			>
-				<FullscreenControl position="top-left" />
-				<NavigationControl position="top-left" />
-				<ScaleControl />
-				<div
+		<Provider store={store}>
+			<Fragment>
+				<Typography variant="h5">Traffic Counts</Typography>
+				<Map
+					mapboxAccessToken={MAPBOX_API_KEY}
+					initialViewState={{
+						latitude: calculateCentroid(coordinates)[0],
+						longitude: calculateCentroid(coordinates)[1],
+						zoom: 13,
+						bearing: 0,
+						pitch: 0,
+					}}
+					mapStyle="mapbox://styles/mapbox/dark-v9"
+					ref={mapRef}
 					style={{
-						padding: "20px",
-						display: "flex",
-						flexDirection: "row-reverse",
+						width: "100%",
+						height: "80vh",
+						margin: 0,
+						padding: 0,
 					}}
 				>
-					<IconButton
+					<div
 						style={{
-							backgroundColor: "white",
+							padding: "20px",
+							display: "flex",
+							flexDirection: "row",
 						}}
-						onClick={onReset}
-						color="inherit"
 					>
-						<RestartAltIcon />
-					</IconButton>
-				</div>
+						<IconButton
+							style={{
+								backgroundColor: "white",
+							}}
+							onClick={onReset}
+							color="inherit"
+						>
+							<RestartAltIcon />
+						</IconButton>
+					</div>
+					<FullscreenControl position="bottom-left" />
+					<NavigationControl position="bottom-left" />
+					<ScaleControl />
 
-				{displayPins && pins}
+					{displayPins && pins}
 
-				{popupInfo && (
-					<>
-						<PopupComponent
-							popupInfo={popupInfo}
-							setPopupInfo={setPopupInfo}
-						/>
-						<LineLayerComponent popupInfo={popupInfo} />
-					</>
-				)}
-			</Map>
-		</Fragment>
+					{popupInfo && (
+						<>
+							<PopupComponent
+								popupInfo={popupInfo}
+								setPopupInfo={setPopupInfo}
+							/>
+							<LineLayerComponent popupInfo={popupInfo} />
+						</>
+					)}
+				</Map>
+				{popupInfo && <TimeSliderComponent />}
+			</Fragment>
+		</Provider>
 	);
 };
 
