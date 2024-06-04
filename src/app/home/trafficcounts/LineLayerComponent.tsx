@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Layer, Marker, Source } from "react-map-gl";
 import { getLayerProps } from "./getLayerProps";
-import { PopupInfo } from "./page";
+import { PopupInfo } from "@/types/PopupInfo";
 import axios from "axios";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
 import { setTimestamps } from "@/lib/store/timeSliderSlice/timeSliderSlice";

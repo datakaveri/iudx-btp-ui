@@ -25,8 +25,6 @@ import { IconButton } from "@mui/material";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import type { Color, Material } from "@deck.gl/core";
 import { animate } from "popmotion";
-import Button from "@mui/joy/Button";
-import TuneIcon from "@mui/icons-material/TuneRounded";
 
 const DATA_URL = {
 	// eslint-disable-line

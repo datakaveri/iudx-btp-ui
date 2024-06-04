@@ -13,9 +13,12 @@ import { CustomTabPanel } from "./CustomTabPanel";
 import TimeseriesComponent from "./TimeseriesComponent";
 import dynamic from "next/dynamic";
 
-const VideoComponent = dynamic(() => import("./VideoComponent"), {
-	ssr: false,
-});
+const VideoComponent = dynamic(
+	() => import("../../../ui/VideoComponent/VideoComponent"),
+	{
+		ssr: false,
+	}
+);
 interface Props {
 	popupInfo: PopupInfo;
 	setPopupInfo: Dispatch<SetStateAction<PopupInfo | undefined | null>>;

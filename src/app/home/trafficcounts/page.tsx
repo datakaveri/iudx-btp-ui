@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
-import { MAPBOX_API_KEY } from "@/environments/environments";
 import React, {
 	Fragment,
 	MutableRefObject,
@@ -9,7 +8,7 @@ import React, {
 	useRef,
 	useState,
 } from "react";
-import Map, {
+import {
 	FullscreenControl,
 	MapRef,
 	Marker,
@@ -23,40 +22,15 @@ import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import PopupComponent from "./PopupView";
 import cameraDataWithPathsAndTimeSeries from "@/data/cameraDataWithPathsAndTimeSeries.json";
 import LineLayerComponent from "./LineLayerComponent";
-import TimeSliderComponent from "./TimeSliderComponent";
+import TimeSliderComponent from "../../../ui/TimeSliderComponent/TimeSliderComponent";
 import { Provider } from "react-redux";
 import { store } from "@/lib/store/store";
 import { Typography } from "@mui/material";
-
-function calculateCentroid(coordinates: number[][]) {
-	let sumX = 0;
-	let sumY = 0;
-
-	for (let i = 0; i < coordinates.length; i++) {
-		sumX += coordinates[i][0];
-		sumY += coordinates[i][1];
-	}
-
-	const centroidX = sumX / coordinates.length;
-	const centroidY = sumY / coordinates.length;
-
-	return [centroidX, centroidY];
-}
-
-export interface Coordinate {
-	longitude: number;
-	latitude: number;
-}
-
-export type PopupInfo = {
-	name: string;
-	junctionname: string;
-	latitude: string;
-	longitude: string;
-	s3links: string;
-	pathLinks: object;
-	tsLinks: object;
-};
+import DatePickerComponent from "../../../ui/DatePickerComponent/DatePickerComponent";
+import MapboxComponent from "../../../ui/MapboxComponent/MapboxComponent";
+import { calculateCentroid } from "./calculateCentroid";
+import { Coordinate } from "@/types/Coordinate";
+import { PopupInfo } from "@/types/PopupInfo";
 
 const page = () => {
 	const coordinates: number[][] = [];
@@ -76,7 +50,7 @@ const page = () => {
 
 	const mapRef: MutableRefObject<MapRef | undefined> = useRef<MapRef>();
 
-	const [popupInfo, setPopupInfo] = useState<PopupInfo>();
+	const [popupInfo, setPopupInfo] = useState<PopupInfo>(null);
 	const [displayPins, setDisplayPins] = useState(true);
 
 	const onSelectCity = useCallback(({ longitude, latitude }: Coordinate) => {
@@ -147,24 +121,7 @@ const page = () => {
 		<Provider store={store}>
 			<Fragment>
 				<Typography variant="h5">Traffic Counts</Typography>
-				<Map
-					mapboxAccessToken={MAPBOX_API_KEY}
-					initialViewState={{
-						latitude: calculateCentroid(coordinates)[0],
-						longitude: calculateCentroid(coordinates)[1],
-						zoom: 13,
-						bearing: 0,
-						pitch: 0,
-					}}
-					mapStyle="mapbox://styles/mapbox/dark-v9"
-					ref={mapRef}
-					style={{
-						width: "100%",
-						height: "80vh",
-						margin: 0,
-						padding: 0,
-					}}
-				>
+				<MapboxComponent coordinates={coordinates} mapRef={mapRef}>
 					<div
 						style={{
 							padding: "20px",
@@ -197,8 +154,13 @@ const page = () => {
 							<LineLayerComponent popupInfo={popupInfo} />
 						</>
 					)}
-				</Map>
-				{popupInfo && <TimeSliderComponent />}
+				</MapboxComponent>
+
+				{popupInfo === null ? (
+					<DatePickerComponent />
+				) : (
+					<TimeSliderComponent />
+				)}
 			</Fragment>
 		</Provider>
 	);
