@@ -1,7 +1,7 @@
-import React from "react";
-import VideoWall from "../_components/VideoWall";
-import { Container, Grid, Typography } from "@mui/material";
-import LeafletComponent from "../_components/LeafletComponent";
+import React, { Suspense } from "react";
+import VideoWall from "@/ui/SyncVideoPlayers/VideoWall";
+import { Grid, Typography } from "@mui/material";
+import LeafletComponent from "@/ui/LeafletComponent/LeafletComponent";
 
 const page = () => {
 	return (
@@ -16,8 +16,9 @@ const page = () => {
 						height: "80vh",
 					}}
 				>
-					{/* <DeckGLComponent /> */}
-					<LeafletComponent />
+					<Suspense fallback={<>Loading...</>}>
+						<LeafletComponent />
+					</Suspense>
 				</Grid>
 				<Grid item xs={12} md={6}>
 					<VideoWall />

@@ -3,6 +3,7 @@
 import React, {
 	Fragment,
 	MutableRefObject,
+	Suspense,
 	useCallback,
 	useMemo,
 	useRef,
@@ -16,35 +17,36 @@ import {
 	ScaleControl,
 } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import Pin from "./Pin";
-import IconButton from "@mui/material/IconButton";
-import RestartAltIcon from "@mui/icons-material/RestartAlt";
-import PopupComponent from "./PopupView";
+import Pin from "@/ui/MapElements/Pin/Pin";
+import PopupComponent from "@/ui/PopupComponent/PopupView";
 import cameraDataWithPathsAndTimeSeries from "@/data/cameraDataWithPathsAndTimeSeries.json";
-import LineLayerComponent from "./LineLayerComponent";
-import TimeSliderComponent from "../../../ui/TimeSliderComponent/TimeSliderComponent";
-import { Provider } from "react-redux";
-import { store } from "@/lib/store/store";
+import LineLayerComponent from "@/ui/MapElements/LineLayerComponent/LineLayerComponent";
+import TimeSliderComponent from "@/ui/TimeSliderComponent/TimeSliderComponent";
 import { Typography } from "@mui/material";
-import DatePickerComponent from "../../../ui/DatePickerComponent/DatePickerComponent";
-import MapboxComponent from "../../../ui/MapboxComponent/MapboxComponent";
-import { calculateCentroid } from "./calculateCentroid";
+import DatePickerComponent from "@/ui/DatePickerComponent/DatePickerComponent";
+import MapboxComponent from "@/ui/MapboxComponent/MapboxComponent";
+import { calculateCentroid } from "@/utils/MapUtils/calculateCentroid";
 import { Coordinate } from "@/types/Coordinate";
 import { PopupInfo } from "@/types/PopupInfo";
+import MapResetButton from "@/ui/MapElements/MapResetButton/MapResetButton";
+import { useAppSelector } from "@/lib/store/hooks";
+import { selectedDate } from "@/lib/store/timeSliderSlice/timeSliderSlice";
 
 const page = () => {
 	const coordinates: number[][] = [];
-	const selectedDate = "2024-05-15";
+	const selectedDateFromAppSelector = useAppSelector(selectedDate);
 	const cameraLocations = Object.keys(
-		cameraDataWithPathsAndTimeSeries[selectedDate]
+		cameraDataWithPathsAndTimeSeries[selectedDateFromAppSelector]
 	);
 
 	cameraLocations.map((cameraLocation, index) => {
 		coordinates.push([
-			+cameraDataWithPathsAndTimeSeries[selectedDate][cameraLocation]
-				.latitude,
-			+cameraDataWithPathsAndTimeSeries[selectedDate][cameraLocation]
-				.longitude,
+			+cameraDataWithPathsAndTimeSeries[selectedDateFromAppSelector][
+				cameraLocation
+			].latitude,
+			+cameraDataWithPathsAndTimeSeries[selectedDateFromAppSelector][
+				cameraLocation
+			].longitude,
 		]);
 	});
 
@@ -81,64 +83,48 @@ const page = () => {
 				<Marker
 					key={`marker-${index}`}
 					longitude={
-						cameraDataWithPathsAndTimeSeries[selectedDate][
-							cameraLocation
-						].longitude
+						cameraDataWithPathsAndTimeSeries[
+							selectedDateFromAppSelector
+						][cameraLocation].longitude
 					}
 					latitude={
-						cameraDataWithPathsAndTimeSeries[selectedDate][
-							cameraLocation
-						].latitude
+						cameraDataWithPathsAndTimeSeries[
+							selectedDateFromAppSelector
+						][cameraLocation].latitude
 					}
 					anchor="bottom"
 					onClick={(e) => {
 						setDisplayPins(false);
 						onSelectCity({
 							latitude:
-								cameraDataWithPathsAndTimeSeries[selectedDate][
-									cameraLocation
-								].latitude,
+								cameraDataWithPathsAndTimeSeries[
+									selectedDateFromAppSelector
+								][cameraLocation].latitude,
 							longitude:
-								cameraDataWithPathsAndTimeSeries[selectedDate][
-									cameraLocation
-								].longitude,
+								cameraDataWithPathsAndTimeSeries[
+									selectedDateFromAppSelector
+								][cameraLocation].longitude,
 						});
 						e.originalEvent.stopPropagation();
 						setPopupInfo(
-							cameraDataWithPathsAndTimeSeries[selectedDate][
-								cameraLocation
-							]
+							cameraDataWithPathsAndTimeSeries[
+								selectedDateFromAppSelector
+							][cameraLocation]
 						);
 					}}
 				>
 					<Pin />
 				</Marker>
 			)),
-		[]
+		[cameraLocations, onSelectCity, selectedDateFromAppSelector]
 	);
 
 	return (
-		<Provider store={store}>
-			<Fragment>
-				<Typography variant="h5">Traffic Counts</Typography>
+		<Fragment>
+			<Typography variant="h5">Traffic Counts</Typography>
+			<Suspense fallback={<>Loading...</>}>
 				<MapboxComponent coordinates={coordinates} mapRef={mapRef}>
-					<div
-						style={{
-							padding: "20px",
-							display: "flex",
-							flexDirection: "row",
-						}}
-					>
-						<IconButton
-							style={{
-								backgroundColor: "white",
-							}}
-							onClick={onReset}
-							color="inherit"
-						>
-							<RestartAltIcon />
-						</IconButton>
-					</div>
+					<MapResetButton onReset={onReset} />
 					<FullscreenControl position="bottom-left" />
 					<NavigationControl position="bottom-left" />
 					<ScaleControl />
@@ -155,14 +141,14 @@ const page = () => {
 						</>
 					)}
 				</MapboxComponent>
+			</Suspense>
 
-				{popupInfo === null ? (
-					<DatePickerComponent />
-				) : (
-					<TimeSliderComponent />
-				)}
-			</Fragment>
-		</Provider>
+			{popupInfo === null ? (
+				<DatePickerComponent />
+			) : (
+				<TimeSliderComponent />
+			)}
+		</Fragment>
 	);
 };
 

@@ -1,7 +1,7 @@
 import { MAPBOX_API_KEY, MAPBOX_STYLE } from "@/environments/environments";
 import { MutableRefObject, ReactNode } from "react";
 import Map, { MapRef } from "react-map-gl";
-import { calculateCentroid } from "../../app/home/trafficcounts/calculateCentroid";
+import { calculateCentroid } from "../../utils/MapUtils/calculateCentroid";
 
 interface Props {
 	coordinates: number[][];

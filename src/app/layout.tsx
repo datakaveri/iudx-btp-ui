@@ -1,9 +1,10 @@
 import { Box, ThemeProvider } from "@mui/material";
 import type { Metadata } from "next";
 import { theme } from "./MaterialTheme";
-import MiniDrawer from "./home/_components/SidebarComponent";
+import MiniDrawer from "../ui/MiniDrawer/MiniDrawer";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
 import "./index.css";
+import StoreProvider from "./StoreProvider";
 
 export const metadata: Metadata = {
 	title: "BTP Dashboard",
@@ -31,16 +32,21 @@ export default function RootLayout({
 					padding: 0,
 				}}
 			>
-				<UserProvider>
-					<ThemeProvider theme={theme}>
-						<Box sx={{ display: "flex", paddingTop: "70px" }}>
-							<MiniDrawer />
-							<Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-								{children}
+				<StoreProvider>
+					<UserProvider>
+						<ThemeProvider theme={theme}>
+							<Box sx={{ display: "flex", paddingTop: "70px" }}>
+								<MiniDrawer />
+								<Box
+									component="main"
+									sx={{ flexGrow: 1, p: 3 }}
+								>
+									{children}
+								</Box>
 							</Box>
-						</Box>
-					</ThemeProvider>
-				</UserProvider>
+						</ThemeProvider>
+					</UserProvider>
+				</StoreProvider>
 			</body>
 		</html>
 	);
