@@ -1,10 +1,10 @@
 "use client";
 
 import { CongestionPopupInfo } from "@/types/CongestionPopupInfo";
-import React, { Dispatch, Fragment, SetStateAction } from "react";
+import React, { Dispatch, Fragment, SetStateAction, useEffect } from "react";
 import { Popup } from "react-map-gl";
+import { Typography } from "@mui/material";
 import "./CongestionPopupView.styles.css";
-import { List, ListItem, Typography } from "@mui/material";
 
 interface Props {
 	congestionPopupInfo: CongestionPopupInfo;
@@ -15,11 +15,9 @@ const CongestionPopupView = ({
 	congestionPopupInfo,
 	setCongestionPopupInfo,
 }: Props) => {
-	console.log(congestionPopupInfo);
-
 	return (
 		<Popup
-			anchor="left"
+			anchor="bottom-left"
 			// ? Positioning pop-up to the right
 			longitude={+congestionPopupInfo?.location.coordinates[1]}
 			latitude={+congestionPopupInfo?.location.coordinates[0]}
