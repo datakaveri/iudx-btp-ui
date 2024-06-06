@@ -1,0 +1,12 @@
+.MapResetButton {
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+	padding: 10px;
+	margin: 15px;
+}
+
+.MapResetButton:hover {
+	background-color: white;
+}

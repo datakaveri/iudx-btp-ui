@@ -2,3 +2,7 @@
 	height: 650px !important;
 	flex-direction: row;
 }
+
+nextjs-portal {
+	display: none !important;
+}
