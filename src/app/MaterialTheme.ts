@@ -36,5 +36,15 @@ export const theme = createTheme({
 				},
 			],
 		},
+		MuiTab: {
+			styleOverrides: {
+				root: {
+					fontWeight: "inherit",
+					fontSize: "20px",
+					textTransform: "none",
+					color: "inherit",
+				},
+			},
+		},
 	},
 });

@@ -1,0 +1,4 @@
+.mapboxgl-popup-anchor-left {
+	height: 80px !important;
+	flex-direction: row;
+}
