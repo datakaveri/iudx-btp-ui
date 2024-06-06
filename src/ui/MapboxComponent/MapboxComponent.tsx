@@ -1,12 +1,13 @@
 import { MAPBOX_API_KEY, MAPBOX_STYLE } from "@/environments/environments";
 import { MutableRefObject, ReactNode } from "react";
 import Map, { MapRef } from "react-map-gl";
-import { calculateCentroid } from "../../utils/MapUtils/calculateCentroid";
+import { calculateCentroid } from "@/utils/MapUtils/calculateCentroid";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 interface Props {
 	coordinates: number[][];
 	children: ReactNode;
-	mapRef: MutableRefObject<MapRef | undefined>;
+	mapRef?: MutableRefObject<MapRef | undefined>;
 }
 
 const MapboxComponent = ({ coordinates, children, mapRef }: Props) => {

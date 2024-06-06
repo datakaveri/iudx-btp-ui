@@ -18,10 +18,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import iudx_logo from "./iudx-logo.png";
 import { useState } from "react";
-import RouteIcon from "@mui/icons-material/Route";
 import SsidChartIcon from "@mui/icons-material/SsidChart";
-import EmergencyRecordingIcon from "@mui/icons-material/EmergencyRecording";
-import PersonPinCircleIcon from "@mui/icons-material/PersonPinCircle";
 import Link from "next/link";
 import { Menu, MenuItem, Tooltip, Typography } from "@mui/material";
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
@@ -29,6 +26,26 @@ import LogoutButton from "@/ui/Authentication/LogoutButton";
 import LoginButton from "@/ui/Authentication/LoginButton";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { usePathname } from "next/navigation";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import AnalyticsIcon from "@mui/icons-material/Analytics";
+
+const drawerLinks = [
+	{ path: "observe", name: "Observe" },
+	{
+		path: "forecast",
+		name: "Forecast / Estimation",
+	},
+	{
+		path: "scenario_analysis",
+		name: "Scenario Analysis",
+	},
+];
+
+const drawerIcons = [
+	<RemoveRedEyeIcon key={0} />,
+	<SsidChartIcon key={1} />,
+	<AnalyticsIcon key={2} />,
+];
 
 const drawerWidth = 250;
 
@@ -123,7 +140,7 @@ export default function MiniDrawer() {
 
 	const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
-	const { user, error, isLoading } = useUser();
+	const { user } = useUser();
 
 	const pathname = usePathname();
 
@@ -208,35 +225,24 @@ export default function MiniDrawer() {
 				</DrawerHeader>
 				<Divider />
 				<List>
-					{[
-						"Traffic Counts",
-						"Re-Identification",
-						"Traffic Prediction",
-						"Origin Destination",
-					].map((text, index) => (
+					{drawerLinks.map((link, index) => (
 						<Link
 							style={{
 								textDecoration: "none",
 								color: "black",
 							}}
 							key={index}
-							href={`/home/${text
-								.replace(" ", "")
-								.replace("-", "")
-								.toLowerCase()}`}
+							href={`/home/${link.path}`}
 						>
 							<ListItem
-								key={text}
+								key={link}
 								disablePadding
 								sx={{ display: "block" }}
 							>
 								<ListItemButton
-									selected={
-										pathname ===
-										`/home/${text
-											.replace(" ", "")
-											.toLowerCase()}`
-									}
+									selected={pathname.includes(
+										`/home/${link.path}`
+									)}
 									sx={{
 										minHeight: 48,
 										justifyContent: open
@@ -252,15 +258,10 @@ export default function MiniDrawer() {
 											justifyContent: "center",
 										}}
 									>
-										{index === 0 && <PersonPinCircleIcon />}
-										{index === 1 && (
-											<EmergencyRecordingIcon />
-										)}
-										{index === 2 && <RouteIcon />}
-										{index === 3 && <SsidChartIcon />}
+										{drawerIcons[index]}
 									</ListItemIcon>
 									<ListItemText
-										primary={text}
+										primary={link.name}
 										sx={{ opacity: open ? 1 : 0 }}
 									/>
 								</ListItemButton>

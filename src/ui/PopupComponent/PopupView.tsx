@@ -40,10 +40,6 @@ const PopupView = ({ popupInfo, setPopupInfo }: Props) => {
 
 	return (
 		<Popup
-			style={{
-				height: "500px",
-				maxWidth: "500px",
-			}}
 			anchor="left"
 			// ? Positioning pop-up to the right
 			longitude={+popupInfo.longitude + 0.00025}
