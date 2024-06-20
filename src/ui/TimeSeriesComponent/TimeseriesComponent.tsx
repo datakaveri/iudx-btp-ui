@@ -1,8 +1,10 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReactEcharts from "echarts-for-react";
-import { SeriesOption } from "echarts";
+import { LegendComponentOption, SeriesOption } from "echarts";
 import { TimeSeriesInterface } from "@/types/TimeSeriesInterface";
+import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
+import { setTimeseriesColorsList } from "@/lib/store/timeSliderSlice/timeSliderSlice";
 
 interface Props {
 	tsLinks: {};
@@ -12,9 +14,19 @@ const TimeseriesComponent = ({ tsLinks }: Props) => {
 	const [timeSeriesData, setTimeSeriesData] =
 		useState<TimeSeriesInterface[]>();
 	const [loading, setLoading] = useState<boolean>(true);
+	const [legendClear, setLegendClear] = useState(true);
+
+	// ? useAppSelector causes rerendering
+	const colorsList = useAppSelector((state) => state.timeSlider.colorsList);
+	const timeValue = useAppSelector((state) => state.timeSlider.value);
+
+	const eChartsRef = useRef(null);
 
 	const timeSeriesArray: SeriesOption[] = [];
-	const legend = [];
+	const legend: LegendComponentOption[] = [];
+	const selected = {};
+
+	const dispatch = useAppDispatch();
 
 	useEffect(() => {
 		if (Object.keys(tsLinks).length > 0) {
@@ -27,7 +39,7 @@ const TimeseriesComponent = ({ tsLinks }: Props) => {
 	}, [tsLinks]);
 
 	if (!loading) {
-		timeSeriesData?.map((timeSeries) => {
+		timeSeriesData?.map((timeSeries, index) => {
 			const trendData: [number, number][] = [];
 			timeSeries.counts.map((count, index) => {
 				trendData.push([
@@ -35,7 +47,12 @@ const TimeseriesComponent = ({ tsLinks }: Props) => {
 					count,
 				]);
 			});
-			legend.push(timeSeries.segment);
+			legend.push({
+				name: timeSeries.segment,
+				itemStyle: {
+					color: colorsList[index].color,
+				},
+			});
 			timeSeriesArray.push({
 				name: timeSeries.segment,
 				type: "line",
@@ -44,14 +61,54 @@ const TimeseriesComponent = ({ tsLinks }: Props) => {
 				data: trendData,
 				lineStyle: {
 					width: 0.5,
+					color: colorsList[index].color,
 				},
 			});
+		});
+		legend.map((legendElement, index) => {
+			selected[legendElement.name] = colorsList[index].selected;
 		});
 	}
 
 	const option: echarts.EChartsOption = {
 		legend: {
+			selected: selected,
+			left: "left",
+			type: "scroll",
 			data: legend,
+			icon: "square",
+		},
+		tooltip: {
+			trigger: "axis",
+		},
+		toolbox: {
+			orient: "vertical",
+			top: "center",
+			left: "right",
+			feature: {
+				saveAsImage: {},
+				dataView: {},
+				magicType: {
+					type: ["line", "bar"],
+				},
+				myTool2: {
+					show: true,
+					title: legendClear ? "Deselect All" : "Select All",
+					icon: "image://https://echarts.apache.org/en/images/favicon.png",
+					onclick: (params) => {
+						const newState = colorsList.map(
+							(colorElement, index) => {
+								return {
+									...colorElement,
+									selected: !legendClear,
+								};
+							}
+						);
+						setLegendClear(!legendClear);
+						dispatch(setTimeseriesColorsList(newState));
+					},
+				},
+			},
 		},
 		xAxis: [
 			{
@@ -74,12 +131,12 @@ const TimeseriesComponent = ({ tsLinks }: Props) => {
 		dataZoom: [
 			{
 				type: "inside",
-				start: 15,
-				end: 45,
+				start: 0,
+				end: 4.5 * timeValue,
 			},
 			{
-				start: 15,
-				end: 45,
+				start: 0,
+				end: 4.5 * timeValue,
 			},
 		],
 		series: timeSeriesArray,
@@ -117,12 +174,28 @@ const TimeseriesComponent = ({ tsLinks }: Props) => {
 	return (
 		<div>
 			<ReactEcharts
+				ref={eChartsRef}
 				option={option}
 				style={{
 					width: "700px",
 					height: "500px",
 				}}
 				className="echart"
+				onEvents={{
+					legendselectchanged: (params) => {
+						const newState = colorsList.map((colorElement, index) =>
+							legend.findIndex(
+								(legendItem) => legendItem.name === params.name
+							) === index
+								? {
+										...colorElement,
+										selected: !colorElement.selected,
+								  }
+								: colorElement
+						);
+						dispatch(setTimeseriesColorsList(newState));
+					},
+				}}
 			/>
 		</div>
 	);

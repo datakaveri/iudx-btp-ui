@@ -2,11 +2,17 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 import cameraDataWithPathsAndTimeSeries from "@/data/cameraDataWithPathsAndTimeSeries.json";
 
+export interface ColorsListItem {
+	selected: boolean;
+	color: string;
+}
+
 interface TimeSliderState {
 	selectedDate: string;
 	timestamps: string[];
 	value: number;
 	playing: boolean;
+	colorsList: ColorsListItem[];
 }
 
 const initialState: TimeSliderState = {
@@ -14,6 +20,7 @@ const initialState: TimeSliderState = {
 	timestamps: [],
 	value: 0,
 	playing: false,
+	colorsList: [],
 };
 
 export const timeSliderSlice = createSlice({
@@ -32,6 +39,12 @@ export const timeSliderSlice = createSlice({
 		setSelectedDate: (state, action: PayloadAction<string>) => {
 			state.selectedDate = action.payload;
 		},
+		setTimeseriesColorsList: (
+			state,
+			action: PayloadAction<ColorsListItem[]>
+		) => {
+			state.colorsList = action.payload;
+		},
 	},
 });
 
@@ -41,6 +54,7 @@ export const {
 	setPlayingStatus,
 	setTimestamps,
 	setSelectedDate,
+	setTimeseriesColorsList,
 } = timeSliderSlice.actions;
 
 export const selectValue = (state: RootState) => state.timeSlider.value;
@@ -48,5 +62,6 @@ export const selectPlaying = (state: RootState) => state.timeSlider.playing;
 export const selectTimestamps = (state: RootState) =>
 	state.timeSlider.timestamps;
 export const selectedDate = (state: RootState) => state.timeSlider.selectedDate;
+export const colorsList = (state: RootState) => state.timeSlider.colorsList;
 
 export default timeSliderSlice.reducer;

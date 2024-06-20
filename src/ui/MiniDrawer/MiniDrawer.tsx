@@ -17,7 +17,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import iudx_logo from "./iudx-logo.png";
-import { useState } from "react";
+import { ReactNode, Suspense, useState } from "react";
 import SsidChartIcon from "@mui/icons-material/SsidChart";
 import Link from "next/link";
 import { Menu, MenuItem, Tooltip, Typography } from "@mui/material";
@@ -28,6 +28,9 @@ import { useUser } from "@auth0/nextjs-auth0/client";
 import { usePathname } from "next/navigation";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import AnalyticsIcon from "@mui/icons-material/Analytics";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import KeycloakComponent from "../keycloak/KeycloakComponent";
 
 const drawerLinks = [
 	{ path: "observe", name: "Observe" },
@@ -118,7 +121,11 @@ const Drawer = styled(MuiDrawer, {
 	}),
 }));
 
-export default function MiniDrawer() {
+interface Props {
+	children: ReactNode;
+}
+
+export default function MiniDrawer({ children }: Props) {
 	const theme = useTheme();
 	const [open, setOpen] = useState(false);
 
@@ -139,8 +146,6 @@ export default function MiniDrawer() {
 	};
 
 	const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
-
-	const { user } = useUser();
 
 	const pathname = usePathname();
 
@@ -203,12 +208,7 @@ export default function MiniDrawer() {
 							open={Boolean(anchorElUser)}
 							onClose={handleCloseUserMenu}
 						>
-							{user && (
-								<MenuItem>
-									<Typography>Hi {user.name}</Typography>
-								</MenuItem>
-							)}
-							{user ? <LogoutButton /> : <LoginButton />}
+							{children}
 						</Menu>
 					</div>
 				</Toolbar>

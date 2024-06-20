@@ -1,18 +1,15 @@
-import { MenuItem, Typography } from "@mui/material";
-import React from "react";
+"use client";
+import { MenuItem } from "@mui/material";
+import { signOut } from "next-auth/react";
 
 const LogoutButton = () => {
 	return (
-		<MenuItem>
-			<a
-				href="/api/auth/logout"
-				style={{
-					textDecoration: "none",
-					color: "inherit",
-				}}
-			>
-				<Typography textAlign="center">Logout</Typography>
-			</a>
+		<MenuItem
+			onClick={() => {
+				signOut();
+			}}
+		>
+			Logout
 		</MenuItem>
 	);
 };
