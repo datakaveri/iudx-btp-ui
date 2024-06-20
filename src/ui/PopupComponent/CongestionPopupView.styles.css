@@ -1,4 +1,8 @@
-.mapboxgl-popup-anchor-left {
-	height: 80px !important;
+.mapboxgl-popup-bottom-left {
+	height: 80px;
 	flex-direction: row;
+}
+
+.mapboxgl-popup-tip {
+	visibility: hidden;
 }

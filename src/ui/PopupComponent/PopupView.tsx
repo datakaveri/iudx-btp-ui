@@ -40,6 +40,10 @@ const PopupView = ({ popupInfo, setPopupInfo }: Props) => {
 
 	return (
 		<Popup
+			style={{
+				height: "500px",
+				maxWidth: "500px",
+			}}
 			anchor="left"
 			// ? Positioning pop-up to the right
 			longitude={+popupInfo.longitude + 0.00025}
@@ -63,10 +67,10 @@ const PopupView = ({ popupInfo, setPopupInfo }: Props) => {
 					<Tab label="Chart" {...a11yProps(1)} />
 				</Tabs>
 				<CustomTabPanel value={value} index={0}>
-					<VideoComponent s3Links={popupInfo.s3links} />
+					<TimeseriesComponent tsLinks={popupInfo.tsLinks} />
 				</CustomTabPanel>
 				<CustomTabPanel value={value} index={1}>
-					<TimeseriesComponent tsLinks={popupInfo.tsLinks} />
+					<VideoComponent s3Links={popupInfo.s3links} />
 				</CustomTabPanel>
 			</Box>
 		</Popup>

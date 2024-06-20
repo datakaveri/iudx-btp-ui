@@ -1,18 +1,15 @@
-import { MenuItem, Typography } from "@mui/material";
-import React from "react";
+"use client";
+import { MenuItem } from "@mui/material";
+import { signIn } from "next-auth/react";
 
 const LoginButton = () => {
 	return (
-		<MenuItem>
-			<a
-				style={{
-					textDecoration: "none",
-					color: "inherit",
-				}}
-				href="/api/auth/login"
-			>
-				<Typography textAlign="center">Login</Typography>
-			</a>
+		<MenuItem
+			onClick={() => {
+				signIn("keycloak");
+			}}
+		>
+			Login
 		</MenuItem>
 	);
 };
