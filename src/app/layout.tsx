@@ -3,8 +3,11 @@ import type { Metadata } from "next";
 import { theme } from "./MaterialTheme";
 import MiniDrawer from "../ui/MiniDrawer/MiniDrawer";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
+import NextTopLoader from "nextjs-toploader";
+
 import "./index.css";
 import StoreProvider from "./StoreProvider";
+import KeycloakComponent from "@/ui/keycloak/KeycloakComponent";
 
 export const metadata: Metadata = {
 	title: "AI Based Demand Forecasting",
@@ -35,19 +38,17 @@ export default function RootLayout({
 				}}
 			>
 				<StoreProvider>
-					<UserProvider>
-						<ThemeProvider theme={theme}>
-							<Box sx={{ display: "flex", paddingTop: "70px" }}>
-								<MiniDrawer />
-								<Box
-									component="main"
-									sx={{ flexGrow: 1, p: 3 }}
-								>
-									{children}
-								</Box>
+					<ThemeProvider theme={theme}>
+						<NextTopLoader color="white" showSpinner={false} />
+						<Box sx={{ display: "flex", paddingTop: "70px" }}>
+							<MiniDrawer>
+								<KeycloakComponent />
+							</MiniDrawer>
+							<Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+								{children}
 							</Box>
-						</ThemeProvider>
-					</UserProvider>
+						</Box>
+					</ThemeProvider>
 				</StoreProvider>
 			</body>
 		</html>

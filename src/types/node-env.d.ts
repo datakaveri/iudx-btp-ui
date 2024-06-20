@@ -4,5 +4,7 @@ declare namespace NodeJS {
 		KEYCLOAK_CLIENT_ID: string;
 		KEYCLOAK_CLIENT_SECRET: string;
 		KEYCLOAK_ISSUER: string;
+		TOKEN_URL: string;
+		TEMPORAL_QUERY_URL: string;
 	}
 }

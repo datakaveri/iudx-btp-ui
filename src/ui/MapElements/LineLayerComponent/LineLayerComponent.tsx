@@ -4,7 +4,11 @@ import { getLayerProps } from "./getLayerProps";
 import { PopupInfo } from "@/types/PopupInfo";
 import axios from "axios";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
-import { setTimestamps } from "@/lib/store/timeSliderSlice/timeSliderSlice";
+import {
+	ColorsListItem,
+	setTimeseriesColorsList,
+	setTimestamps,
+} from "@/lib/store/timeSliderSlice/timeSliderSlice";
 import chroma from "chroma-js";
 import { PathInterface } from "@/types/PathInterface";
 
@@ -15,9 +19,9 @@ interface Props {
 const LineLayerComponent = ({ popupInfo }: Props) => {
 	const [paths, setPaths] = useState<PathInterface>();
 	const [loading, setLoading] = useState(true);
-	const [colorsList, setColorsList] = useState<string[]>([]);
 
 	const timeValue = useAppSelector((state) => state.timeSlider.value);
+	const colorsList = useAppSelector((state) => state.timeSlider.colorsList);
 
 	const dispatch = useAppDispatch();
 
@@ -28,9 +32,14 @@ const LineLayerComponent = ({ popupInfo }: Props) => {
 				setPaths(res.data);
 				setLoading(false);
 				dispatch(setTimestamps(res.data.timestamps));
-				setColorsList([
-					...res.data.counts.map((_) => chroma.random().hex()),
-				]);
+				const timeSeriesColorsList: ColorsListItem[] = [];
+				res.data.counts[0].map((count, index) => {
+					timeSeriesColorsList.push({
+						color: chroma.random().hex(),
+						selected: true,
+					});
+				});
+				dispatch(setTimeseriesColorsList(timeSeriesColorsList));
 			});
 		}
 	}, [popupInfo.pathLinks, dispatch]);
@@ -40,7 +49,7 @@ const LineLayerComponent = ({ popupInfo }: Props) => {
 			{!loading ? (
 				<>
 					{paths?.geometries[timeValue].map((path, index) => {
-						return (
+						return colorsList[index].selected ? (
 							<Source
 								key={index}
 								id={index.toString()}
@@ -50,7 +59,7 @@ const LineLayerComponent = ({ popupInfo }: Props) => {
 								<Layer
 									id={index.toString()}
 									{...getLayerProps({
-										lineColors: colorsList[index],
+										lineColors: colorsList[index].color,
 										values: paths.counts[timeValue],
 										valueCounts:
 											paths.counts[timeValue][index],
@@ -63,10 +72,10 @@ const LineLayerComponent = ({ popupInfo }: Props) => {
 									})}
 								/>
 							</Source>
-						);
+						) : null;
 					})}
 					{paths?.geometries[timeValue].map((path, index) => {
-						return (
+						return colorsList[index].selected ? (
 							<Marker
 								anchor="right"
 								key={`countMarker-${index}`}
@@ -89,7 +98,7 @@ const LineLayerComponent = ({ popupInfo }: Props) => {
 									{paths.counts[timeValue][index]}
 								</span>
 							</Marker>
-						);
+						) : null;
 					})}
 				</>
 			) : null}
