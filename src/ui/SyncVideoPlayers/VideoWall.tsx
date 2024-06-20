@@ -9,7 +9,7 @@ import { VideoPlayerOptions } from "@/lib/sync-video-player/main";
 
 const VideoComponent = () => {
 	const [ids] = useState([
-		...[1, 2, 3, 4].map((_, index) => `video-${index}`),
+		...[0, 1, 2, 3, 4, 5].map((_, index) => `video-${index}`),
 	]);
 	const [addedContainers, setAddedContainers] = useState(false);
 
@@ -21,22 +21,37 @@ const VideoComponent = () => {
 				{
 					id: "#video-0",
 					initialSrc:
-						"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-15/Devasandra_Sgnl_JN_FIX_1_time_2024-05-15T07:30:02_003.mp4",
+						"https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ayyappa+Temple+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
 				},
 				{
 					id: "#video-1",
 					initialSrc:
-						"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-15/MS_Ramaiah_JN_FIX_1_time_2024-05-15T07:30:02_003.mp4",
+						"https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
 				},
 				{
 					id: "#video-2",
 					initialSrc:
-						"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-17/Isro_JN_FIX_02_time_2024-05-17T07:39:56_003.mp4",
+						"https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sty+Wll+Ldge+Fix+3+Time+2024-05-12T12-30-02+000.mp4",
 				},
 				{
 					id: "#video-3",
 					initialSrc:
-						"https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-18/SBI_Bnk_JN_FIX_1_time_2024-05-18T07:30:02_003.mp4",
+						"https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				},
+				{
+					id: "#video-4",
+					initialSrc:
+						"https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				},
+				{
+					id: "#video-5",
+					initialSrc:
+						"https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				},
+				{
+					id: "#video-6",
+					initialSrc:
+						"https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Kuvempu+Circle+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
 				},
 			],
 		});
