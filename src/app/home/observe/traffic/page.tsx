@@ -6,7 +6,7 @@ import {
 	Fragment,
 	MutableRefObject,
 	Suspense,
-	useCallback,
+	useEffect,
 	useMemo,
 	useRef,
 	useState,
@@ -17,7 +17,6 @@ import congestionData from "@/data/congestion.json";
 import Pin from "@/ui/MapElements/Pin/Pin";
 import { CongestionPopupInfo } from "@/types/CongestionPopupInfo";
 import CongestionPopupView from "@/ui/PopupComponent/CongestionPopupView";
-import { Coordinate } from "@/types/Coordinate";
 import MapResetButton from "@/ui/MapElements/MapResetButton/MapResetButton";
 import { onResetCallback } from "@/hooks/onReset";
 
@@ -41,24 +40,17 @@ export default function Page() {
 	const [congestionPopupInfo, setCongestionPopupInfo] =
 		useState<CongestionPopupInfo>(null);
 
-	const pins = useMemo(
-		() =>
-			congestionData.map((congestionElement, index) => (
-				<Marker
-					key={`trafficMarker-${index}`}
-					longitude={congestionElement.location.coordinates[1]}
-					latitude={congestionElement.location.coordinates[0]}
-					onClick={(e) => {
-						e.originalEvent.stopPropagation();
+	const [data, setData] = useState();
 
-						setCongestionPopupInfo(congestionElement);
-					}}
-				>
-					<Pin />
-				</Marker>
-			)),
-		[]
-	);
+	useEffect(() => {
+		const fetchData = async () => {
+			const result = await fetch("/api/getDataset");
+			const resJson = await result.json();
+			setData(resJson);
+		};
+
+		fetchData();
+	}, []);
 
 	return (
 		<Fragment>
@@ -71,7 +63,28 @@ export default function Page() {
 							coordinates
 						)}
 					/>
-					{pins}
+					{data ? (
+						data.results.map((congestionElement, index) => (
+							<Marker
+								key={`trafficMarker-${index}`}
+								longitude={
+									congestionElement.location.coordinates[1]
+								}
+								latitude={
+									congestionElement.location.coordinates[0]
+								}
+								onClick={(e) => {
+									e.originalEvent.stopPropagation();
+
+									setCongestionPopupInfo(congestionElement);
+								}}
+							>
+								<Pin />
+							</Marker>
+						))
+					) : (
+						<span>Loading...</span>
+					)}
 					{congestionPopupInfo !== null ? (
 						<CongestionPopupView
 							congestionPopupInfo={congestionPopupInfo}
