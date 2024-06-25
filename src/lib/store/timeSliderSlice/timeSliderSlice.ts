@@ -1,6 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 import cameraDataWithPathsAndTimeSeries from "@/data/cameraDataWithPathsAndTimeSeries.json";
+import { getColorsList } from "./getTimeSeriesColors";
 
 export interface ColorsListItem {
 	selected: boolean;
@@ -20,7 +21,7 @@ const initialState: TimeSliderState = {
 	timestamps: [],
 	value: 0,
 	playing: false,
-	colorsList: [],
+	colorsList: getColorsList(),
 };
 
 export const timeSliderSlice = createSlice({
