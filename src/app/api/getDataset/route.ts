@@ -29,7 +29,6 @@ export async function getBearerToken() {
 
 export async function GET() {
 	try {
-		const startTime = new Date().setHours(0, 0, 0, 0);
 		const options = {
 			method: "POST",
 			url: process.env.TEMPORAL_QUERY_URL,
