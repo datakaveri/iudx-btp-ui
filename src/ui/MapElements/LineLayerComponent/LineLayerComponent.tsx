@@ -32,14 +32,6 @@ const LineLayerComponent = ({ popupInfo }: Props) => {
 				setPaths(res.data);
 				setLoading(false);
 				dispatch(setTimestamps(res.data.timestamps));
-				const timeSeriesColorsList: ColorsListItem[] = [];
-				res.data.counts[0].map((count, index) => {
-					timeSeriesColorsList.push({
-						color: chroma.random().hex(),
-						selected: true,
-					});
-				});
-				dispatch(setTimeseriesColorsList(timeSeriesColorsList));
 			});
 		}
 	}, [popupInfo.pathLinks, dispatch]);

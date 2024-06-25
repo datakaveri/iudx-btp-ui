@@ -29,7 +29,6 @@ export async function getBearerToken() {
 
 export async function GET() {
 	try {
-		const startTime = new Date().setHours(0, 0, 0, 0);
 		const options = {
 			method: "POST",
 			url: process.env.TEMPORAL_QUERY_URL,
@@ -45,8 +44,8 @@ export async function GET() {
 				],
 				temporalQ: {
 					timerel: "during",
-					time: new Date(startTime).toISOString(),
-					endtime: new Date().toISOString(),
+					time: "2024-06-21T00:00:00+05:30",
+					endtime: "2024-06-21T12:47:00+05:30",
 					timeProperty: "observationDateTime",
 				},
 			},

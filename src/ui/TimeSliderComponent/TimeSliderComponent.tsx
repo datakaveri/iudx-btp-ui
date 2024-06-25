@@ -116,7 +116,15 @@ const TimeSliderComponent = () => {
 				</Grid>
 				<Grid item xs={3}>
 					<div className="timeValue">
-						<span>{timestamps[timeValue]}</span>
+						<span>
+							{new Date(timestamps[timeValue]).toLocaleString(
+								"en-IN",
+								{
+									dateStyle: "long",
+									timeStyle: "short",
+								}
+							)}
+						</span>
 					</div>
 				</Grid>
 			</Grid>
