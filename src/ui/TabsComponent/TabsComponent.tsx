@@ -12,19 +12,18 @@ function a11yProps(index: number) {
 	};
 }
 
-
 function toTitleCase(str) {
-    // Split the string by underscores
-    let words = str.split("_");
+	// Split the string by underscores
+	let words = str.split("_");
 
-    // Capitalize the first letter of each word and join them back
-    let titleCaseStr = words
-        .map((word) => {
-            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-        })
-        .join(" ");
+	// Capitalize the first letter of each word and join them back
+	let titleCaseStr = words
+		.map((word) => {
+			return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+		})
+		.join(" ");
 
-    return titleCaseStr;
+	return titleCaseStr;
 }
 
 interface Props {
@@ -37,7 +36,7 @@ const TabsComponent = ({ rootPath, routes }: Props) => {
 
 	return (
 		<Box sx={{ borderBottom: 0.5, borderColor: "divider" }}>
-			<Tabs aria-label="basic tabs example">
+			<Tabs value={`${pathname}`} aria-label="basic tabs example">
 				{routes.map((route, index) => (
 					<Link
 						className={
@@ -48,7 +47,11 @@ const TabsComponent = ({ rootPath, routes }: Props) => {
 						href={`/home/${rootPath}/${route}`}
 						key={index}
 					>
-						<Tab label={toTitleCase(route)} {...a11yProps(index)} />
+						<Tab
+							value={route}
+							label={toTitleCase(route)}
+							{...a11yProps(index)}
+						/>
 					</Link>
 				))}
 			</Tabs>

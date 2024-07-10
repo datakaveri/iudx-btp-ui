@@ -176,10 +176,7 @@ const TimeseriesComponent = ({ tsLinks }: Props) => {
 			<ReactEcharts
 				ref={eChartsRef}
 				option={option}
-				style={{
-					width: "700px",
-					height: "500px",
-				}}
+				style={{}}
 				className="echart"
 				onEvents={{
 					legendselectchanged: (params) => {

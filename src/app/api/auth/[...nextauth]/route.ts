@@ -1,3 +1,4 @@
+import axios from "axios";
 import NextAuth, { AuthOptions } from "next-auth";
 import KeycloakProvider from "next-auth/providers/keycloak";
 export const authOptions: AuthOptions = {
@@ -30,24 +31,25 @@ export const authOptions: AuthOptions = {
 				try {
 					console.log("refresh token callback");
 					// TODO: Write Keycloak refresh token callback function
-					const response = await fetch(
+
+					const response = await axios.post(
 						`${process.env.KEYCLOAK_ISSUER}/protocol/openid-connect/token`,
 						{
-							method: "POST",
+							grant_type: "refresh_token",
+							refresh_token: token.refreshToken,
+							client_id: process.env.KEYCLOAK_CLIENT_ID,
+						},
+						{
 							headers: {
 								"Content-Type":
 									"application/x-www-form-urlencoded",
 							},
-							body: new URLSearchParams({
-								grant_type: "refresh_token",
-								refresh_token: token.refreshToken,
-								client_id: process.env.KEYCLOAK_CLIENT_ID,
-								client_secret:
-									process.env.KEYCLOAK_CLIENT_SECRET,
-							}),
 						}
 					);
-					const responseTokens = await response.json();
+
+					console.log(`refresh token response` + response.data);
+
+					const responseTokens = response.data;
 					if (!response.ok) throw responseTokens;
 					return {
 						...token,
@@ -57,7 +59,8 @@ export const authOptions: AuthOptions = {
 								(responseTokens.expires_in as number)
 						),
 						refresh_token:
-							responseTokens.refresh_token ?? token.refresh_token,
+							responseTokens.refresh_token ??
+							responseTokens.refresh_token,
 					};
 				} catch (error) {
 					console.error("Error refreshing access token", error);

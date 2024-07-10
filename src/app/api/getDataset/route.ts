@@ -1,6 +1,8 @@
 import axios from "axios";
 import { authOptions } from "../auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
+import { getStartTime } from "../auth/[...nextauth]/getStartDate";
+import { getCurrentTime } from "../auth/[...nextauth]/getCurrentDate";
 
 export async function getBearerToken() {
 	const session = await getServerSession(authOptions);
@@ -44,8 +46,8 @@ export async function GET() {
 				],
 				temporalQ: {
 					timerel: "during",
-					time: '2024-06-21T00:00:00+05:30', 
-					endtime: '2024-06-21T12:47:00+05:30',
+					time: getStartTime(),
+					endtime: getCurrentTime(),
 					timeProperty: "observationDateTime",
 				},
 			},

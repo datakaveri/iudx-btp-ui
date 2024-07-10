@@ -1,4 +1,9 @@
-import { MAPBOX_API_KEY, MAPBOX_STYLE } from "@/environments/environments";
+import {
+	MAPBOX_API_KEY,
+	MAPBOX_STYLE,
+	OLA_API_KEY,
+	OLA_MAP_STYLE,
+} from "@/environments/environments";
 import { MutableRefObject, ReactNode } from "react";
 import Map, { MapRef } from "react-map-gl";
 import { calculateCentroid } from "@/utils/MapUtils/calculateCentroid";
@@ -6,7 +11,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 interface Props {
 	coordinates: number[][];
-	children: ReactNode;
+	children?: ReactNode;
 	mapRef?: MutableRefObject<MapRef | undefined>;
 }
 
