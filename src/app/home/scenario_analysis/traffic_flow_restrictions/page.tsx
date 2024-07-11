@@ -1,7 +1,16 @@
 import React from "react";
 
 const Page = () => {
-	return <div>Traffic Flow Restrictions</div>;
+	return (
+		<div>
+			<iframe
+				width="100%"
+				height="900px"
+				src="http://3.110.136.33:8000/abstreet.html"
+				// title="W3Schools Free Online Web Tutorials"
+			></iframe>
+		</div>
+	);
 };
 
 export default Page;
