@@ -21,9 +21,6 @@ export default function Page() {
 	const newData = data.geojsons.slice(0, 1000);
 	const newValues = data.values;
 
-	console.log("values");
-	console.log(newValues[0].slice(0, 1000));
-
 	return (
 		<div>
 			<MapboxComponent

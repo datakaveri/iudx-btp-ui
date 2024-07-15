@@ -7,8 +7,14 @@ import { MAPBOX_STYLES } from "@/lib/sync-video-player/constants";
 import { useAppSelector } from "@/lib/store/hooks";
 import TimeSliderComponent from "@/app/home/forecast/short_term_traffic_flow/TimeSliderComponent";
 
-import data from "@/data/timed_predictions.json";
+import timed_predictions from "@/data/timed_predictions_NEW.json";
+import timed_truth from "@/data/timed_ground_truth_NEW.json";
 import TopLabel from "./TopLabel";
+import { getLayerProps } from "../../forecast/short_term_traffic_flow/getLayerProps";
+import {
+	computeMean,
+	computeStandardDeviation,
+} from "../../forecast/short_term_traffic_flow/computeMeanAndStandardDeviation";
 
 export type Mode = "side-by-side" | "split-screen";
 
@@ -53,7 +59,7 @@ const SideBySide = () => {
 
 	const [activeMap, setActiveMap] = useState<"left" | "right">("left");
 	const width = typeof window === "undefined" ? 100 : window.innerWidth;
-	const [mode, setMode] = useState<Mode>("split-screen");
+	const [mode, setMode] = useState<Mode>("side-by-side");
 	const mapStyle = useAppSelector((state) => state.mapStyle.value);
 
 	const timeValue = useAppSelector((state) => state.timeSlider.value);
@@ -82,7 +88,16 @@ const SideBySide = () => {
 		};
 	}, [width, mode]);
 
-	const newTimestamps = data.timestamps;
+	const timed_predictions_timestamps = timed_predictions.timestamps;
+
+	const timed_predictions_geojsons = timed_predictions.geojsons.slice(
+		0,
+		1000
+	);
+	const timed_predictions_values = timed_predictions.values;
+
+	const timed_truth_geojsons = timed_truth.geojsons.slice(0, 1000);
+	const timed_truth_values = timed_truth.values;
 
 	return (
 		<>
@@ -105,7 +120,43 @@ const SideBySide = () => {
 					}
 					mapboxAccessToken={MAPBOX_API_KEY}
 				>
-					<TopLabel value={newTimestamps[timeValue]} />
+					<TopLabel value={timed_predictions_timestamps[timeValue]} />
+
+					{timed_truth_geojsons.map((feature, index) => {
+						return (
+							<Source
+								key={index.toString()}
+								id={`new_loop-${index.toString()}`}
+								type="geojson"
+								data={feature.geometry}
+							>
+								<Layer
+									id={`new_loop-${index.toString()}`}
+									{...getLayerProps(
+										timed_predictions_values[timeValue][
+											index
+										],
+										Math.max(
+											...timed_predictions_values[
+												timeValue
+											]
+										),
+										Math.min(
+											...timed_predictions_values[
+												timeValue
+											]
+										),
+										computeMean(
+											timed_predictions_values[timeValue]
+										),
+										computeStandardDeviation(
+											timed_predictions_values[timeValue]
+										)
+									)}
+								/>
+							</Source>
+						);
+					})}
 				</Map>
 				<Map
 					maxZoom={14}
@@ -120,10 +171,48 @@ const SideBySide = () => {
 					}
 					mapboxAccessToken={MAPBOX_API_KEY}
 				>
-					<TopLabel value={addHour(newTimestamps[timeValue])} />
+					<TopLabel
+						value={addHour(timed_predictions_timestamps[timeValue])}
+					/>
+
+					{timed_predictions_geojsons.map((feature, index) => {
+						return (
+							<Source
+								key={index.toString()}
+								id={`new_loop-${index.toString()}`}
+								type="geojson"
+								data={feature.geometry}
+							>
+								<Layer
+									id={`new_loop-${index.toString()}`}
+									{...getLayerProps(
+										timed_predictions_values[timeValue][
+											index
+										],
+										Math.max(
+											...timed_predictions_values[
+												timeValue
+											]
+										),
+										Math.min(
+											...timed_predictions_values[
+												timeValue
+											]
+										),
+										computeMean(
+											timed_predictions_values[timeValue]
+										),
+										computeStandardDeviation(
+											timed_predictions_values[timeValue]
+										)
+									)}
+								/>
+							</Source>
+						);
+					})}
 				</Map>
 			</div>
-			<TimeSliderComponent timestamps={newTimestamps} />
+			<TimeSliderComponent timestamps={timed_predictions_timestamps} />
 		</>
 	);
 };
