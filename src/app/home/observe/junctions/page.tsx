@@ -16,7 +16,8 @@ import {
 	NavigationControl,
 	ScaleControl,
 } from "react-map-gl";
-import Pin from "@/ui/MapElements/Pin/Pin";
+// import Pin from "@/ui/MapElements/Pin/Pin";
+import VideoCameraFrontIcon from "@mui/icons-material/VideoCameraFront";
 import PopupComponent from "@/ui/PopupComponent/PopupView";
 import cameraDataWithPathsAndTimeSeries from "@/data/cameraDataWithPathsAndTimeSeries.json";
 import LineLayerComponent from "@/ui/MapElements/LineLayerComponent/LineLayerComponent";
@@ -99,7 +100,13 @@ const page = () => {
 						);
 					}}
 				>
-					<Pin />
+					<VideoCameraFrontIcon
+						color="error"
+						sx={{
+							cursor: "pointer",
+							width: "20px",
+						}}
+					/>
 				</Marker>
 			)),
 		[cameraLocations, onSelectCity, selectedDateFromAppSelector]

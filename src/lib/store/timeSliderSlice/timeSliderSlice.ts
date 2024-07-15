@@ -6,6 +6,7 @@ import { getColorsList } from "./getTimeSeriesColors";
 export interface ColorsListItem {
 	selected: boolean;
 	color: string;
+	path: string;
 }
 
 interface TimeSliderState {

@@ -1,12 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import timeSliderReducer from "./timeSliderSlice/timeSliderSlice";
 import brushReducer from "@/lib/store/brushSlice/brushSlice";
+import mapStyleReducer from "@/lib/store/mapStyleSlice/mapStyleSlice";
 
 export const makeStore = () => {
 	return configureStore({
 		reducer: {
 			timeSlider: timeSliderReducer,
 			brush: brushReducer,
+			mapStyle: mapStyleReducer,
 		},
 	});
 };

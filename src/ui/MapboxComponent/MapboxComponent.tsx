@@ -8,6 +8,9 @@ import { MutableRefObject, ReactNode } from "react";
 import Map, { MapRef } from "react-map-gl";
 import { calculateCentroid } from "@/utils/MapUtils/calculateCentroid";
 import "mapbox-gl/dist/mapbox-gl.css";
+import MapSelector from "@/ui/MapSelector/MapSelector";
+import { MAPBOX_STYLES } from "@/lib/sync-video-player/constants";
+import { useAppSelector } from "@/lib/store/hooks";
 
 interface Props {
 	coordinates: number[][];
@@ -16,6 +19,8 @@ interface Props {
 }
 
 const MapboxComponent = ({ coordinates, children, mapRef }: Props) => {
+	const mapStyle = useAppSelector((state) => state.mapStyle.value);
+
 	return (
 		<Map
 			mapboxAccessToken={MAPBOX_API_KEY}
@@ -26,7 +31,7 @@ const MapboxComponent = ({ coordinates, children, mapRef }: Props) => {
 				bearing: 0,
 				pitch: 0,
 			}}
-			mapStyle={MAPBOX_STYLE}
+			mapStyle={MAPBOX_STYLES.find((el) => el.value === mapStyle)?.url}
 			ref={mapRef}
 			style={{
 				width: "100%",
@@ -35,6 +40,7 @@ const MapboxComponent = ({ coordinates, children, mapRef }: Props) => {
 				padding: 0,
 			}}
 		>
+			<MapSelector />
 			{children}
 		</Map>
 	);

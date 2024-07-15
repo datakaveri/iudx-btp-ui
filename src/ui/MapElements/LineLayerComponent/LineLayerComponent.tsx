@@ -87,6 +87,7 @@ const LineLayerComponent = ({ popupInfo }: Props) => {
 										backgroundColor: "white",
 									}}
 								>
+									{colorsList[index].path},{" "}
 									{paths.counts[timeValue][index]}
 								</span>
 							</Marker>
