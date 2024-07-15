@@ -20,7 +20,6 @@ interface Props {
 const TimeSliderComponent = ({ timestamps }: Props) => {
 	const timeValue = useAppSelector((state) => state.timeSlider.value);
 	const playingStatus = useAppSelector((state) => state.timeSlider.playing);
-	// const timestamps = useAppSelector((state) => state.timeSlider.timestamps);
 
 	const min: number = 0;
 	const max: number = timestamps.length - 1;
@@ -121,16 +120,7 @@ const TimeSliderComponent = ({ timestamps }: Props) => {
 					</Grid>
 					<Grid item xs={3}>
 						<div className="timeValue">
-							<span>
-								{/* {new Date(timestamps[timeValue]).toLocaleString(
-									"en-IN",
-									{
-										dateStyle: "long",
-										timeStyle: "short",
-									}
-								)} */}
-								{timestamps[timeValue]}
-							</span>
+							<span>{timestamps[timeValue]}</span>
 						</div>
 					</Grid>
 				</Grid>

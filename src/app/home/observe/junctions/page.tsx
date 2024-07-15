@@ -5,6 +5,7 @@ import React, {
 	MutableRefObject,
 	Suspense,
 	useCallback,
+	useEffect,
 	useMemo,
 	useRef,
 	useState,
@@ -31,6 +32,11 @@ import { useAppSelector } from "@/lib/store/hooks";
 import { selectedDate } from "@/lib/store/timeSliderSlice/timeSliderSlice";
 import { onResetCallback } from "@/hooks/onReset";
 import { Coordinate } from "@/types/Coordinate";
+import IIScLoopLayer from "@/ui/MapElements/IIScLoopLayer/IIScLoopLayer";
+import { CongestionPopupInfo } from "@/types/CongestionPopupInfo";
+import CongestionPopupView from "@/ui/PopupComponent/CongestionPopupView";
+import Pin from "@/ui/MapElements/Pin/Pin";
+import LegendComponent from "./LegendComponent";
 
 const page = () => {
 	const coordinates: number[][] = [];
@@ -101,7 +107,7 @@ const page = () => {
 					}}
 				>
 					<VideoCameraFrontIcon
-						color="error"
+						color="info"
 						sx={{
 							cursor: "pointer",
 							width: "20px",
@@ -112,11 +118,31 @@ const page = () => {
 		[cameraLocations, onSelectCity, selectedDateFromAppSelector]
 	);
 
+	// ? Congestion pop up
+	const [congestionPopupInfo, setCongestionPopupInfo] =
+		useState<CongestionPopupInfo>(null);
+
+	const [congestionData, setCongestionData] = useState();
+
+	useEffect(() => {
+		const fetchData = async () => {
+			const result = await fetch("/api/getDataset");
+			const resJson = await result.json();
+			setCongestionData(resJson);
+		};
+
+		fetchData();
+	}, []);
+
 	return (
 		<Fragment>
 			<Typography variant="h5">Traffic Counts</Typography>
 			<Suspense fallback={<>Loading...</>}>
-				<MapboxComponent coordinates={coordinates} mapRef={mapRef}>
+				<MapboxComponent
+					coordinates={coordinates}
+					mapRef={mapRef}
+					legend={<LegendComponent />}
+				>
 					<MapResetButton
 						onReset={onResetCallback(
 							setPopupInfo,
@@ -131,6 +157,8 @@ const page = () => {
 
 					{displayPins && pins}
 
+					{displayPins && <IIScLoopLayer />}
+
 					{popupInfo && (
 						<>
 							<PopupComponent
@@ -140,6 +168,41 @@ const page = () => {
 							<LineLayerComponent popupInfo={popupInfo} />
 						</>
 					)}
+
+					{congestionData ? (
+						congestionData.results.map(
+							(congestionElement, index) => (
+								<Marker
+									key={`trafficMarker-${index}`}
+									longitude={
+										congestionElement.location
+											.coordinates[1]
+									}
+									latitude={
+										congestionElement.location
+											.coordinates[0]
+									}
+									onClick={(e) => {
+										e.originalEvent.stopPropagation();
+
+										setCongestionPopupInfo(
+											congestionElement
+										);
+									}}
+								>
+									<Pin />
+								</Marker>
+							)
+						)
+					) : (
+						<span>Loading...</span>
+					)}
+					{congestionPopupInfo !== null ? (
+						<CongestionPopupView
+							congestionPopupInfo={congestionPopupInfo}
+							setCongestionPopupInfo={setCongestionPopupInfo}
+						/>
+					) : null}
 				</MapboxComponent>
 			</Suspense>
 

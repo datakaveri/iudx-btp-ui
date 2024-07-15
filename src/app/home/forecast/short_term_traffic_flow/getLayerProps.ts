@@ -1,10 +1,16 @@
 import chroma from "chroma-js";
 import { LayerProps } from "react-map-gl";
 
-export const getLayerProps = (value: number) => {
+export const getLayerProps = (
+	value: number,
+	max: number,
+	min: number,
+	mean: number,
+	sd: number
+) => {
 	const scale = chroma
-		.scale(["red", "yellow", "orange", "green"])
-		.domain([0, 5, 20, 100]);
+		.scale(["green", "yellow", "orange", "red"])
+		.domain([min, mean - 0.625 * sd, mean, mean + 0.625 * sd, max]);
 	const layerStyle: LayerProps = {
 		type: "line",
 		source: "my_data",

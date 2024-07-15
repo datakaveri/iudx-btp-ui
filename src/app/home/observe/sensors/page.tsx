@@ -1,3 +1,5 @@
+import SideBySide from "./side-by-side";
+
 export default function Page() {
-	return <div>Sensors</div>;
+	return <SideBySide />;
 }

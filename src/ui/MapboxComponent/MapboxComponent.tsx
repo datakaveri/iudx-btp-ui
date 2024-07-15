@@ -15,10 +15,11 @@ import { useAppSelector } from "@/lib/store/hooks";
 interface Props {
 	coordinates: number[][];
 	children?: ReactNode;
+	legend?: ReactNode;
 	mapRef?: MutableRefObject<MapRef | undefined>;
 }
 
-const MapboxComponent = ({ coordinates, children, mapRef }: Props) => {
+const MapboxComponent = ({ coordinates, children, mapRef, legend }: Props) => {
 	const mapStyle = useAppSelector((state) => state.mapStyle.value);
 
 	return (
@@ -42,6 +43,7 @@ const MapboxComponent = ({ coordinates, children, mapRef }: Props) => {
 		>
 			<MapSelector />
 			{children}
+			{legend}
 		</Map>
 	);
 };

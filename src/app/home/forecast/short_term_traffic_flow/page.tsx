@@ -7,6 +7,12 @@ import { Layer, Source } from "react-map-gl";
 import { getLayerProps } from "./getLayerProps";
 import TimeSliderComponent from "./TimeSliderComponent";
 import { useAppSelector } from "@/lib/store/hooks";
+import {
+	computeMean,
+	computeStandardDeviation,
+} from "./computeMeanAndStandardDeviation";
+import { Typography } from "@mui/material";
+import LegendComponent from "./LegendComponent";
 
 export default function Page() {
 	const newTimestamps = data.timestamps;
@@ -15,12 +21,21 @@ export default function Page() {
 	const newData = data.geojsons.slice(0, 1000);
 	const newValues = data.values;
 
-	console.log(newTimestamps);
+	console.log("values");
+	console.log(newValues[0].slice(0, 1000));
 
 	return (
 		<div>
 			<MapboxComponent
 				coordinates={[[13.021773235458033, 77.57145036562521]]}
+				legend={
+					<LegendComponent
+						min={Math.min(...newValues[timeValue])}
+						max={Math.max(...newValues[timeValue])}
+						mean={computeMean(newValues[timeValue])}
+						std={computeStandardDeviation(newValues[timeValue])}
+					/>
+				}
 			>
 				{newData.map((feature, index) => {
 					return (
@@ -32,7 +47,15 @@ export default function Page() {
 						>
 							<Layer
 								id={`new_loop-${index.toString()}`}
-								{...getLayerProps(newValues[timeValue][index])}
+								{...getLayerProps(
+									newValues[timeValue][index],
+									Math.max(...newValues[timeValue]),
+									Math.min(...newValues[timeValue]),
+									computeMean(newValues[timeValue]),
+									computeStandardDeviation(
+										newValues[timeValue]
+									)
+								)}
 							/>
 						</Source>
 					);

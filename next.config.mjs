@@ -10,7 +10,7 @@ const nextConfig = {
 			},
 			{
 				source: "/home/observe",
-				destination: "/home/observe/traffic",
+				destination: "/home/observe/junctions",
 				permanent: false,
 			},
 			{

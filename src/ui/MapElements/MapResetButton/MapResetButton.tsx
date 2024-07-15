@@ -7,15 +7,13 @@ interface Props {
 }
 const MapResetButton = ({ onReset }: Props) => {
 	return (
-		<div>
-			<IconButton
-				className={styles.MapResetButton}
-				onClick={onReset}
-				color="inherit"
-			>
-				<RestartAltIcon className={styles.MapResetIcon} />
-			</IconButton>
-		</div>
+		<IconButton
+			className={styles.MapResetButton}
+			onClick={onReset}
+			color="inherit"
+		>
+			<RestartAltIcon className={styles.MapResetIcon} />
+		</IconButton>
 	);
 };
 
