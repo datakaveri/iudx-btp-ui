@@ -8,6 +8,7 @@ import NextTopLoader from "nextjs-toploader";
 import "./index.css";
 import StoreProvider from "./StoreProvider";
 import KeycloakComponent from "@/ui/keycloak/KeycloakComponent";
+import Footer from "@/ui/Footer/Footer";
 
 export const metadata: Metadata = {
 	title: "AI Based Demand Forecasting",
@@ -50,6 +51,7 @@ export default function RootLayout({
 						</Box>
 					</ThemeProvider>
 				</StoreProvider>
+				{/* <Footer /> */}
 			</body>
 		</html>
 	);

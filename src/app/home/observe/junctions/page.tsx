@@ -20,7 +20,7 @@ import {
 // import Pin from "@/ui/MapElements/Pin/Pin";
 import VideoCameraFrontIcon from "@mui/icons-material/VideoCameraFront";
 import PopupComponent from "@/ui/PopupComponent/PopupView";
-import cameraDataWithPathsAndTimeSeries from "@/data/cameraDataWithPathsAndTimeSeries.json";
+import cameraDataWithPathsAndTimeSeries from "@/data/data_outs_july_16_new.json";
 import LineLayerComponent from "@/ui/MapElements/LineLayerComponent/LineLayerComponent";
 import TimeSliderComponent from "@/ui/TimeSliderComponent/TimeSliderComponent";
 import { Typography } from "@mui/material";
@@ -139,7 +139,7 @@ const page = () => {
 			<Typography variant="h5">Traffic Counts</Typography>
 			<Suspense fallback={<>Loading...</>}>
 				<MapboxComponent
-					coordinates={coordinates}
+					coordinates={[[13.0114048607646, 77.56908283576961]]}
 					mapRef={mapRef}
 					legend={<LegendComponent />}
 				>
@@ -147,7 +147,7 @@ const page = () => {
 						onReset={onResetCallback(
 							setPopupInfo,
 							mapRef,
-							coordinates,
+							[[13.0114048607646, 77.56908283576961]],
 							setDisplayPins
 						)}
 					/>

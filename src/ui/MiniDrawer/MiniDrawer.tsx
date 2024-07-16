@@ -17,6 +17,9 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import iudx_logo from "./iudx-logo.png";
+import iitk_logo from "./iitk.png";
+import iisc_logo from "./iisc_logo.png";
+
 import { ReactNode, Suspense, useState } from "react";
 import SsidChartIcon from "@mui/icons-material/SsidChart";
 import Link from "next/link";
@@ -182,7 +185,44 @@ export default function MiniDrawer({ children }: Props) {
 							alignItems: "center",
 						}}
 					>
-						<Image src={iudx_logo} alt="iudx-logo" width={100} />
+						<div>
+							<Link href={`/home`}>
+								<Image
+									style={{
+										marginRight: "30px",
+										marginTop: "5px",
+										marginBottom: "5px",
+									}}
+									src={iudx_logo}
+									alt="iudx-logo"
+									width={100}
+								/>
+							</Link>
+							<Link href={`/home`}>
+								<Image
+									style={{
+										marginRight: "30px",
+										marginTop: "5px",
+										marginBottom: "5px",
+									}}
+									src={iisc_logo}
+									alt="iisc-logo"
+									width={50}
+								/>
+							</Link>
+							<Link href={`/home`}>
+								<Image
+									style={{
+										marginTop: "5px",
+										marginBottom: "5px",
+										marginRight: "30px",
+									}}
+									src={iitk_logo}
+									alt="iitk-logo"
+									width={50}
+								/>
+							</Link>
+						</div>
 						<Tooltip title="Profile">
 							<IconButton
 								color="inherit"

@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../store";
-import cameraDataWithPathsAndTimeSeries from "@/data/cameraDataWithPathsAndTimeSeries.json";
+import cameraDataWithPathsAndTimeSeries from "@/data/data_outs_july_16.json";
 import { getColorsList } from "./getTimeSeriesColors";
 
 export interface ColorsListItem {

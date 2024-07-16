@@ -1,0 +1,1220 @@
+{
+    "2024-07-10": {
+        "11TH_CRS_JN_NR_CANARA_BANK_MALLESHWARAM": {
+            "name": "11th_Crs_Nr_Canara_bnk_FIX_1",
+            "junctionname": "11TH_CRS_JN_NR_CANARA_BANK_MALLESHWARAM",
+            "latitude": "13.001834",
+            "longitude": "77.572236",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/11th_Crs_Nr_Canara_bnk_FIX_1_time_2024-07-10T08:59:26_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "11TH_CRS_WEST_PARK_RD": {
+            "name": "11th_Crs_Wst_Prk_Rd_FIX_2",
+            "junctionname": "11TH_CRS_WEST_PARK_RD",
+            "latitude": "13.001973",
+            "longitude": "77.57012400000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/11th_Crs_Wst_Prk_Rd_FIX_2_time_2024-07-10T08:59:24_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "17TH_CRS_OPP_JALA_GANGAMMA_TMPL": {
+            "name": "17th_Crs_opp_Jala_Gangamma_Tmpl_PTZ_1",
+            "junctionname": "17TH_CRS_OPP_JALA_GANGAMMA_TMPL",
+            "latitude": "13.007135",
+            "longitude": "77.573953",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/17th_Crs_opp_Jala_Gangamma_Tmpl_PTZ_1_time_2024-07-10T08:59:32_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "18TH_CRS_AYYAPPASWAMY_TEMPLE": {
+            "name": "18th_Crs_Ayyappaswmy_Tmpl_FIX_2",
+            "junctionname": "18TH_CRS_AYYAPPASWAMY_TEMPLE",
+            "latitude": "13.008091",
+            "longitude": "77.571906",
+            "s3links": [
+              "https://safecityvideos.s3.ap-south-1.amazonaws.com/speeds/Ramaiah_Bus_Stop_Fix_1+Speeds.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "18TH_CRS_BUS_STOP_MARGOSA_RD_MALLESHWRAM": {
+            "name": "18th_Crs_Bus_Stop_FIX_2",
+            "junctionname": "18TH_CRS_BUS_STOP_MARGOSA_RD_MALLESHWRAM",
+            "latitude": "13.0114048607646",
+            "longitude": "77.56908283576961",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/18th_Crs_Bus_Stop_FIX_2_time_2024-07-10T08:59:22_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "18TH_CRS_BUS_STP_SAMPIGE_RD": {
+            "name": "18th_Crs_BsStp_JN_FIX_2",
+            "junctionname": "18TH_CRS_BUS_STP_SAMPIGE_RD",
+            "latitude": "13.009179",
+            "longitude": "77.571197",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/18th_Crs_BsStp_JN_FIX_2_time_2024-07-10T08:59:26_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "18TH_CRS_ENT_PNT_FRM_CAUVERY_JN": {
+            "name": "18thCrs_EntyPnt_FIX_2",
+            "junctionname": "18TH_CRS_ENT_PNT_FRM_CAUVERY_JN",
+            "latitude": "13.004305",
+            "longitude": "77.58246200000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/18thCrs_EntyPnt_FIX_2_time_2024-07-10T08:59:20_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "1ST_CRS_G_D_PARK_NR_CHOWDAIAH_MEMORIAL_HALL": {
+            "name": "1st_Crs_GDPrk_PTZ_1",
+            "junctionname": "1ST_CRS_G_D_PARK_NR_CHOWDAIAH_MEMORIAL_HALL",
+            "latitude": "13.00607",
+            "longitude": "77.57543200000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/1st_Crs_GDPrk_PTZ_1_time_2024-07-10T08:59:25_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "1ST_MAIN_ASHWATHA_NAGAR": {
+            "name": "1st_Mn_Ashwatha_Ngr_FIX_1",
+            "junctionname": "1ST_MAIN_ASHWATHA_NAGAR",
+            "latitude": "13.026473",
+            "longitude": "77.580089",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/1st_Mn_Ashwatha_Ngr_FIX_1_time_2024-07-10T08:59:31_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "1ST_MAIN_RD_FRANKS_RD": {
+            "name": "1st_Mn_Rd_Frnks_FIX_2",
+            "junctionname": "1ST_MAIN_RD_FRANKS_RD",
+            "latitude": "13.047722",
+            "longitude": "77.612291",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/1st_Mn_Rd_Frnks_FIX_2_time_2024-07-10T08:59:21_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "2ND_MAIN_ASHWATHA_NAGAR": {
+            "name": "1st_Mn_Ashwatha_Ngr_FIX_2",
+            "junctionname": "2ND_MAIN_ASHWATHA_NAGAR",
+            "latitude": "13.026473",
+            "longitude": "77.580089",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/1st_Mn_Ashwatha_Ngr_FIX_2_time_2024-07-10T08:59:17_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "2ND_MAIN_BHND_DEVASANDRA_BUS_STAND": {
+            "name": "2nd_Mn_Bhnd_Devasandhra_BsStp_FIX_3",
+            "junctionname": "2ND_MAIN_BHND_DEVASANDRA_BUS_STAND",
+            "latitude": "13.035844",
+            "longitude": "77.566554",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/2nd_Mn_Bhnd_Devasandhra_BsStp_FIX_1_time_2024-07-10T08:59:31_000_rain.mp4",
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/2nd_Mn_Bhnd_Devasandhra_BsStp_FIX_2_time_2024-07-10T08:59:27_000_rain.mp4",
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/2nd_Mn_Bhnd_Devasandhra_BsStp_FIX_3_time_2024-07-10T08:59:18_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "3RD_MAIN_ASHWATHA_NAGAR": {
+            "name": "1st_Mn_Ashwatha_Ngr_PTZ_1",
+            "junctionname": "3RD_MAIN_ASHWATHA_NAGAR",
+            "latitude": "13.026473",
+            "longitude": "77.580089",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/1st_Mn_Ashwatha_Ngr_PTZ_1_time_2024-07-10T08:59:27_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "4TH_MAIN_9TH_CROSS_MALLESHWARAM": {
+            "name": "4th_Main_9th_Crs_FIX_2",
+            "junctionname": "4TH_MAIN_9TH_CROSS_MALLESHWARAM",
+            "latitude": "13.000152",
+            "longitude": "77.568406",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/4th_Main_9th_Crs_FIX_1_time_2024-07-10T08:59:24_000_rain.mp4",
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/4th_Main_9th_Crs_FIX_1_time_2024-07-10T08:59:24_000_rain.mp4",
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/4th_Main_9th_Crs_FIX_2_time_2024-07-10T08:59:27_000_rain.mp4",
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/4th_Main_9th_Crs_FIX_2_time_2024-07-10T08:59:27_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "80_FEET_RD_POOJARI_LAYT_RMV_2ND_STG": {
+            "name": "80ft_Rd_RMV_2nd_Stage_FIX_4",
+            "junctionname": "80_FEET_RD_POOJARI_LAYT_RMV_2ND_STG",
+            "latitude": "13.027344",
+            "longitude": "77.576865",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/80ft_Rd_RMV_2nd_Stage_FIX_4_time_2024-07-10T08:59:26_000_rain.mp4"
+            ],
+            "pathLinks": {
+                "2024-07-10": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/paths/Site 2 Camera 5849        80ft_Rd_RMV_2nd_Stage_FIX_1        80_FEET_RD_POOJARI_LAYT_RMV_2ND_STG 6th May 2024.json"
+            },
+            "tsLinks": {
+                "2024-07-10": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/timeseries/Site 2 Camera 5849        80ft_Rd_RMV_2nd_Stage_FIX_1        80_FEET_RD_POOJARI_LAYT_RMV_2ND_STG 6th May 2024.json"
+            }
+        },
+        "8TH_CRS_NEAR_LPO_GROUND_SADASHIVNAGAR": {
+            "name": "8th_Crs_Nr_LPO_Grnd_PTZ_1",
+            "junctionname": "8TH_CRS_NEAR_LPO_GROUND_SADASHIVNAGAR",
+            "latitude": "13.004705",
+            "longitude": "7757912",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "8TH_MAIN_7TH_CROSS_MALLESHWARAM": {
+            "name": "8th_Main_7th_Crs_PTZ_1",
+            "junctionname": "8TH_MAIN_7TH_CROSS_MALLESHWARAM",
+            "latitude": "12.998159",
+            "longitude": "77.56567",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/8th_Main_7th_Crs_PTZ_1_time_2024-07-10T08:59:25_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "AIR_FORCE_SCHOOL": {
+            "name": "Air_Frc_School_FIX_2",
+            "junctionname": "AIR_FORCE_SCHOOL",
+            "latitude": "13.014826",
+            "longitude": "77.57952400000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Air_Frc_School_FIX_2_time_2024-07-10T08:59:27_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "AMRUTHAHALLI_GATE_SIGNAL": {
+            "name": "Amruthahalli_Gat_Sgnl_FIX_2",
+            "junctionname": "AMRUTHAHALLI_GATE_SIGNAL",
+            "latitude": "13.05579",
+            "longitude": "77.593743",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Amruthahalli_Gat_Sgnl_FIX_2_time_2024-07-10T08:59:25_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "ASWATHNAGAR_JUNCATION": {
+            "name": "Aswathnagar_PTZ_1",
+            "junctionname": "ASWATHNAGAR_JUNCATION",
+            "latitude": "13.027391",
+            "longitude": "77.579187",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Aswathnagar_PTZ_1_time_2024-07-10T08:59:21_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "AYYAPPA_TEMPLE": {
+            "name": "Ayyappa_Temple_FIX_3",
+            "junctionname": "AYYAPPA_TEMPLE",
+            "latitude": "13.023551",
+            "longitude": "77.572177",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Ayyappa_Temple_FIX_3_time_2024-07-10T08:59:36_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "A_BLOCK_SERVICE_RD_AND_RAILWAY_PARALLEL_RD_JN": {
+            "name": "A_Blck_Service_Rd_FIX_2",
+            "junctionname": "A_BLOCK_SERVICE_RD_AND_RAILWAY_PARALLEL_RD_JN",
+            "latitude": "13.008743",
+            "longitude": "77.55506800000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/A_Blck_Service_Rd_FIX_2_time_2024-07-10T08:59:22_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "A_BLOCK_SERVICE_RD_VIVEKANANDA_COLLEGE": {
+            "name": "A_Blck_Srvc_Rd_VK_CLG_FIX_3",
+            "junctionname": "A_BLOCK_SERVICE_RD_VIVEKANANDA_COLLEGE",
+            "latitude": "13.008743",
+            "longitude": "77.55506800000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/A_Blck_Srvc_Rd_VK_CLG_FIX_3_time_2024-07-10T08:59:17_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "BALLARY_ROAD_TARALUBALU_RD_JN": {
+            "name": "Ballary_Rd_FIX_2",
+            "junctionname": "BALLARY_ROAD_TARALUBALU_RD_JN",
+            "latitude": "13.01728",
+            "longitude": "77.58411700000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Ballary_Rd_FIX_2_time_2024-07-10T08:59:33_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "BALMURI_GANESHA_TMPL_C_CRS_BASAPPA_GRDN": {
+            "name": "Balmuri_Gansh_Temple_FIX_2",
+            "junctionname": "BALMURI_GANESHA_TMPL_C_CRS_BASAPPA_GRDN",
+            "latitude": "12.995802",
+            "longitude": "77.577184",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Balmuri_Gansh_Temple_FIX_2_time_2024-07-10T08:59:21_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "BASHAM_CIRLE_SANKYE_ROAD": {
+            "name": "Basham_Crcl_Sankye_Rd_HD_1",
+            "junctionname": "BASHAM_CIRLE_SANKYE_ROAD",
+            "latitude": "13.006086",
+            "longitude": "77.57866199999999",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "BASHYAM_CIRCLE_SHIVAJI_STATUE": {
+            "name": "Bashyam_Crcl_Shivaji_Statue_FIX_3",
+            "junctionname": "BASHYAM_CIRCLE_SHIVAJI_STATUE",
+            "latitude": "13.006875",
+            "longitude": "77.57895600000001",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "BBMP_GRLS_CLG_HIGH_SCHL_RLY_RD": {
+            "name": "BBMP_Grls_Clg_RlyRd_FIX_2",
+            "junctionname": "BBMP_GRLS_CLG_HIGH_SCHL_RLY_RD",
+            "latitude": "12.998013",
+            "longitude": "77.56487199999999",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/BBMP_Grls_Clg_RlyRd_FIX_2_time_2024-07-10T08:59:34_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "BDA_UNDER_PASS": {
+            "name": "BDA_Under_Pass_FIX_2",
+            "junctionname": "BDA_UNDER_PASS",
+            "latitude": "12.997685",
+            "longitude": "77.58423999999999",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/BDA_Under_Pass_FIX_2_time_2024-07-10T08:59:26_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "BEL_HEAD_OFFICE": {
+            "name": "BEL_Hd_Offfc_FIX_2",
+            "junctionname": "BEL_HEAD_OFFICE",
+            "latitude": "13.04080805",
+            "longitude": "77.61681105",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/BEL_Hd_Offfc_FIX_2_time_2024-07-10T08:59:20_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "BHASHYAM_CIRCLE_VIEW_1": {
+            "name": "Bhashyam_Circle_HD_1",
+            "junctionname": "BHASHYAM_CIRCLE_VIEW_1",
+            "latitude": "13.012382",
+            "longitude": "77.568927",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "BHUVANESHWARI_NAGARA_PARK": {
+            "name": "Bhuvaneshwari_Ngr_Prk_FIX_2",
+            "junctionname": "BHUVANESHWARI_NAGARA_PARK",
+            "latitude": "13.05512",
+            "longitude": "77.60197100000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Bhuvaneshwari_Ngr_Prk_FIX_2_time_2024-07-10T08:59:32_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "BJP_OFFICE_OPP_13TH_CRS_MALLESHWARAM": {
+            "name": "BJP_Office_Opp_13thCrs_FIX_1",
+            "junctionname": "BJP_OFFICE_OPP_13TH_CRS_MALLESHWARAM",
+            "latitude": "13.003198",
+            "longitude": "77.572203",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/BJP_Office_Opp_13thCrs_FIX_1_time_2024-07-10T08:59:26_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "BUDDA_VIHAR_NEAR_AMBEDKAR_STATUE": {
+            "name": "Budda_Vihar_Nr_Ambedkar_Stue_FIX_3",
+            "junctionname": "BUDDA_VIHAR_NEAR_AMBEDKAR_STATUE",
+            "latitude": "13.014737",
+            "longitude": "77.575952",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Budda_Vihar_Nr_Ambedkar_Stue_FIX_3_time_2024-07-10T08:59:18_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "CBI_BUS_STOP_NR_UNDER_PASS": {
+            "name": "CBI_Bs_Stp_JN_FIX_2",
+            "junctionname": "CBI_BUS_STOP_NR_UNDER_PASS",
+            "latitude": "13.027112",
+            "longitude": "77.585606",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/CBI_Bs_Stp_JN_FIX_2_time_2024-07-10T08:59:17_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "CBI_ROAD_JUNCTION": {
+            "name": "CBI_Rd_JN_HD_1",
+            "junctionname": "CBI_ROAD_JUNCTION",
+            "latitude": "13.026913",
+            "longitude": "77.585778",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/CBI_Rd_JN_HD_1_time_2024-07-10T08:59:22_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "CHANDUS_HOTEL_OPP_8TH_CRS_MALLESHWARAM": {
+            "name": "Chandus_Htl_Opp_8th_Crs_FIX_1",
+            "junctionname": "CHANDUS_HOTEL_OPP_8TH_CRS_MALLESHWARAM",
+            "latitude": "12.999274",
+            "longitude": "77.57231",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Chandus_Htl_Opp_8th_Crs_FIX_1_time_2024-07-10T08:59:33_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "CUAVERY_JN_NR_HYUNDAI_SH_RM_BELLORY_RD": {
+            "name": "Cauvery_HD_1",
+            "junctionname": "CUAVERY_JN_NR_HYUNDAI_SH_RM_BELLORY_RD",
+            "latitude": "13.003103",
+            "longitude": "77.58391",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Cauvery_HD_1_time_2024-07-10T08:59:35_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "DARI_ANJANEYA_TEMPLE": {
+            "name": "Dari_Anjaneya_Tmpl_FIX_2",
+            "junctionname": "DARI_ANJANEYA_TEMPLE",
+            "latitude": "13.018242",
+            "longitude": "77.558723",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Dari_Anjaneya_Tmpl_FIX_2_time_2024-07-10T08:59:26_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "DASARAHALLI_CIRCLE": {
+            "name": "Dasarahalli_Crcl_JN_FIX_2",
+            "junctionname": "DASARAHALLI_CIRCLE",
+            "latitude": "13.056356",
+            "longitude": "77.61149",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "DAVALAGIRI_ENT_6TH_CRS_RMV_2ND_STG": {
+            "name": "Davalagiri_Ent_6thCrs_RMV_2nd_Stg_FIX_2",
+            "junctionname": "DAVALAGIRI_ENT_6TH_CRS_RMV_2ND_STG",
+            "latitude": "13.027569",
+            "longitude": "77.575778",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Davalagiri_Ent_6thCrs_RMV_2nd_Stg_FIX_2_time_2024-07-10T08:59:18_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "DEVASANDRA_SGNL_TEJA_BAR_NEW_BEL_RD": {
+            "name": "Devasandra_Sgnl_JN_PTZ_1",
+            "junctionname": "DEVASANDRA_SGNL_TEJA_BAR_NEW_BEL_RD",
+            "latitude": "13.036887",
+            "longitude": "77.56614399999999",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Devasandra_Sgnl_JN_PTZ_1_time_2024-07-10T08:59:30_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "ESTEEM_MALL_OPP_RD_BELLARY_MN_RD": {
+            "name": "Esteem_Mall_Opp_Rd_JN_HD_1",
+            "junctionname": "ESTEEM_MALL_OPP_RD_BELLARY_MN_RD",
+            "latitude": "13.049384",
+            "longitude": "77.592626",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Esteem_Mall_Opp_Rd_JN_HD_1_time_2024-07-10T08:59:31_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "GANDHI_GRAMA_CRCL_GAYATRI_NAGARA": {
+            "name": "Gandhi_Grma_Crcl_FIX_3",
+            "junctionname": "GANDHI_GRAMA_CRCL_GAYATRI_NAGARA",
+            "latitude": "13.000462",
+            "longitude": "77.562529",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Gandhi_Grma_Crcl_FIX_3_time_2024-07-10T08:59:27_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "HEBBALA_BUS_STOP": {
+            "name": "Hebbala_BsStp_JN_PTZ_1",
+            "junctionname": "HEBBALA_BUS_STOP",
+            "latitude": "13.038596",
+            "longitude": "77.58913800000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Hebbala_BsStp_JN_FIX_2_time_2024-07-10T08:59:19_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "HEBBALA_BUS_STP_TWRDS_CITY": {
+            "name": "Hebbala_BsStp_Twrds_City_FIX_2",
+            "junctionname": "HEBBALA_BUS_STP_TWRDS_CITY",
+            "latitude": "13.039218",
+            "longitude": "77.589708",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "HEBBALA_FLYOVER_UNDER_BRIDGE": {
+            "name": "HebbalaFlyOvr_Brdge_PTZ_1",
+            "junctionname": "HEBBALA_FLYOVER_UNDER_BRIDGE",
+            "latitude": "13.041093",
+            "longitude": "77.589538",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/HebbalaFlyOvr_Brdge_PTZ_1_time_2024-07-10T08:59:25_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "HEBBAL_BUS_STOP": {
+            "name": "Hebbal_BsStp_FIX_2",
+            "junctionname": "HEBBAL_BUS_STOP",
+            "latitude": "13.038824",
+            "longitude": "77.58964899999999",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "HEBBAL_BUS_STOP_BELOW_FLY_OVER": {
+            "name": "Hebbal_BsStp_JN_HD_1",
+            "junctionname": "HEBBAL_BUS_STOP_BELOW_FLY_OVER",
+            "latitude": "13.042593",
+            "longitude": "77.589063",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "HEBBAL_FLY_OVER_BUSTOP": {
+            "name": "Hebbal_Flyovr_BsStp_FIX_2",
+            "junctionname": "HEBBAL_FLY_OVER_BUSTOP",
+            "latitude": "13.042949",
+            "longitude": "77.591492",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Hebbal_Flyovr_BsStp_FIX_2_time_2024-07-10T08:59:20_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "HEBBAL_FLY_OVER_DOWN_RAMP_TWRDS_AIRPORT": {
+            "name": "Hebbal_Flyovr_JN_FIX_2",
+            "junctionname": "HEBBAL_FLY_OVER_DOWN_RAMP_TWRDS_AIRPORT",
+            "latitude": "13.043296",
+            "longitude": "77.590339",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "HP_PETROL_BUNK_NEW_BEL_RD": {
+            "name": "HP_Ptrl_Bnk_BEL_Rd_FIX_2",
+            "junctionname": "HP_PETROL_BUNK_NEW_BEL_RD",
+            "latitude": "13.030116",
+            "longitude": "77.570854",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/HP_Ptrl_Bnk_BEL_Rd_FIX_2_time_2024-07-10T08:59:29_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "HQTC_BUS_STAND_BELLARY_RD": {
+            "name": "HQTC_BsStd_Bellry_Rd_PTZ_1",
+            "junctionname": "HQTC_BUS_STAND_BELLARY_RD",
+            "latitude": "13.020559",
+            "longitude": "77.584194",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/HQTC_BsStd_Bellry_Rd_PTZ_1_time_2024-07-10T08:59:36_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "HQTC_BUS_STAND_SANJAYANAGAR_CRS": {
+            "name": "HQTC_Bus_Stand_FIX_3",
+            "junctionname": "HQTC_BUS_STAND_SANJAYANAGAR_CRS",
+            "latitude": "13.024723",
+            "longitude": "77.582289",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/HQTC_Bus_Stand_FIX_3_time_2024-07-10T08:59:22_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "ISRO_JUNCATION": {
+            "name": "Isro_JN_FIX_03",
+            "junctionname": "ISRO_JUNCATION",
+            "latitude": "13.034576",
+            "longitude": "77.57003400000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Isro_JN_FIX_03_time_2024-07-10T08:59:27_000_rain.mp4"
+            ],
+            "pathLinks": {
+                "2024-07-10": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/paths/Site 2 Camera 6155        Isro_JN_FIX_01        ISRO_JUNCATION 6th May 2024.json"
+            },
+            "tsLinks": {
+                "2024-07-10": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/timeseries/Site 2 Camera 6155        Isro_JN_FIX_01        ISRO_JUNCATION 6th May 2024.json"
+            }
+        },
+        "JEEVARAJ_ALVA_RD_Jn_CV_RAMAN_RD": {
+            "name": "Jeevaraj_Alva_Rd_FIX_3",
+            "junctionname": "JEEVARAJ_ALVA_RD_Jn_CV_RAMAN_RD",
+            "latitude": "13.014599",
+            "longitude": "77.57373",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Jeevaraj_Alva_Rd_FIX_3_time_2024-07-10T08:59:19_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "KADUMALLESWARA_TMPL_JN_15TH_CRS_MALLESHWARAM": {
+            "name": "Kadumalleshwara_Temple_FIX_1",
+            "junctionname": "KADUMALLESWARA_TMPL_JN_15TH_CRS_MALLESHWARAM",
+            "latitude": "13.005425",
+            "longitude": "77.57217799999999",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Kadumalleshwara_Temple_FIX_1_time_2024-07-10T08:59:34_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "KANAKA_NAGARA_MN_ROAD": {
+            "name": "Kanakanagara_Mn_Rd_FIX_2",
+            "junctionname": "KANAKA_NAGARA_MN_ROAD",
+            "latitude": "13.042341",
+            "longitude": "77.611921",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Kanakanagara_Mn_Rd_FIX_2_time_2024-07-10T08:59:32_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "KENDRIYA_VIDYALAYA_GATE": {
+            "name": "Kendhriya_Vdhylaya_Gate_FIX_2",
+            "junctionname": "KENDRIYA_VIDYALAYA_GATE",
+            "latitude": "13.014948",
+            "longitude": "77.575726",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Kendhriya_Vdhylaya_Gate_FIX_2_time_2024-07-10T08:59:21_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "KODIGEHALLI_JUNCTION_GATE": {
+            "name": "Kodigehalli_JN_Gate_HD_1",
+            "junctionname": "KODIGEHALLI_JUNCTION_GATE",
+            "latitude": "13.057321",
+            "longitude": "77.59319600000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Kodigehalli_JN_Gate_HD_1_time_2024-07-10T08:59:30_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "KUVEMPU_CIRCLE": {
+            "name": "Kuvempu_Circle_PTZ_1",
+            "junctionname": "KUVEMPU_CIRCLE",
+            "latitude": "13.043601",
+            "longitude": "77.561301",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Kuvempu_Circle_PTZ_1_time_2024-07-10T08:59:19_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "LITTELE_MILENIAM_SCHL_3RD_MAIN_VYALIKAVAL": {
+            "name": "Ltle_Mileniam_Schl_FIX_1",
+            "junctionname": "LITTELE_MILENIAM_SCHL_3RD_MAIN_VYALIKAVAL",
+            "latitude": "13.004706",
+            "longitude": "77.57786400000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Ltle_Mileniam_Schl_FIX_1_time_2024-07-10T08:59:35_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "MADHURA_DARSHINI_HTL_BALLARY_RD": {
+            "name": "Madhura_Dhrshn_Htl_FIX_3",
+            "junctionname": "MADHURA_DARSHINI_HTL_BALLARY_RD",
+            "latitude": "13.0254",
+            "longitude": "77.585403",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Madhura_Dhrshn_Htl_FIX_3_time_2024-07-10T08:59:28_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "MARAMMA_TEMPLE": {
+            "name": "Maramma_Temple_PTZ_1",
+            "junctionname": "MARAMMA_TEMPLE",
+            "latitude": "13.012382",
+            "longitude": "77.568927",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "MARIYANNA_PALYA_CHURCH_SINGAL": {
+            "name": "Mariyanna_Palya_Chrch_Sgnl_HD_1",
+            "junctionname": "MARIYANNA_PALYA_CHURCH_SINGAL",
+            "latitude": "13.049718",
+            "longitude": "77.612582",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Mariyanna_Palya_Chrch_Sgnl_HD_1_time_2024-07-10T08:59:31_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "MATTIKERE_JUNCTON": {
+            "name": "Mattikere_JN_PTZ_1",
+            "junctionname": "MATTIKERE_JUNCTON",
+            "latitude": "13.02718223",
+            "longitude": "77.55840198999999",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "MEKHRI_CIRCLE_JUNCTION": {
+            "name": "Mekhri_Crcl_JN_PTZ_1",
+            "junctionname": "MEKHRI_CIRCLE_JUNCTION",
+            "latitude": "13.014578",
+            "longitude": "77.584323",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Mekhri_Crcl_JN_PTZ_1_time_2024-07-10T08:59:22_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "MEKHRI_CIRCLE_VIEW_1_SADASHIVANAGAR": {
+            "name": "Mekhri_Circl_PTZ_1",
+            "junctionname": "MEKHRI_CIRCLE_VIEW_1_SADASHIVANAGAR",
+            "latitude": "13.011422",
+            "longitude": "77.583727",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Mekhri_Circl_FIX_1_time_2024-07-10T08:59:19_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "MEKHRI_SERVICE_ROAD": {
+            "name": "Mekhri_Service_Rd_FIX_3",
+            "junctionname": "MEKHRI_SERVICE_ROAD",
+            "latitude": "13.014556",
+            "longitude": "77.583389",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Mekhri_Service_Rd_FIX_1_time_2024-07-10T08:59:32_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "MLA_LAYOUT_JUNCATION": {
+            "name": "MLA_Lyt_JN_FIX_3",
+            "junctionname": "MLA_LAYOUT_JUNCATION",
+            "latitude": "13.040212",
+            "longitude": "77.564318",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/MLA_Lyt_JN_FIX_3_time_2024-07-10T08:59:29_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "MS_RAMAIAH_JUNCTION": {
+            "name": "MS_Ramaiah_JN_HD_1",
+            "junctionname": "MS_RAMAIAH_JUNCTION",
+            "latitude": "13.028447",
+            "longitude": "77.571478",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/annotated_videos/MS_Ramaiah_JN_FIX_2+Turning+Patterns.mp4"
+            ],
+            "pathLinks": {
+                "2024-07-10": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/paths/Site 2 Camera 6166        MS_Ramaiah_JN_FIX_2        MS_RAMAIAH_JUNCTION 6th May 2024.json"
+            },
+            "tsLinks": {
+                "2024-07-10": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/timeseries/Site 2 Camera 6166        MS_Ramaiah_JN_FIX_2        MS_RAMAIAH_JUNCTION 6th May 2024.json"
+            }
+        },
+        "NANDHITIRTHA_TMPL_2ND_RD_MALLESHWARAM": {
+            "name": "Nandhithirta_Tmpl_2nd_TmplRd_FIX_2",
+            "junctionname": "NANDHITIRTHA_TMPL_2ND_RD_MALLESHWARAM",
+            "latitude": "13.005524",
+            "longitude": "77.57222",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Nandhithirta_Tmpl_2nd_TmplRd_FIX_2_time_2024-07-10T08:59:23_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "NEAR_SHELL_PETROL_BANK_SANKYE_RD": {
+            "name": "Nr_Shell_PtrlBnk_FIX_1",
+            "junctionname": "NEAR_SHELL_PETROL_BANK_SANKYE_RD",
+            "latitude": "13.005146",
+            "longitude": "77.58111700000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Nr_Shell_PtrlBnk_FIX_1_time_2024-07-10T08:59:20_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "NO48_NR_LINK_ROAD_BUS_STOP_MALLESWARAM": {
+            "name": "No48_Nr_Link_Rd_BusStp_FIX_2",
+            "junctionname": "NO48_NR_LINK_ROAD_BUS_STOP_MALLESWARAM",
+            "latitude": "12.99572319",
+            "longitude": "77.57591859999999",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/No48_Nr_Link_Rd_BusStp_FIX_2_time_2024-07-10T08:59:24_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "NR_KP_NANJUDI_HOUSE_KGE_LAYOUT": {
+            "name": "Nr_KP_Nanjudi_Huse_JN_FIX_01",
+            "junctionname": "NR_KP_NANJUDI_HOUSE_KGE_LAYOUT",
+            "latitude": "13.032865",
+            "longitude": "77.56985299999999",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Nr_KP_Nanjudi_Huse_JN_FIX_01_time_2024-07-10T08:59:29_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "NR_MANTRI_MALL_OPPSITE_BASHAM_PARK": {
+            "name": "Nr_Mantri_Mall_HD_1",
+            "junctionname": "NR_MANTRI_MALL_OPPSITE_BASHAM_PARK",
+            "latitude": "12.99136154",
+            "longitude": "77.57155912",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Nr_Mantri_Mall_HD_1_time_2024-07-10T08:59:32_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "OPPOSITE_STELL_MARY_SCHL_16TH_CRS_MALLESWARAM": {
+            "name": "Opp_Stl_MrySchl_FIX_1",
+            "junctionname": "OPPOSITE_STELL_MARY_SCHL_16TH_CRS_MALLESWARAM",
+            "latitude": "13.006198",
+            "longitude": "77.577832",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Opp_Stl_MrySchl_FIX_1_time_2024-07-10T08:59:24_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "OPP_SAYI_FLOWER_STALL_JN_RV_LAYOUT": {
+            "name": "Opp_Sayi_Flwr_Stll_FIX_2",
+            "junctionname": "OPP_SAYI_FLOWER_STALL_JN_RV_LAYOUT",
+            "latitude": "12.997711",
+            "longitude": "77.583765",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Opp_Sayi_Flwr_Stll_FIX_2_time_2024-07-10T08:59:16_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "ORION_MALL_OPP_DR_RAJ_KUMAR_RD": {
+            "name": "Orin_Mall_Opp_Dr_Rajkumar_Rd_FIX_2",
+            "junctionname": "ORION_MALL_OPP_DR_RAJ_KUMAR_RD",
+            "latitude": "13.012188",
+            "longitude": "77.554422",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "PALACE_GUTTAHALLI_BUS_STP_BELLORY_RD": {
+            "name": "Palace_Guttenhalli_busStp_FIX_1",
+            "junctionname": "PALACE_GUTTAHALLI_BUS_STP_BELLORY_RD",
+            "latitude": "13.000271",
+            "longitude": "77.584115",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Palace_Guttenhalli_busStp_FIX_1_time_2024-07-10T08:59:17_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "RAILWAY_STATION_RP_RD_MALELSHWARAM": {
+            "name": "Rlwy_Station_RP_Rd_FIX_1",
+            "junctionname": "RAILWAY_STATION_RP_RD_MALELSHWARAM",
+            "latitude": "13.0009",
+            "longitude": "77.5633",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Rlwy_Station_RP_Rd_FIX_1_time_2024-07-10T08:59:33_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "RAILWAY_STN_JN_RLY_PARALLEL_RD": {
+            "name": "Rlwy_Stn_FIX_3",
+            "junctionname": "RAILWAY_STN_JN_RLY_PARALLEL_RD",
+            "latitude": "13.000244",
+            "longitude": "77.563554",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Rlwy_Stn_FIX_3_time_2024-07-10T08:59:35_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "RAJEEVAGANDHI_CRICLE_SHESHADRIPURAM": {
+            "name": "Rajeevgandhi_Crcl_PTZ_1",
+            "junctionname": "RAJEEVAGANDHI_CRICLE_SHESHADRIPURAM",
+            "latitude": "12.989859",
+            "longitude": "77.572074",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "RAMAIAH_BUS_STOP": {
+            "name": "Ramaiah_BsStp_JN_PTZ_1",
+            "junctionname": "RAMAIAH_BUS_STOP",
+            "latitude": "13.0287915",
+            "longitude": "77.56155679",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Ramaiah_BsStp_JN_FIX_3_time_2024-07-10T08:59:28_000_rain.mp4"
+            ],
+            "pathLinks": {
+                "2024-07-10": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/paths/Site 2 Camera 5854        Ramaiah_Bus_Stop_FIX_1        RAMAIAH_BUS_STOP 6th May 2024.json"
+            },
+            "tsLinks": {
+                "2024-07-10": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/timeseries/Site 2 Camera 5854        Ramaiah_Bus_Stop_FIX_1        RAMAIAH_BUS_STOP 6th May 2024.json"
+            }
+        },
+        "RAMANA_MAHARSHI_PARK_SADASHIVANAGARA": {
+            "name": "Ramana_Maharshi_Prk_FIX_3",
+            "junctionname": "RAMANA_MAHARSHI_PARK_SADASHIVANAGARA",
+            "latitude": "13.012845",
+            "longitude": "77.583361",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Ramana_Maharshi_Prk_FIX_3_time_2024-07-10T08:59:25_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "SANJAYNAGAR_CROSS": {
+            "name": "Sanjaynagar_Crs_HD_1",
+            "junctionname": "SANJAYNAGAR_CROSS",
+            "latitude": "13.023299",
+            "longitude": "77.58441000000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Sanjaynagar_Crs_HD_1_time_2024-07-10T08:59:19_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "SANJAY_NAGARA_CROS_ROAD": {
+            "name": "Sanjaynagar_Crs_Rd_FIX_2",
+            "junctionname": "SANJAY_NAGARA_CROS_ROAD",
+            "latitude": "13.023097",
+            "longitude": "77.58436",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Sanjaynagar_Crs_Rd_FIX_2_time_2024-07-10T08:59:36_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "SANJIVI_NGR_ASTER_HSPTL_SANJIVINI_NGR_MUD_RD": {
+            "name": "Sanjivi_Ngr_Aster_Hospital_FIX_3",
+            "junctionname": "SANJIVI_NGR_ASTER_HSPTL_SANJIVINI_NGR_MUD_RD",
+            "latitude": "13.05005",
+            "longitude": "77.59249",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Sanjivi_Ngr_Aster_Hospital_FIX_3_time_2024-07-10T08:59:23_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "SANKEY_BACK_GATE": {
+            "name": "Sankey_Back_Gate_FIX_2",
+            "junctionname": "SANKEY_BACK_GATE",
+            "latitude": "13.008479",
+            "longitude": "77.571826",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Sankey_Back_Gate_FIX_2_time_2024-07-10T08:59:31_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "SBI_BANK_LOTTEGOLLAHALLI": {
+            "name": "SBI_Bnk_JN_FIX_3",
+            "junctionname": "SBI_BANK_LOTTEGOLLAHALLI",
+            "latitude": "13.040655",
+            "longitude": "77.563501",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/SBI_Bnk_JN_FIX_3_time_2024-07-10T08:59:29_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "SHELL_PTRL_BUNK_BALLARY_RD": {
+            "name": "Shell_Ptrl_Bnk_FIX_2",
+            "junctionname": "SHELL_PTRL_BUNK_BALLARY_RD",
+            "latitude": "13.021322",
+            "longitude": "77.584357",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Shell_Ptrl_Bnk_FIX_2_time_2024-07-10T08:59:35_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "SHIVANNA_CIRCLE": {
+            "name": "Shivanna_Circle_PTZ_1",
+            "junctionname": "SHIVANNA_CIRCLE",
+            "latitude": "13.006453",
+            "longitude": "77.593403",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Shivanna_Circle_FIX_2_time_2024-07-10T08:59:21_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "SHRIGANDA_BAR_BALLARY_RD": {
+            "name": "Shriganda_Bar_BalRd_FIX_3",
+            "junctionname": "SHRIGANDA_BAR_BALLARY_RD",
+            "latitude": "13.02325",
+            "longitude": "77.58485",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Shriganda_Bar_BalRd_FIX_3_time_2024-07-10T08:59:22_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "SSA_RD_BALLERY_MN_SERVICE_RD": {
+            "name": "SSA_Rd_JN_HD_1",
+            "junctionname": "SSA_RD_BALLERY_MN_SERVICE_RD",
+            "latitude": "13.037488",
+            "longitude": "77.589523",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "STATION_JUNCTION": {
+            "name": "Stn_PTZ_1",
+            "junctionname": "STATION_JUNCTION",
+            "latitude": "13.014804",
+            "longitude": "77.572816",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/annotated_videos/Station_HD_1+Turning+Patterns.mp4"
+            ],
+            "pathLinks": {
+                "2024-07-10": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/paths/Site 2 Camera 5816        Stn_HD_1        STATION_JUNCTION 6th May 2024.json"
+            },
+            "tsLinks": {
+                "2024-07-10": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/timeseries/Site 2 Camera 5816        Stn_HD_1        STATION_JUNCTION 6th May 2024.json"
+            }
+        },
+        "STAY_WLL_LODGE_NEW_BEL_KGE_LYT": {
+            "name": "Sty_Wll_Ldge_FIX_3",
+            "junctionname": "STAY_WLL_LODGE_NEW_BEL_KGE_LYT",
+            "latitude": "13.028873",
+            "longitude": "77.57152000000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Sty_Wll_Ldge_FIX_3_time_2024-07-10T08:59:28_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "SUBRAMANI_TMPL_KP_WEST_SHESHADRIPURAM": {
+            "name": "Subramani_Tmpl_FIX_2",
+            "junctionname": "SUBRAMANI_TMPL_KP_WEST_SHESHADRIPURAM",
+            "latitude": "12.989558",
+            "longitude": "77.572136",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Subramani_Tmpl_FIX_2_time_2024-07-10T08:59:31_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "SUBRAMANYA_NAGARA_ARCH_JN": {
+            "name": "Subramanya_Ngr_PTZ_1",
+            "junctionname": "SUBRAMANYA_NAGARA_ARCH_JN",
+            "latitude": "13.004487",
+            "longitude": "77.56116900000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Subramanya_Ngr_PTZ_1_time_2024-07-10T08:59:32_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "SUNDARANAGAR_ENTRANCE": {
+            "name": "Sundaranagar_Entrnc_JN_FIX_2",
+            "junctionname": "SUNDARANAGAR_ENTRANCE",
+            "latitude": "13.041226",
+            "longitude": "77.557159",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Sundaranagar_Entrnc_JN_FIX_2_time_2024-07-10T08:59:24_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "SWIMMING_POOL_NR_BHASYAM_CIRCLE": {
+            "name": "Swmg_Pl_Nr_Bhsym_Crcl_FIX_2",
+            "junctionname": "SWIMMING_POOL_NR_BHASYAM_CIRCLE",
+            "latitude": "13.007323",
+            "longitude": "77.578453",
+            "s3links": [],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "TARALABALU_CROSS_ROAD": {
+            "name": "Taralabalu_Crs_Rd_FIX_3",
+            "junctionname": "TARALABALU_CROSS_ROAD",
+            "latitude": "13.01734",
+            "longitude": "77.584051",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Taralabalu_Crs_Rd_FIX_3_time_2024-07-10T08:59:20_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "TATA_INSTITUTE_BUS_STOP": {
+            "name": "Tata_Inst_Bustp_FIX_2",
+            "junctionname": "TATA_INSTITUTE_BUS_STOP",
+            "latitude": "13.014443",
+            "longitude": "77.568741",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Tata_Inst_Bustp_FIX_2_time_2024-07-10T08:59:34_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "TVS_SHOWROOM_BALLARY_RD": {
+            "name": "TVS_Shrm_JN_FIX_2",
+            "junctionname": "TVS_SHOWROOM_BALLARY_RD",
+            "latitude": "13.028553",
+            "longitude": "77.586321",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/TVS_Shrm_JN_FIX_2_time_2024-07-10T08:59:36_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "TV_TOWER": {
+            "name": "TV_Tower_HD_1",
+            "junctionname": "TV_TOWER",
+            "latitude": "13.009958",
+            "longitude": "77.59072999999999",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/TV_Tower_HD_1_time_2024-07-10T08:59:33_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "TV_TOWER_JUNCTION": {
+            "name": "TV_Twer_JN_FIX_2",
+            "junctionname": "TV_TOWER_JUNCTION",
+            "latitude": "13.009913",
+            "longitude": "77.590608",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/TV_Twer_JN_FIX_2_time_2024-07-10T08:59:17_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "UDAYAGIRI_JUNCTION": {
+            "name": "Udayagiri_JN_PTZ_1",
+            "junctionname": "UDAYAGIRI_JUNCTION",
+            "latitude": "13.03077486",
+            "longitude": "77.55998063",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Udayagiri_JN_PTZ_1_time_2024-07-10T08:59:33_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "VEERANNAASHRAMA_6TH_CRS_BASAPPA_GRDN": {
+            "name": "Veerannaashrama_6th_Crs_Basp_Grdn_FIX_1",
+            "junctionname": "VEERANNAASHRAMA_6TH_CRS_BASAPPA_GRDN",
+            "latitude": "12.996562",
+            "longitude": "77.57557",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Veerannaashrama_6th_Crs_Basp_Grdn_FIX_1_time_2024-07-10T08:59:17_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "VEERANNA_PALYA_JN": {
+            "name": "Veeranna_Plya_HD_1",
+            "junctionname": "VEERANNA_PALYA_JN",
+            "latitude": "13.04197445",
+            "longitude": "77.61364389000001",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Veeranna_Plya_HD_1_time_2024-07-10T08:59:35_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "YASIM_MAZID_JN_NR_HEBBAL_FLYOVER": {
+            "name": "Yasim_Msjd_JN_HD_1",
+            "junctionname": "YASIM_MAZID_JN_NR_HEBBAL_FLYOVER",
+            "latitude": "13.040986",
+            "longitude": "77.59001499999999",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Yasim_Msjd_JN_PTZ_1_time_2024-07-10T08:59:27_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "YESWANTHPUR_CIRCLE": {
+            "name": "Yeshwanthpur_Crcl_JN_HD_1",
+            "junctionname": "YESWANTHPUR_CIRCLE",
+            "latitude": "13.018888",
+            "longitude": "77.55776299999999",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Yeshwanthpur_Crcl_JN_HD_1_time_2024-07-10T08:59:21_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        },
+        "YOGESHWAR_NAGAR_JUNCTION": {
+            "name": "Yogeshwar_Ngr_FIX_1",
+            "junctionname": "YOGESHWAR_NAGAR_JUNCTION",
+            "latitude": "13.043866",
+            "longitude": "77.600937",
+            "s3links": [
+                "https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-07-10/Yogeshwar_Ngr_FIX_1_time_2024-07-10T08:59:20_000_rain.mp4"
+            ],
+            "pathLinks": {},
+            "tsLinks": {}
+        }
+    }
+}

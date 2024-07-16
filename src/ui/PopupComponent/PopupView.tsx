@@ -63,15 +63,19 @@ const PopupView = ({ popupInfo, setPopupInfo }: Props) => {
 					onChange={handleChange}
 					aria-label="basic tabs example"
 				>
-					<Tab label="Chart" {...a11yProps(0)} />
-					<Tab label="Video" {...a11yProps(1)} />
+					<Tab label="Video" {...a11yProps(0)} />
+					<Tab label="Chart" {...a11yProps(1)} />
+					{/* <Tab label="Speeds" {...a11yProps(2)} /> */}
 				</Tabs>
 				<CustomTabPanel value={value} index={0}>
-					<TimeseriesComponent tsLinks={popupInfo.tsLinks} />
-				</CustomTabPanel>
-				<CustomTabPanel value={value} index={1}>
 					<VideoComponent s3Links={popupInfo.s3links} />
 				</CustomTabPanel>
+				<CustomTabPanel value={value} index={1}>
+					<TimeseriesComponent tsLinks={popupInfo.tsLinks} />
+				</CustomTabPanel>
+				{/* <CustomTabPanel value={value} index={2}>
+					<VideoComponent s3Links={popupInfo.speeds} />
+				</CustomTabPanel> */}
 			</Box>
 		</Popup>
 	);

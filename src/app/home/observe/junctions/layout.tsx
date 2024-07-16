@@ -12,15 +12,16 @@ export default async function Layout({
 }: {
 	children: React.ReactNode;
 }) {
-	const session = await getServerSession(authOptions);
+	// const session = await getServerSession(authOptions);
 
-	return session ? (
-		<section>{children}</section>
-	) : (
-		<center>
-			<Typography variant="h4">
-				You must be logged in to view this content
-			</Typography>
-		</center>
-	);
+	// return session ? (
+	// 	<section>{children}</section>
+	// ) : (
+	// 	<center>
+	// 		<Typography variant="h4">
+	// 			You must be logged in to view this content
+	// 		</Typography>
+	// 	</center>
+	// );
+	return <section>{children}</section>;
 }

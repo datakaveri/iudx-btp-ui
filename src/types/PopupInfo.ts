@@ -6,4 +6,5 @@ export type PopupInfo = {
 	s3links: string;
 	pathLinks: object;
 	tsLinks: object;
+	speeds: object;
 } | null;

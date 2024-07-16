@@ -47,8 +47,8 @@ const VideoPlayer = () => {
 			}}
 		>
 			<ReactPlayer
-				width={320 * 1.5}
-				height={180 * 1.5}
+				width={320 * 3}
+				height={180 * 3}
 				ref={playerRef_1}
 				url="https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-15/MS_Ramaiah_JN_FIX_2_time_2024-05-15T07:30:02_003.mp4"
 				playing={true}
@@ -56,7 +56,7 @@ const VideoPlayer = () => {
 				onDuration={handleDuration}
 				controls={false}
 			/>
-			<ReactPlayer
+			{/* <ReactPlayer
 				width={320 * 1.5}
 				height={180 * 1.5}
 				ref={playerRef_2}
@@ -75,7 +75,7 @@ const VideoPlayer = () => {
 				volume={0.1}
 				onDuration={handleDuration}
 				controls={false}
-			/>
+			/> */}
 		</div>
 	);
 };

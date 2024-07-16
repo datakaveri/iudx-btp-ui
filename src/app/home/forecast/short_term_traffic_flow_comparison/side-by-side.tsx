@@ -7,14 +7,14 @@ import { MAPBOX_STYLES } from "@/lib/sync-video-player/constants";
 import { useAppSelector } from "@/lib/store/hooks";
 import TimeSliderComponent from "@/app/home/forecast/short_term_traffic_flow/TimeSliderComponent";
 
-import timed_predictions from "@/data/timed_predictions_NEW.json";
-import timed_truth from "@/data/timed_ground_truth_NEW.json";
+import timed_predictions from "@/data/timed_predictions_NEW_sorted.json";
+import timed_truth from "@/data/timed_ground_truth_NEW_sorted.json";
 import TopLabel from "./TopLabel";
-import { getLayerProps } from "../../forecast/short_term_traffic_flow/getLayerProps";
+import { getLayerProps } from "../short_term_traffic_flow/getLayerProps";
 import {
 	computeMean,
 	computeStandardDeviation,
-} from "../../forecast/short_term_traffic_flow/computeMeanAndStandardDeviation";
+} from "../short_term_traffic_flow/computeMeanAndStandardDeviation";
 
 export type Mode = "side-by-side" | "split-screen";
 
@@ -52,14 +52,14 @@ function addHour(timeStr: string) {
 
 const SideBySide = () => {
 	const [viewState, setViewState] = useState({
-		longitude: 77.47460896692512,
-		latitude: 13.11495651374481,
-		zoom: 13,
+		longitude: 77.5839566282995,
+		latitude: 13.01459741683244,
+		zoom: 12,
 	});
 
 	const [activeMap, setActiveMap] = useState<"left" | "right">("left");
 	const width = typeof window === "undefined" ? 100 : window.innerWidth;
-	const [mode, setMode] = useState<Mode>("side-by-side");
+	const [mode, setMode] = useState<Mode>("split-screen");
 	const mapStyle = useAppSelector((state) => state.mapStyle.value);
 
 	const timeValue = useAppSelector((state) => state.timeSlider.value);
@@ -120,7 +120,10 @@ const SideBySide = () => {
 					}
 					mapboxAccessToken={MAPBOX_API_KEY}
 				>
-					<TopLabel value={timed_predictions_timestamps[timeValue]} />
+					<TopLabel
+						label="Ground Truth"
+						value={timed_predictions_timestamps[timeValue]}
+					/>
 
 					{timed_truth_geojsons.map((feature, index) => {
 						return (
@@ -172,7 +175,8 @@ const SideBySide = () => {
 					mapboxAccessToken={MAPBOX_API_KEY}
 				>
 					<TopLabel
-						value={addHour(timed_predictions_timestamps[timeValue])}
+						label="Predictions"
+						value={timed_predictions_timestamps[timeValue]}
 					/>
 
 					{timed_predictions_geojsons.map((feature, index) => {
