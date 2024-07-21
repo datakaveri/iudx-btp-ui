@@ -41,7 +41,7 @@ const MapboxComponent = ({ coordinates, children, mapRef, legend }: Props) => {
 				padding: 0,
 			}}
 		>
-			<MapSelector />
+			{/* <MapSelector /> */}
 			{children}
 			{legend}
 		</Map>

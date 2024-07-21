@@ -4,6 +4,9 @@ import { useAppSelector } from "@/lib/store/hooks";
 import React, { useState, useRef, useEffect } from "react";
 import ReactPlayer from "react-player";
 import { calculateProgress } from "./calculateProgress";
+import screenfull from "screenfull";
+import FullScreenButton from "./FullScreenButton";
+import styles from "./styles.module.css";
 
 const VideoPlayer = () => {
 	const [duration, setDuration] = useState(0);
@@ -37,12 +40,18 @@ const VideoPlayer = () => {
 		setDuration(duration);
 	};
 
+	const handleFullScreen = (ref) => {
+		if (screenfull.isEnabled) {
+			screenfull.request(ref.current.wrapper);
+		}
+	};
 	return (
 		<div
 			style={{
+				position: "relative",
 				display: "flex",
 				flexDirection: "row",
-				justifyContent: "space-evenly",
+				justifyContent: "space-between",
 				padding: "20px 0 40px 0",
 			}}
 		>
@@ -64,7 +73,6 @@ const VideoPlayer = () => {
 				playing={true}
 				volume={0.1}
 				onDuration={handleDuration}
-				controls={false}
 			/>
 			<ReactPlayer
 				width={320 * 1.5}
@@ -74,8 +82,18 @@ const VideoPlayer = () => {
 				playing={true}
 				volume={0.1}
 				onDuration={handleDuration}
-				controls={false}
 			/>
+			<div className={styles.kVideoFullScreenButtonsContainer}>
+				<FullScreenButton
+					handleFullScreen={() => handleFullScreen(playerRef_1)}
+				/>
+				<FullScreenButton
+					handleFullScreen={() => handleFullScreen(playerRef_2)}
+				/>
+				<FullScreenButton
+					handleFullScreen={() => handleFullScreen(playerRef_3)}
+				/>
+			</div>
 		</div>
 	);
 };

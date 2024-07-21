@@ -23,7 +23,14 @@ import iisc_logo from "./iisc_logo.png";
 import { ReactNode, Suspense, useState } from "react";
 import SsidChartIcon from "@mui/icons-material/SsidChart";
 import Link from "next/link";
-import { Menu, MenuItem, Tooltip, Typography } from "@mui/material";
+import {
+	FormControl,
+	Menu,
+	MenuItem,
+	Select,
+	Tooltip,
+	Typography,
+} from "@mui/material";
 import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 import LogoutButton from "@/ui/Authentication/LogoutButton";
 import LoginButton from "@/ui/Authentication/LoginButton";
@@ -34,6 +41,7 @@ import AnalyticsIcon from "@mui/icons-material/Analytics";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import KeycloakComponent from "../keycloak/KeycloakComponent";
+import MapSelector from "../MapSelector/MapSelector";
 
 const drawerLinks = [
 	{ path: "observe", name: "Observe" },
@@ -309,6 +317,10 @@ export default function MiniDrawer({ children }: Props) {
 						</Link>
 					))}
 				</List>
+				<div style={{ flexGrow: 1 }}></div>
+
+				{/* Dropdown at the bottom */}
+				<ListItem>{open ? <MapSelector /> : null}</ListItem>
 			</Drawer>
 			<DrawerHeader />
 		</>

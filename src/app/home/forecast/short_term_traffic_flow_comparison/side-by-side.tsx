@@ -15,6 +15,7 @@ import {
 	computeMean,
 	computeStandardDeviation,
 } from "../short_term_traffic_flow/computeMeanAndStandardDeviation";
+import ControlPanel from "./control-panel";
 
 export type Mode = "side-by-side" | "split-screen";
 
@@ -124,6 +125,7 @@ const SideBySide = () => {
 						label="Ground Truth"
 						value={timed_predictions_timestamps[timeValue]}
 					/>
+					<ControlPanel mode={mode} onModeChange={setMode} />
 
 					{timed_truth_geojsons.map((feature, index) => {
 						return (

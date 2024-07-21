@@ -6,6 +6,9 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import VideoContainers from "./VideoContainers";
 import { VideoPlayerOptions } from "@/lib/sync-video-player/main";
+import Link from "next/link";
+import { Button } from "@mui/material";
+import EventIcon from "@mui/icons-material/Event";
 interface Props {
 	s3Links: string[];
 }
@@ -76,6 +79,19 @@ const VideoComponent = ({ s3Links }: Props) => {
 				<button onClick={onPlay}>
 					<PlayArrowIcon />
 				</button>
+			</div>
+			<div
+				style={{
+					display: "flex",
+					flexDirection: "row-reverse",
+					width: "100%",
+				}}
+			>
+				<Link href={`/home/observe/events`} target="_blank">
+					<Button variant="outlined" endIcon={<EventIcon />}>
+						Events
+					</Button>
+				</Link>
 			</div>
 		</div>
 	);

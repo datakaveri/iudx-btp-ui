@@ -6,10 +6,13 @@ import "leaflet.timeline/dist/Timeline";
 import "leaflet.timeline/dist/TimelineSliderControl";
 import axios from "axios";
 import "./timeline.css";
+import { useAppSelector } from "@/lib/store/hooks";
+import { MAPBOX_STYLES } from "@/lib/sync-video-player/constants";
 
 const LeafletComponent = () => {
 	const [vehicles, setVehicles] = useState();
 	const [dataLoaded, setDataLoaded] = useState(false);
+	const mapStyle = useAppSelector((state) => state.mapStyle.value);
 
 	useEffect(() => {
 		const getData = async () => {
@@ -30,7 +33,7 @@ const LeafletComponent = () => {
 			16
 		);
 		L.tileLayer(
-			"https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png",
+			MAPBOX_STYLES.find((el) => el.value === mapStyle)?.leaflet_url,
 			{
 				maxZoom: 18,
 				attribution:
@@ -72,7 +75,7 @@ const LeafletComponent = () => {
 			map?.off();
 			map?.remove();
 		};
-	}, [dataLoaded, vehicles]);
+	}, [dataLoaded, mapStyle, vehicles]);
 
 	return (
 		<div

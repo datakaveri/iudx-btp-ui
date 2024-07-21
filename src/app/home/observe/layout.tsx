@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import TabsComponent from "@/ui/TabsComponent/TabsComponent";
 import { Metadata } from "next";
 
-const routes = ["junctions", "tracking", "events", "sensors", "violations"];
+const routes = ["junctions", "tracking", "sensors", "violations"];
 
 export const metadata: Metadata = {
 	title: "Observe | AI Based Demand Forecasting",

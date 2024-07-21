@@ -1,4 +1,8 @@
 import {
+	LEAFLET_DARK,
+	LEAFLET_LIGHT,
+	LEAFLET_SATELLITE,
+	LEAFLET_STREETS,
 	MAPBOX_LIGHT,
 	MAPBOX_SATELLITE,
 	MAPBOX_STREETS,
@@ -19,21 +23,25 @@ export const MAPBOX_STYLES = [
 	{
 		value: "Dark",
 		url: MAPBOX_STYLE,
+		leaflet_url: LEAFLET_DARK,
 		image: require("@/public/maps/dark.png"),
 	},
 	{
 		value: "Light",
 		url: MAPBOX_LIGHT,
+		leaflet_url: LEAFLET_LIGHT,
 		image: require("@/public/maps/light.png"),
 	},
 	{
 		value: "Streets",
 		url: MAPBOX_STREETS,
+		leaflet_url: LEAFLET_STREETS,
 		image: require("@/public/maps/streets.png"),
 	},
 	{
 		value: "Satellite",
 		url: MAPBOX_SATELLITE,
+		leaflet_url: LEAFLET_SATELLITE,
 		image: require("@/public/maps/satellite.png"),
 	},
 ];

@@ -65,7 +65,6 @@ const PopupView = ({ popupInfo, setPopupInfo }: Props) => {
 				>
 					<Tab label="Video" {...a11yProps(0)} />
 					<Tab label="Chart" {...a11yProps(1)} />
-					{/* <Tab label="Speeds" {...a11yProps(2)} /> */}
 				</Tabs>
 				<CustomTabPanel value={value} index={0}>
 					<VideoComponent s3Links={popupInfo.s3links} />
@@ -73,9 +72,6 @@ const PopupView = ({ popupInfo, setPopupInfo }: Props) => {
 				<CustomTabPanel value={value} index={1}>
 					<TimeseriesComponent tsLinks={popupInfo.tsLinks} />
 				</CustomTabPanel>
-				{/* <CustomTabPanel value={value} index={2}>
-					<VideoComponent s3Links={popupInfo.speeds} />
-				</CustomTabPanel> */}
 			</Box>
 		</Popup>
 	);

@@ -8,7 +8,7 @@ const routes = [
 	"short_term_intersection",
 	"short_term_traffic_flow",
 	"short_term_traffic_flow_comparison",
-	"od_estimation",
+	"o-d_estimation",
 ];
 
 export const metadata: Metadata = {

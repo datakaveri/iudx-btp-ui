@@ -5,6 +5,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	z-index: 2;
 }
 
 .kSideBySideTopBoxLabel {
@@ -20,4 +21,12 @@
 
 .kSideBySideTopBoxLabelSpan {
 	font-size: 15px;
+}
+
+.swipeControlPanel {
+	position: absolute;
+	z-index: 3;
+	margin: 10px;
+	background-color: white;
+	padding: 5px;
 }

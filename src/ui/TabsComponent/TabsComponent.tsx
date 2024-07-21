@@ -14,12 +14,29 @@ function a11yProps(index: number) {
 
 function toTitleCase(str) {
 	// Split the string by underscores
-	let words = str.split("_");
+	let words: string[] = str.split("_");
+
+	if (words[0].includes("-")) {
+		let newWord = words[0]
+			.split("-")
+			.map((word) => word.charAt(0).toUpperCase())
+			.join("-");
+		console.log(`newWord ${newWord}`);
+	}
 
 	// Capitalize the first letter of each word and join them back
 	let titleCaseStr = words
 		.map((word) => {
-			return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+			if (word.includes("-")) {
+				return word
+					.split("-")
+					.map((dashedWord) => dashedWord.charAt(0).toUpperCase())
+					.join("-");
+			} else {
+				return (
+					word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+				);
+			}
 		})
 		.join(" ");
 
