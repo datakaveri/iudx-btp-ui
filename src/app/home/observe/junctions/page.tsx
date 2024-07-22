@@ -17,7 +17,6 @@ import {
 	NavigationControl,
 	ScaleControl,
 } from "react-map-gl";
-// import Pin from "@/ui/MapElements/Pin/Pin";
 import VideoCameraFrontIcon from "@mui/icons-material/VideoCameraFront";
 import PopupComponent from "@/ui/PopupComponent/PopupView";
 import cameraDataWithPathsAndTimeSeries from "@/data/data_outs_july_16_new.json";

@@ -5,7 +5,7 @@ const nextConfig = {
 		return [
 			{
 				source: "/home/forecast",
-				destination: "/home/forecast/short_term_intersection",
+				destination: "/home/forecast/junction_prediction",
 				permanent: false,
 			},
 			{

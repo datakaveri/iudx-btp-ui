@@ -5,7 +5,7 @@ import TabsComponent from "@/ui/TabsComponent/TabsComponent";
 import { Metadata } from "next";
 
 const routes = [
-	"short_term_intersection",
+	"junction_prediction",
 	"short_term_traffic_flow",
 	"short_term_traffic_flow_comparison",
 	"o-d_estimation",

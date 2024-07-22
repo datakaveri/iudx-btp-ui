@@ -24,6 +24,12 @@ import { ReactNode, Suspense, useState } from "react";
 import SsidChartIcon from "@mui/icons-material/SsidChart";
 import Link from "next/link";
 import {
+	Box,
+	Button,
+	Dialog,
+	DialogActions,
+	DialogContent,
+	DialogTitle,
 	FormControl,
 	Menu,
 	MenuItem,
@@ -42,6 +48,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import KeycloakComponent from "../keycloak/KeycloakComponent";
 import MapSelector from "../MapSelector/MapSelector";
+import SettingsIcon from "@mui/icons-material/Settings";
 
 const drawerLinks = [
 	{ path: "observe", name: "Observe" },
@@ -139,6 +146,7 @@ interface Props {
 export default function MiniDrawer({ children }: Props) {
 	const theme = useTheme();
 	const [open, setOpen] = useState(false);
+	const [openDialog, setOpenDialog] = useState(false);
 
 	const handleDrawerOpen = () => {
 		setOpen(true);
@@ -154,6 +162,19 @@ export default function MiniDrawer({ children }: Props) {
 
 	const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
 		setAnchorElUser(event.currentTarget);
+	};
+
+	const handleDialogClickOpen = () => {
+		setOpenDialog(true);
+	};
+
+	const handleDialogClose = (
+		event: React.SyntheticEvent<unknown>,
+		reason?: string
+	) => {
+		if (reason !== "backdropClick") {
+			setOpenDialog(false);
+		}
 	};
 
 	const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
@@ -319,8 +340,23 @@ export default function MiniDrawer({ children }: Props) {
 				</List>
 				<div style={{ flexGrow: 1 }}></div>
 
-				{/* Dropdown at the bottom */}
-				<ListItem>{open ? <MapSelector /> : null}</ListItem>
+				<IconButton onClick={handleDialogClickOpen}>
+					<SettingsIcon />
+				</IconButton>
+				<Dialog
+					disableEscapeKeyDown
+					open={openDialog}
+					onClose={handleDialogClose}
+				>
+					<DialogTitle>Settings</DialogTitle>
+					<DialogContent>
+						<MapSelector />
+					</DialogContent>
+					<DialogActions>
+						<Button onClick={handleDialogClose}>Cancel</Button>
+						<Button onClick={handleDialogClose}>Ok</Button>
+					</DialogActions>
+				</Dialog>
 			</Drawer>
 			<DrawerHeader />
 		</>
