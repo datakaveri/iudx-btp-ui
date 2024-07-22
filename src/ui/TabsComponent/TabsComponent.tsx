@@ -21,7 +21,6 @@ function toTitleCase(str) {
 			.split("-")
 			.map((word) => word.charAt(0).toUpperCase())
 			.join("-");
-		console.log(`newWord ${newWord}`);
 	}
 
 	// Capitalize the first letter of each word and join them back

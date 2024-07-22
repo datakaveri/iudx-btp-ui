@@ -1,5 +1,4 @@
 export const getIconColor = (division: string) => {
-	console.log(`Division: ${division}`);
 	switch (division) {
 		case "NORTH":
 			return "violet";
