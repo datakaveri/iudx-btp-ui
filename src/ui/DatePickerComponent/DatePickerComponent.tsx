@@ -21,6 +21,7 @@ const DatePickerComponent = () => {
 		<LocalizationProvider dateAdapter={AdapterDayjs}>
 			<DemoContainer components={["DatePicker"]}>
 				<DatePicker
+					format="DD MMM YYYY"
 					minDate={dayjs("2024-07-10")}
 					maxDate={dayjs("2024-07-10")}
 					value={dayjs(selectedDate)}
