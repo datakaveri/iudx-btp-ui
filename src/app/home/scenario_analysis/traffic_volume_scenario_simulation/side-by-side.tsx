@@ -8,16 +8,13 @@ import { useAppSelector } from "@/lib/store/hooks";
 import TimeSliderComponent from "@/app/home/forecast/short_term_traffic_flow/TimeSliderComponent";
 
 import TopLabel from "./TopLabel";
-import { getLayerProps } from "@/app/home/forecast/short_term_traffic_flow/getLayerProps";
+import { getLayerProps } from "./getLayerProps";
 import ControlPanel from "./control-panel";
+import RadioButtons from "./ZoomButtons";
 import { Typography } from "@mui/material";
 
-import truth_data from "@/data/timed_ground_truth_NEW_sorted.json";
-import prediction_data from "@/data/timed_predictions_NEW_sorted.json";
-import {
-	computeMean,
-	computeStandardDeviation,
-} from "../short_term_traffic_flow/computeMeanAndStandardDeviation";
+import zoom_1 from "@/data/zoomLevels/File_1x.json";
+import { selectZoomData } from "./selectZoomData";
 
 export type Mode = "side-by-side" | "split-screen";
 
@@ -74,12 +71,15 @@ const SideBySide = () => {
 
 	const zoomLevel = useAppSelector((state) => state.mapLayer.zoomLevel);
 
-	const timed_truth_values = truth_data.values;
-	const timed_truth_timestamps = truth_data.timestamps;
-	const timed_truth_geojsons = truth_data.geojsons.slice(0, 300);
+	const timed_truth_values = zoom_1.values;
+	const timed_truth_timestamps = zoom_1.timestamps;
+	const timed_truth_geojsons = zoom_1.geojsons.slice(0, 300);
 
-	const timed_predictions_values = prediction_data.values;
-	const timed_predictions_geojsons = prediction_data.geojsons.slice(0, 300);
+	const timed_predictions_values = selectZoomData(zoomLevel).values;
+	const timed_predictions_geojsons = selectZoomData(zoomLevel).geojsons.slice(
+		0,
+		300
+	);
 
 	return (
 		<>
@@ -102,7 +102,7 @@ const SideBySide = () => {
 					}
 					mapboxAccessToken={MAPBOX_API_KEY}
 				>
-					<TopLabel label="Ground Truth" />
+					<TopLabel label="1x" />
 					<ControlPanel mode={mode} onModeChange={setMode} />
 
 					{timed_truth_geojsons.map((feature, index) => {
@@ -116,19 +116,7 @@ const SideBySide = () => {
 								<Layer
 									id={`new_loop-${index.toString()}`}
 									{...getLayerProps(
-										timed_truth_values[timeValue][index],
-										Math.max(
-											...timed_truth_values[timeValue]
-										),
-										Math.min(
-											...timed_truth_values[timeValue]
-										),
-										computeMean(
-											timed_truth_values[timeValue]
-										),
-										computeStandardDeviation(
-											timed_truth_values[timeValue]
-										)
+										timed_truth_values[timeValue][index]
 									)}
 								/>
 							</Source>
@@ -148,7 +136,7 @@ const SideBySide = () => {
 					}
 					mapboxAccessToken={MAPBOX_API_KEY}
 				>
-					<TopLabel label={`Predictions`} />
+					<TopLabel label={`${zoomLevel}x`} />
 
 					{timed_predictions_geojsons.map((feature, index) => {
 						return (
@@ -163,23 +151,7 @@ const SideBySide = () => {
 									{...getLayerProps(
 										timed_predictions_values[timeValue][
 											index
-										],
-										Math.max(
-											...timed_predictions_values[
-												timeValue
-											]
-										),
-										Math.min(
-											...timed_predictions_values[
-												timeValue
-											]
-										),
-										computeMean(
-											timed_predictions_values[timeValue]
-										),
-										computeStandardDeviation(
-											timed_predictions_values[timeValue]
-										)
+										]
 									)}
 								/>
 							</Source>
@@ -188,6 +160,17 @@ const SideBySide = () => {
 				</Map>
 			</div>
 			<TimeSliderComponent timestamps={timed_truth_timestamps} />
+			<Typography
+				variant="h6"
+				sx={{
+					paddingTop: "10px",
+					paddingBottom: "5px",
+				}}
+			>
+				Volume Gain Over Usual Traffic
+			</Typography>
+
+			<RadioButtons />
 		</>
 	);
 };

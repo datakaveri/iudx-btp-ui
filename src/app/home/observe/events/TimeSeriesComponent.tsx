@@ -154,7 +154,7 @@ const TimeSeriesComponent = () => {
 				type: "text",
 				rotation: 1.5706,
 				z: 100,
-				left: "1.5%",
+				left: "7%",
 				top: "middle",
 				style: {
 					fill: "#333",

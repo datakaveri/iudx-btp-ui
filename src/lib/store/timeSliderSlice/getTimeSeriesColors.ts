@@ -6,7 +6,7 @@ export const getColorsList: () => ColorsListItem[] = () => {
 	const primaryColors = [
 		"#FF0000", // Red
 		"#FFA500", // Orange
-		"#FFFF00", // Yellow
+		"#CD7F32", //
 		"#008000", // Green
 		"#0000FF", // Blue
 		"#4B0082", // Indigo

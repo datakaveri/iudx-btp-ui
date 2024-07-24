@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import timeSliderReducer from "./timeSliderSlice/timeSliderSlice";
 import brushReducer from "@/lib/store/brushSlice/brushSlice";
 import mapStyleReducer from "@/lib/store/mapStyleSlice/mapStyleSlice";
+import mapLayerSlice from "./mapLayerSlice/mapLayerSlice";
 
 export const makeStore = () => {
 	return configureStore({
@@ -9,6 +10,7 @@ export const makeStore = () => {
 			timeSlider: timeSliderReducer,
 			brush: brushReducer,
 			mapStyle: mapStyleReducer,
+			mapLayer: mapLayerSlice,
 		},
 	});
 };

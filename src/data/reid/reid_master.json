@@ -1,0 +1,1218 @@
+{
+	"17988": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 23.82
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 0.1933333333333333
+			}
+		]
+	},
+	"18001": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 37.242222222222225
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 17.39333333333333
+			}
+		]
+	},
+	"18081": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 171.51777777777778
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 17.606666666666666
+			}
+		]
+	},
+	"18141": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 46.41111111111111
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 27.313333333333333
+			}
+		]
+	},
+	"18142": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 46.09111111111111
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 27.24222222222222
+			}
+		]
+	},
+	"18143": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 46.19777777777778
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 27.037777777777777
+			}
+		]
+	},
+	"18149": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 46.41111111111111
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 27.62
+			}
+		]
+	},
+	"18160": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 46.7
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 29.580000000000002
+			}
+		]
+	},
+	"18201": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 68.34
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 45.71333333333334
+			}
+		]
+	},
+	"18220": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 68.77111111111113
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 50.05111111111112
+			}
+		]
+	},
+	"18268": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 69.18444444444445
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 54.40222222222222
+			}
+		]
+	},
+	"18272": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 68.34
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 54.14888888888889
+			}
+		]
+	},
+	"18284": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 75.26444444444445
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 57.282222222222224
+			}
+		]
+	},
+	"18287": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 72.66444444444444
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 56.095555555555556
+			}
+		]
+	},
+	"18290": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 72.86444444444444
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 56.44222222222223
+			}
+		]
+	},
+	"18295": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 70.2688888888889
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 56.099999999999994
+			}
+		]
+	},
+	"18309": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 86.32222222222222
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 60.34000000000001
+			}
+		]
+	},
+	"18371": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 50.68222222222222
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 69.46000000000001
+			}
+		]
+	},
+	"18396": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 136.4511111111111
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 73.26444444444445
+			}
+		]
+	},
+	"18409": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 107.51777777777777
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 77.38444444444444
+			}
+		]
+	},
+	"18431": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 108.64222222222223
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 84.67777777777778
+			}
+		]
+	},
+	"18442": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 98.54888888888888
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 83.32666666666667
+			}
+		]
+	},
+	"18463": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 149.06444444444443
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 85.94444444444444
+			}
+		]
+	},
+	"18464": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 109.93111111111111
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 86.87777777777778
+			}
+		]
+	},
+	"18466": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 108.64222222222223
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 85.78
+			}
+		]
+	},
+	"18467": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 108.96222222222222
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 86.5
+			}
+		]
+	},
+	"18469": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 110.58888888888889
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 88.17111111111112
+			}
+		]
+	},
+	"18498": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 110.8288888888889
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 88.50888888888889
+			}
+		]
+	},
+	"18508": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 111.12222222222222
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 89.17555555555556
+			}
+		]
+	},
+	"18594": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 72.57555555555557
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 113.05555555555557
+			}
+		]
+	},
+	"18606": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 131.77555555555554
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 115.10444444444444
+			}
+		]
+	},
+	"18612": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 132.73111111111112
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 114.88666666666666
+			}
+		]
+	},
+	"18638": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 134.39777777777778
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 116.62444444444445
+			}
+		]
+	},
+	"18639": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 132.73111111111112
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 116.04666666666667
+			}
+		]
+	},
+	"18652": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 134.32666666666665
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 116.94444444444444
+			}
+		]
+	},
+	"18663": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 136.94444444444443
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 118.57111111111111
+			}
+		]
+	},
+	"18676": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 169.89111111111112
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 120.66888888888889
+			}
+		]
+	},
+	"18708": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 157.75777777777776
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 140.2511111111111
+			}
+		]
+	},
+	"18805": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 158.64666666666665
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 143.8022222222222
+			}
+		]
+	},
+	"18806": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 157.03777777777776
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 142.7133333333333
+			}
+		]
+	},
+	"18818": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 171.06
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 145.59777777777776
+			}
+		]
+	},
+	"18861": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 170.4822222222222
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 147.70444444444445
+			}
+		]
+	},
+	"18865": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 171.76222222222222
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 148.19333333333333
+			}
+		]
+	},
+	"18866": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 170.11777777777777
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 147.30888888888887
+			}
+		]
+	},
+	"18870": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 172.18444444444444
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 148.81555555555553
+			}
+		]
+	},
+	"18873": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 170.71777777777777
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 147.80666666666667
+			}
+		]
+	},
+	"18877": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 191.09555555555556
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 159.82888888888888
+			}
+		]
+	},
+	"18881": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 171.51777777777778
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 148.30444444444444
+			}
+		]
+	},
+	"18886": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 172.18444444444444
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 148.95777777777778
+			}
+		]
+	},
+	"18891": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 193.7
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 150.6688888888889
+			}
+		]
+	},
+	"18899": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 193.7
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 150.56222222222223
+			}
+		]
+	},
+	"18941": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 119.45555555555555
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 155.95777777777778
+			}
+		]
+	},
+	"19062": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 192.6511111111111
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 174.97555555555556
+			}
+		]
+	},
+	"19083": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 193.46888888888887
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 175.37555555555556
+			}
+		]
+	},
+	"19102": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 193.81555555555553
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 176.37555555555556
+			}
+		]
+	},
+	"19107": {
+		"latlons": [
+			[77.566144, 13.036887],
+			[77.56819758000938, 13.03441293522282]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 194.26
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 176.62
+			}
+		]
+	},
+	"19344": {
+		"latlons": [
+			[77.561301, 13.043601],
+			[77.57152, 13.028873]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Kuvempu+Circle+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 96.94888888888889
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sty+Wll+Ldge+Fix+3+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 10.08222222222222
+			}
+		]
+	},
+	"19393": {
+		"latlons": [
+			[77.561301, 13.043601],
+			[77.57152, 13.028873]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Kuvempu+Circle+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 100.59333333333332
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sty+Wll+Ldge+Fix+3+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 17.273333333333333
+			}
+		]
+	},
+	"19517": {
+		"latlons": [
+			[77.561301, 13.043601],
+			[77.57152, 13.028873]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Kuvempu+Circle+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 9.53111111111111
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sty+Wll+Ldge+Fix+3+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 33.882222222222225
+			}
+		]
+	},
+	"19558": {
+		"latlons": [
+			[77.561301, 13.043601],
+			[77.57152, 13.028873]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Kuvempu+Circle+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 174.45999999999998
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sty+Wll+Ldge+Fix+3+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 37.19777777777778
+			}
+		]
+	},
+	"19670": {
+		"latlons": [
+			[77.561301, 13.043601],
+			[77.57152, 13.028873]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Kuvempu+Circle+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 15.317777777777778
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sty+Wll+Ldge+Fix+3+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 51.01111111111111
+			}
+		]
+	},
+	"19691": {
+		"latlons": [
+			[77.561301, 13.043601],
+			[77.57152, 13.028873]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Kuvempu+Circle+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 194.86888888888888
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sty+Wll+Ldge+Fix+3+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 52.32666666666667
+			}
+		]
+	},
+	"32394": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 90.19777777777777
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 3.317777777777778
+			}
+		]
+	},
+	"32442": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 121.66888888888889
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 7.5488888888888885
+			}
+		]
+	},
+	"32680": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 131.0111111111111
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 22.188888888888886
+			}
+		]
+	},
+	"32710": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 130.4111111111111
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 24.024444444444445
+			}
+		]
+	},
+	"32721": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 131.9711111111111
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 24.593333333333334
+			}
+		]
+	},
+	"32792": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 163.8111111111111
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 28.68222222222222
+			}
+		]
+	},
+	"32959": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 170.94444444444443
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 41.08222222222222
+			}
+		]
+	},
+	"32987": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 20.08222222222222
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 42.282222222222224
+			}
+		]
+	},
+	"33050": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 84.79333333333334
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 44.80666666666667
+			}
+		]
+	},
+	"33330": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 21.073333333333334
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 65.16222222222223
+			}
+		]
+	},
+	"33519": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 180.73999999999998
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 75.17111111111112
+			}
+		]
+	},
+	"33520": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 81.68222222222222
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 75.51333333333334
+			}
+		]
+	},
+	"33668": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 68.73555555555555
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 82.9088888888889
+			}
+		]
+	},
+	"33886": {
+		"latlons": [
+			[77.571478, 13.028447],
+			[77.563501, 13.040655]
+		],
+		"videos": [
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 27.984444444444446
+			},
+			{
+				"video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+				"seek": 94.76666666666667
+			}
+		]
+	}
+}
