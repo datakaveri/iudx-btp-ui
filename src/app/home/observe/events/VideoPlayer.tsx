@@ -52,10 +52,10 @@ const VideoPlayer = () => {
 			}}
 		>
 			<ReactPlayer
-				width={320 * 1.5}
-				height={180 * 1.5}
+				width={320 * 2}
+				height={180 * 2}
 				ref={playerRef_1}
-				url="https://safecityvideos.s3.ap-south-1.amazonaws.com/2024-05-15/MS_Ramaiah_JN_FIX_2_time_2024-05-15T07:30:02_003.mp4"
+				url="https://safecityvideos.s3.ap-south-1.amazonaws.com/events/Site+2+Camera+6166+MS_Ramaiah_JN_FIX_2+MS_RAMAIAH_JUNCTION+1st+May+2024_h264.mp4"
 				playing={true}
 				volume={0.1}
 				onDuration={handleDuration}
