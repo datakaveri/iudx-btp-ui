@@ -73,13 +73,10 @@ const SideBySide = () => {
 
 	const timed_truth_values = zoom_1.values;
 	const timed_truth_timestamps = zoom_1.timestamps;
-	const timed_truth_geojsons = zoom_1.geojsons.slice(0, 300);
+	const timed_truth_geojsons = zoom_1.geojsons;
 
 	const timed_predictions_values = selectZoomData(zoomLevel).values;
-	const timed_predictions_geojsons = selectZoomData(zoomLevel).geojsons.slice(
-		0,
-		300
-	);
+	const timed_predictions_geojsons = selectZoomData(zoomLevel).geojsons;
 
 	return (
 		<>

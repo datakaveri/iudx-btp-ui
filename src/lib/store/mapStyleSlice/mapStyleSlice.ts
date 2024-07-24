@@ -6,7 +6,7 @@ interface MapStyleState {
 }
 
 const initialState: MapStyleState = {
-	value: "Dark",
+	value: "Streets",
 };
 
 export const mapStyleSlice = createSlice({
