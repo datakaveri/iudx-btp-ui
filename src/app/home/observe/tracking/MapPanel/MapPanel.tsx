@@ -34,9 +34,6 @@ const MapPanel = () => {
 							"hh:mm:ss a, ddd DD MMM YY"
 						)}
 					</span>
-					<span className={styles.reIdMarker}>
-						{data.videos[0].seek}
-					</span>
 					<Pin />
 				</div>
 			</Marker>
@@ -50,9 +47,6 @@ const MapPanel = () => {
 						{dayjs(data.timestamps[1]).format(
 							"hh:mm:ss a, ddd DD MMM YY"
 						)}
-					</span>
-					<span className={styles.reIdMarker}>
-						{data.videos[1].seek}
 					</span>
 					<Pin />
 				</div>
