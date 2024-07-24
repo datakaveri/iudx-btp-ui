@@ -1,31 +1,22 @@
-import React, { Suspense } from "react";
-import VideoWall from "@/ui/SyncVideoPlayers/VideoWall";
-import { Grid, Typography } from "@mui/material";
-import LeafletComponent from "@/ui/LeafletComponent/LeafletComponent";
+import { Grid } from "@mui/material";
+import VideoPlayer from "./VideoPlayer/VideoPlayer";
+import MapPanel from "./MapPanel/MapPanel";
+import SidebarComponent from "./SidebarComponent.tsx/SidebarComponent";
 
-const page = () => {
+export default function Page() {
 	return (
-		<>
-			<Typography variant="h5">Vehicle Re-Identification</Typography>
+		<div>
 			<Grid container spacing={2}>
-				<Grid
-					item
-					xs={12}
-					md={6}
-					style={{
-						height: "80vh",
-					}}
-				>
-					<Suspense fallback={<>Loading...</>}>
-						<LeafletComponent />
-					</Suspense>
+				<Grid item xs={12} lg={2}>
+					<SidebarComponent />
 				</Grid>
-				<Grid item xs={12} md={6}>
-					<VideoWall />
+				<Grid item xs={12} lg={5}>
+					<MapPanel />
+				</Grid>
+				<Grid item xs={12} lg={5}>
+					<VideoPlayer />
 				</Grid>
 			</Grid>
-		</>
+		</div>
 	);
-};
-
-export default page;
+}

@@ -5,8 +5,6 @@ import { Layer } from "react-map-gl";
 import { getLayerProps } from "./getLayerProps";
 
 const TrafficLayer = () => {
-	console.log(data.geojsons[0]);
-
 	return (
 		<Source
 			key={`trafficLayer`}

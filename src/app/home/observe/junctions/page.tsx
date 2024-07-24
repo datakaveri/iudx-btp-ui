@@ -19,7 +19,7 @@ import {
 } from "react-map-gl";
 import VideoCameraFrontIcon from "@mui/icons-material/VideoCameraFront";
 import PopupComponent from "@/ui/PopupComponent/PopupView";
-import cameraDataWithPathsAndTimeSeries from "@/data/data_outs_july_16_new.json";
+import cameraDataWithPathsAndTimeSeries from "@/data/junctions/data_outs.json";
 import LineLayerComponent from "@/ui/MapElements/LineLayerComponent/LineLayerComponent";
 import TimeSliderComponent from "@/ui/TimeSliderComponent/TimeSliderComponent";
 import { Typography } from "@mui/material";

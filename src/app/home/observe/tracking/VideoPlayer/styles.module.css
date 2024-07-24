@@ -1,0 +1,23 @@
+.kVideoFullScreenButton {
+	width: 480px;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.kVideoFullScreenButtonStyles {
+	background-color: white;
+	padding: 5px;
+	margin: 5px;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.kVideoFullScreenButtonsContainer {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

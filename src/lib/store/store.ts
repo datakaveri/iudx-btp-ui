@@ -3,6 +3,7 @@ import timeSliderReducer from "./timeSliderSlice/timeSliderSlice";
 import brushReducer from "@/lib/store/brushSlice/brushSlice";
 import mapStyleReducer from "@/lib/store/mapStyleSlice/mapStyleSlice";
 import mapLayerSlice from "./mapLayerSlice/mapLayerSlice";
+import reIdSlice from "./reIdSlice/reIdSlice";
 
 export const makeStore = () => {
 	return configureStore({
@@ -11,6 +12,7 @@ export const makeStore = () => {
 			brush: brushReducer,
 			mapStyle: mapStyleReducer,
 			mapLayer: mapLayerSlice,
+			reId: reIdSlice,
 		},
 	});
 };

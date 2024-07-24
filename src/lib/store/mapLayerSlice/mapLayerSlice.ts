@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
-import { execOnce } from "next/dist/shared/lib/utils";
 
 interface MapLayerState {
 	metroLayer: boolean;

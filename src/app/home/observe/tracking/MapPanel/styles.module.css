@@ -1,0 +1,11 @@
+.reIdMarker {
+	font-weight: 500;
+	padding: 5px;
+	outline: 1px solid black;
+	background-color: white;
+}
+
+.reIdMarkerContainer {
+	display: flex;
+	flex-direction: column;
+}
