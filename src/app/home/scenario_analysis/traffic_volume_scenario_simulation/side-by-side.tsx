@@ -13,7 +13,7 @@ import ControlPanel from "./control-panel";
 import RadioButtons from "./ZoomButtons";
 import { Typography } from "@mui/material";
 
-import zoom_1 from "@/data/zoomLevels/File_1x.json";
+import zoom_1 from "@/data/zoomLevels/final_prediction_1x_sorted.json";
 import { selectZoomData } from "./selectZoomData";
 
 export type Mode = "side-by-side" | "split-screen";

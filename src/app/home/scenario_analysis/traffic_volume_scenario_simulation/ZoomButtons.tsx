@@ -23,12 +23,12 @@ const ZoomButtons = () => {
 				>
 					2x
 				</Button>
-				<Button
+				{/* <Button
 					variant={zoomLevel === 3 ? "contained" : "outlined"}
 					onClick={() => dispatch(updateZoomLevel(3))}
 				>
 					3x
-				</Button>
+				</Button> */}
 			</ButtonGroup>
 		</div>
 	);
