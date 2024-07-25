@@ -1,5 +1,5 @@
 import React from "react";
-import iisc_loop from "@/data/extended_loop.json";
+import iisc_loop from "@/data/cameras/extended_loop.json";
 import { Layer, Source } from "react-map-gl";
 import { getLayerProps } from "./getLayerProps";
 
