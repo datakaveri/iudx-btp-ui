@@ -8,6 +8,7 @@ import { Metadata } from "next";
 const routes = [
 	"traffic_volume_scenario_simulation",
 	"traffic_flow_restrictions",
+	"road_closure",
 ];
 
 export const metadata: Metadata = {

@@ -1,14 +1,8 @@
-import {
-	MAPBOX_API_KEY,
-	MAPBOX_STYLE,
-	OLA_API_KEY,
-	OLA_MAP_STYLE,
-} from "@/environments/environments";
+import { MAPBOX_API_KEY } from "@/environments/environments";
 import { MutableRefObject, ReactNode } from "react";
 import Map, { MapRef } from "react-map-gl";
 import { calculateCentroid } from "@/utils/MapUtils/calculateCentroid";
 import "mapbox-gl/dist/mapbox-gl.css";
-import MapSelector from "@/ui/MapSelector/MapSelector";
 import { MAPBOX_STYLES } from "@/lib/sync-video-player/constants";
 import { useAppSelector } from "@/lib/store/hooks";
 
@@ -41,7 +35,6 @@ const MapboxComponent = ({ coordinates, children, mapRef, legend }: Props) => {
 				padding: 0,
 			}}
 		>
-			{/* <MapSelector /> */}
 			{children}
 			{legend}
 		</Map>
