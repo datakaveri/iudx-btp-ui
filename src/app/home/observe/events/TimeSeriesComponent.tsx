@@ -3,6 +3,9 @@
 import { setBounds, setSelectedTime } from "@/lib/store/brushSlice/brushSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
 import { TimeSeriesInterface } from "@/types/TimeSeriesInterface";
+import DropdownComponent, {
+	vehicleClasses,
+} from "@/ui/TimeSeriesComponent/DropdownComponent";
 import { Card } from "@mui/material";
 import axios from "axios";
 import { LegendComponentOption, SeriesOption } from "echarts";
@@ -14,10 +17,9 @@ interface Props {
 	setTimestamp: (value: number) => void;
 }
 
-// const TimeSeriesComponent = ({ timeValue, setTimestamp }: Props) => {
 const TimeSeriesComponent = () => {
 	const timeSeriesURL =
-		"https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/timeseries/Site 2 Camera 6166        MS_Ramaiah_JN_FIX_2        MS_RAMAIAH_JUNCTION 1st May 2024.json";
+		"https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/classwisetimeseries/Site 2 Camera 6166        MS_Ramaiah_JN_FIX_2        MS_RAMAIAH_JUNCTION 1st May 2024.json";
 	const [timeSeriesData, setTimeSeriesData] =
 		useState<TimeSeriesInterface[]>();
 	const [loading, setLoading] = useState<boolean>(true);
@@ -33,9 +35,12 @@ const TimeSeriesComponent = () => {
 				setTimeSeriesData(res.data);
 				setLoading(false);
 			});
-	}, []);
+	}, [loading]);
 
 	const dispatch = useAppDispatch();
+	const vehicleClass = useAppSelector(
+		(state) => state.timeSlider.vehicleClass
+	);
 
 	if (!loading) {
 		dispatch(
@@ -54,7 +59,7 @@ const TimeSeriesComponent = () => {
 			timeSeries.counts.map((count, index) => {
 				trendData.push([
 					+new Date(timeSeries.timestamps[index]),
-					count,
+					count[vehicleClasses.indexOf(vehicleClass)],
 				]);
 			});
 			legend.push({
@@ -133,21 +138,6 @@ const TimeSeriesComponent = () => {
 				},
 			},
 		],
-		// dataZoom: [
-		// 	{
-		// 		show: false,
-		// 		type: "slider",
-		// 		start: timeValue,
-		// 		end: timeValue + 10,
-		// 		minSpan: 10,
-		// 		maxSpan: 10,
-		// 	},
-		// 	{
-		// 		type: "slider",
-		// 		start: timeValue + 10,
-		// 		end: timeValue + 20,
-		// 	},
-		// ],
 		series: timeSeriesArray,
 		graphic: [
 			{
@@ -182,6 +172,7 @@ const TimeSeriesComponent = () => {
 
 	return (
 		<Card variant="outlined">
+			<DropdownComponent />
 			<ReactEcharts
 				option={option}
 				style={{

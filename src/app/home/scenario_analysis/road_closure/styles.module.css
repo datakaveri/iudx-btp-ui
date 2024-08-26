@@ -1,0 +1,9 @@
+.kJunctionsLegendComponent {
+	margin: 20px;
+	padding: 10px;
+	width: auto;
+	position: absolute;
+	outline: 1px solid black;
+	background-color: white;
+	border-radius: 5px;
+}

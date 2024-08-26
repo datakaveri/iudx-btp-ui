@@ -6,6 +6,7 @@ interface MapLayerState {
 	wardsLayer: boolean;
 	zoomLevel: 1.5 | 2 | 3;
 	closure: "original" | "simulated" | "gnn_predicted";
+	closureLayers: {};
 }
 
 const initialState: MapLayerState = {
@@ -13,6 +14,7 @@ const initialState: MapLayerState = {
 	wardsLayer: true,
 	zoomLevel: 1.5,
 	closure: "original",
+	closureLayers: {},
 };
 
 export const mapLayerSlice = createSlice({
@@ -31,15 +33,35 @@ export const mapLayerSlice = createSlice({
 		) => {
 			state.closure = action.payload;
 		},
+		setClosureLayers: (state, action: PayloadAction<{}>) => {
+			state.closureLayers = action.payload;
+		},
+		updateClosureLayers: (state, action: PayloadAction<string>) => {
+			state.closureLayers = {
+				...state.closureLayers,
+				[action.payload]: !state.closureLayers[action.payload],
+			};
+		},
+		clearClosureLayers: (state) => {
+			state.closureLayers = {};
+		},
 	},
 });
 
-export const { updateLayers, updateZoomLevel, updateClosure } =
-	mapLayerSlice.actions;
+export const {
+	updateLayers,
+	updateZoomLevel,
+	updateClosure,
+	setClosureLayers,
+	updateClosureLayers,
+	clearClosureLayers,
+} = mapLayerSlice.actions;
 
 export const selectMetroLayer = (state: RootState) => state.mapLayer.metroLayer;
 export const selectWardsLayer = (state: RootState) => state.mapLayer.wardsLayer;
 export const selectZoomLevel = (state: RootState) => state.mapLayer.zoomLevel;
 export const selectClosure = (state: RootState) => state.mapLayer.closure;
+export const selectClosureLayers = (state: RootState) =>
+	state.mapLayer.closureLayers;
 
 export default mapLayerSlice.reducer;

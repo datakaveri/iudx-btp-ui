@@ -2,12 +2,13 @@ import { LayerProps } from "react-map-gl";
 
 export const getClosedLayerProps = () => {
 	const layerStyle: LayerProps = {
-		type: "line",
+		type: "fill",
 		source: "my_data",
 		layout: {},
 		paint: {
-			"line-color": "purple",
-			"line-width": 2,
+			"fill-color": "purple",
+			"fill-outline-color": "black",
+			"fill-opacity": 0.8,
 		},
 	};
 

@@ -23,8 +23,8 @@ const VideoContainers = ({ ids, syncVideoPlayer, addedContainers }: Props) => {
 					id={id}
 					style={{
 						margin: "5px",
-						width: "576px",
-						height: "324px",
+						width: "480px",
+						height: "270px",
 					}}
 					className="box"
 					onClick={() => onClick(index)}

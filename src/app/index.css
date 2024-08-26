@@ -1,5 +1,6 @@
 .mapboxgl-popup-anchor-left {
-	height: 650px !important;
+	/* TODO: Uncomment if popups break */
+	/* height: 650px !important; */
 	flex-direction: row;
 }
 

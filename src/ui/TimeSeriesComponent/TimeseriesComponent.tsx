@@ -5,6 +5,7 @@ import { LegendComponentOption, SeriesOption } from "echarts";
 import { TimeSeriesInterface } from "@/types/TimeSeriesInterface";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
 import { setTimeseriesColorsList } from "@/lib/store/timeSliderSlice/timeSliderSlice";
+import DropdownComponent, { vehicleClasses } from "./DropdownComponent";
 
 interface Props {
 	tsLinks: {};
@@ -28,6 +29,10 @@ const TimeseriesComponent = ({ tsLinks }: Props) => {
 
 	const dispatch = useAppDispatch();
 
+	const vehicleClass = useAppSelector(
+		(state) => state.timeSlider.vehicleClass
+	);
+
 	useEffect(() => {
 		if (Object.keys(tsLinks).length > 0) {
 			const date = Object.keys(tsLinks)[0];
@@ -44,7 +49,7 @@ const TimeseriesComponent = ({ tsLinks }: Props) => {
 			timeSeries.counts.map((count, index) => {
 				trendData.push([
 					+new Date(timeSeries.timestamps[index]),
-					count,
+					count[vehicleClasses.indexOf(vehicleClass)],
 				]);
 			});
 			legend.push({
@@ -173,6 +178,7 @@ const TimeseriesComponent = ({ tsLinks }: Props) => {
 
 	return (
 		<div>
+			<DropdownComponent />
 			<ReactEcharts
 				ref={eChartsRef}
 				option={option}
