@@ -13,6 +13,7 @@ import ClosedRoads from "./ClosedRoads";
 import { MAPBOX_API_KEY } from "@/environments/environments";
 import { MAPBOX_STYLES } from "@/lib/sync-video-player/constants";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { useSearchParams } from "next/navigation";
 
 export default function Page() {
 	const mapStyle = useAppSelector((state) => state.mapStyle.value);
@@ -21,13 +22,18 @@ export default function Page() {
 	const timeValue = useAppSelector((state) => state.timeSlider.value);
 	const mapRef: MutableRefObject<MapRef | undefined> = useRef<MapRef>();
 
-	const timestamps = selectClosureData(closure).timestamps;
-	const values = selectClosureData(closure).values;
-	const geojsons = selectClosureData(closure).geojsons;
+	const searchParams = useSearchParams();
+	const roadType = searchParams.get("keyword")
+		? searchParams.get("keyword")
+		: "hmt_road";
+
+	const timestamps = selectClosureData(closure, roadType).timestamps;
+	const values = selectClosureData(closure, roadType).values;
+	const geojsons = selectClosureData(closure, roadType).geojsons;
 
 	return (
 		<div>
-			<Typography variant="h5">Road Closure</Typography>
+			<Typography variant="h5">Road Closure for {roadType}</Typography>
 
 			<Map
 				mapboxAccessToken={MAPBOX_API_KEY}

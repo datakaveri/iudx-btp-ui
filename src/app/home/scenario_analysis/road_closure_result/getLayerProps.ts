@@ -2,7 +2,9 @@ import chroma from "chroma-js";
 import { LayerProps } from "react-map-gl";
 
 export const getLayerProps = (value: number) => {
-	const scale = chroma.scale(["green", "yellow", "red"]).domain([0, 2, 10]);
+	const scale = chroma
+		.scale(["green", "yellow", "red"])
+		.domain([0, 0.2, 0.5]);
 	const layerStyle: LayerProps = {
 		type: "fill",
 		source: "my_data",

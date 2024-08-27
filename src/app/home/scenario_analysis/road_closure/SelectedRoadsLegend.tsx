@@ -48,7 +48,14 @@ const SelectedRoadsLegend = () => {
 			})}
 			<br />
 			{layersArray.length > 0 ? (
-				<Link href={`/home/scenario_analysis/road_closure_result`}>
+				<Link
+					href={{
+						pathname: `/home/scenario_analysis/road_closure_result`,
+						query: {
+							keyword: Object.keys(closureLayers)[0],
+						},
+					}}
+				>
 					<Button variant="outlined" endIcon={<InsightsIcon />}>
 						Analyze
 					</Button>

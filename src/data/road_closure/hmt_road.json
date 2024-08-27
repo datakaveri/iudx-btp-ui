@@ -54,7 +54,7 @@
 		},
 		{
 			"type": "Feature",
-			"id": "bel_road",
+			"id": "msr_road",
 			"geometry": {
 				"type": "LineString",
 				"coordinates": [
@@ -79,7 +79,7 @@
 				]
 			},
 			"properties": {
-				"name": "bel_road"
+				"name": "msr_road"
 			}
 		}
 	]
