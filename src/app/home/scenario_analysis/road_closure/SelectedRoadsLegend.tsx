@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./styles.module.css";
-import { Chip, Typography } from "@mui/material";
+import { Button, Chip, Typography } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
 import {
 	clearClosureLayers,
 	updateClosureLayers,
 } from "@/lib/store/mapLayerSlice/mapLayerSlice";
-
+import Link from "next/link";
+import InsightsIcon from "@mui/icons-material/Insights";
 const SelectedRoadsLegend = () => {
 	const closureLayers = useAppSelector(
 		(state) => state.mapLayer.closureLayers
@@ -37,7 +38,7 @@ const SelectedRoadsLegend = () => {
 			</Typography>
 			<br />
 			{layersArray.map((layer, index) => {
-				return closureLayers[layer] === false ? (
+				return closureLayers[layer] ? (
 					<Chip
 						label={layer}
 						key={index}
@@ -45,6 +46,14 @@ const SelectedRoadsLegend = () => {
 					/>
 				) : null;
 			})}
+			<br />
+			{layersArray.length > 0 ? (
+				<Link href={`/home/scenario_analysis/road_closure_result`}>
+					<Button variant="outlined" endIcon={<InsightsIcon />}>
+						Analyze
+					</Button>
+				</Link>
+			) : null}
 		</div>
 	);
 };

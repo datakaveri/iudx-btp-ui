@@ -1,14 +1,14 @@
 import { LayerProps } from "react-map-gl";
 
-export const getClosedLayerProps = () => {
+export const getClosedLayerProps = (visble: boolean) => {
 	const layerStyle: LayerProps = {
-		type: "fill",
+		type: "line",
 		source: "my_data",
 		layout: {},
 		paint: {
-			"fill-color": "purple",
-			"fill-outline-color": "black",
-			"fill-opacity": 0.8,
+			"line-color": visble ? "red" : "black",
+			"line-width": 6,
+			"line-opacity": visble ? 0.7 : 0.4,
 		},
 	};
 

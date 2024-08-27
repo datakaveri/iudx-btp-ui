@@ -1,14 +1,9 @@
 "use client";
 
-import MapboxComponent from "@/ui/MapboxComponent/MapboxComponent";
 import { Typography } from "@mui/material";
-import ClosureButtons from "./ClosureButtons";
-import TimeSliderComponent from "@/app/home/forecast/short_term_traffic_flow/TimeSliderComponent";
-import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
-import { selectClosureData } from "./selectClosureData";
-import Map, { Layer, MapRef, Source } from "react-map-gl";
+import { useAppSelector } from "@/lib/store/hooks";
+import Map, { MapRef } from "react-map-gl";
 
-import { getLayerProps } from "./getLayerProps";
 import {
 	MutableRefObject,
 	useCallback,
@@ -16,70 +11,42 @@ import {
 	useRef,
 	useState,
 } from "react";
-import ClosedRoads from "./ClosedRoads";
 import { MAPBOX_API_KEY } from "@/environments/environments";
 import { MAPBOX_STYLES } from "@/lib/sync-video-player/constants";
 import "mapbox-gl/dist/mapbox-gl.css";
-import PopupComponent from "./PopupComponent";
-import { calculateCentroid } from "@/utils/MapUtils/calculateCentroid";
-import { centroid } from "./centroid";
+import HMTLayer from "./hmtLayer";
 import MapResetButton from "@/ui/MapElements/MapResetButton/MapResetButton";
 import { onResetCallback } from "@/hooks/onReset";
-import { setClosureLayers } from "@/lib/store/mapLayerSlice/mapLayerSlice";
+import PopupComponent from "./PopupComponent";
+import { calculateCentroid } from "@/utils/MapUtils/calculateCentroid";
 import SelectedRoadsLegend from "./SelectedRoadsLegend";
 
 export default function Page() {
 	const mapStyle = useAppSelector((state) => state.mapStyle.value);
-	const closure = useAppSelector((state) => state.mapLayer.closure);
-	const closureLayers = useAppSelector(
-		(state) => state.mapLayer.closureLayers
-	);
-	const timeValue = useAppSelector((state) => state.timeSlider.value);
+
 	const mapRef: MutableRefObject<MapRef | undefined> = useRef<MapRef>();
 	const [hoverInfo, setHoverInfo] = useState(null);
-
-	const timestamps = selectClosureData(closure).timestamps;
-	const values = selectClosureData(closure).values;
-	const geojsons = selectClosureData(closure).geojsons;
-
-	const layersArray = Array.from(
-		{ length: geojsons.length },
-		(v, i) => `new_loop-${i}`
-	);
-
-	const dispatch = useAppDispatch();
 
 	const onClick = useCallback((event) => {
 		const { features } = event;
 
 		const hoveredFeature = features && features[0];
-		const point = centroid(hoveredFeature.geometry);
+
+		const point = calculateCentroid(hoveredFeature.geometry.coordinates);
 
 		event.originalEvent.stopPropagation();
+
 		setHoverInfo(
 			hoveredFeature
 				? {
 						feature: hoveredFeature,
 						x: point[1],
 						y: point[0],
+						road: hoveredFeature.properties.name,
 				  }
 				: null
 		);
 	}, []);
-
-	useEffect(() => {
-		dispatch(
-			setClosureLayers(
-				Array.from(
-					{ length: geojsons.length },
-					(v, i) => `new_loop-${i}`
-				).reduce((acc, key) => {
-					acc[key] = true;
-					return acc;
-				}, {})
-			)
-		);
-	}, [dispatch, geojsons.length]);
 
 	return (
 		<div>
@@ -87,11 +54,11 @@ export default function Page() {
 
 			<Map
 				mapboxAccessToken={MAPBOX_API_KEY}
-				interactiveLayerIds={layersArray}
+				interactiveLayerIds={["hmt_road", "bel_road"]}
 				initialViewState={{
 					latitude: 13.021773235458033,
 					longitude: 77.57145036562521,
-					zoom: 13,
+					zoom: 14.5,
 					bearing: 0,
 					pitch: 0,
 				}}
@@ -112,50 +79,15 @@ export default function Page() {
 						[13.021773235458033, 77.57145036562521],
 					])}
 				/>
-				{geojsons.map((feature, index) => {
-					return (
-						<Source
-							key={index.toString()}
-							id={`new_loop-${index.toString()}`}
-							type="geojson"
-							data={feature.geometry}
-						>
-							<Layer
-								id={`new_loop-${index.toString()}`}
-								{...getLayerProps(
-									values[timeValue][index],
-									closureLayers[
-										`new_loop-${index.toString()}`
-									]
-								)}
-							/>
-						</Source>
-					);
-				})}
-				<ClosedRoads />
-
+				<SelectedRoadsLegend />
 				{hoverInfo && (
 					<PopupComponent
 						popupInfo={hoverInfo}
 						setPopupInfo={setHoverInfo}
 					/>
 				)}
-				<SelectedRoadsLegend />
+				<HMTLayer />
 			</Map>
-
-			<TimeSliderComponent timestamps={timestamps} />
-
-			<Typography
-				variant="h6"
-				sx={{
-					paddingTop: "10px",
-					paddingBottom: "5px",
-				}}
-			>
-				Closures
-			</Typography>
-
-			<ClosureButtons />
 		</div>
 	);
 }

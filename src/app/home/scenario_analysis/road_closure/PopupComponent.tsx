@@ -14,7 +14,8 @@ const PopupComponent = ({ popupInfo, setPopupInfo }: Props) => {
 	const closureLayers = useAppSelector(
 		(state) => state.mapLayer.closureLayers
 	);
-	useEffect(() => {}, [popupInfo]);
+
+	console.log(popupInfo.road);
 
 	return (
 		<Popup
@@ -28,24 +29,24 @@ const PopupComponent = ({ popupInfo, setPopupInfo }: Props) => {
 			{closureLayers[popupInfo.feature.source] ? (
 				<Button
 					onClick={() => {
-						dispatch(updateClosureLayers(popupInfo.feature.source));
-					}}
-					size="small"
-					variant="outlined"
-					color="error"
-				>
-					Close Road
-				</Button>
-			) : (
-				<Button
-					onClick={() => {
-						dispatch(updateClosureLayers(popupInfo.feature.source));
+						dispatch(updateClosureLayers(popupInfo.road));
 					}}
 					size="small"
 					variant="outlined"
 					color="success"
 				>
 					Open Road
+				</Button>
+			) : (
+				<Button
+					onClick={() => {
+						dispatch(updateClosureLayers(popupInfo.road));
+					}}
+					size="small"
+					variant="outlined"
+					color="error"
+				>
+					Close Road
 				</Button>
 			)}
 		</Popup>

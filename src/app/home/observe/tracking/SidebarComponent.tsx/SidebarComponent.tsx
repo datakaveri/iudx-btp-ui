@@ -10,7 +10,7 @@ import {
 	ListItemText,
 } from "@mui/material";
 
-import reIdData from "@/data/reid/reid_master_new.json";
+import reIdData from "@/data/reid/reid_master.json";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
 import { selectVehicleId } from "@/lib/store/reIdSlice/reIdSlice";
 
