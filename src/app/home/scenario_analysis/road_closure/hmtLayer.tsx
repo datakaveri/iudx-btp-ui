@@ -1,5 +1,5 @@
 import React from "react";
-import hmt_layer from "@/data/road_closure/hmt_road.json";
+import hmt_layer from "@/data/road_closure/roads.json";
 import { Layer, Source } from "react-map-gl";
 import { getClosedLayerProps } from "./getClosedLayerProps";
 import { useAppSelector } from "@/lib/store/hooks";

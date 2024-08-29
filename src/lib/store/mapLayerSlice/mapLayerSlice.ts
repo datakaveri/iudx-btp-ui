@@ -5,7 +5,7 @@ interface MapLayerState {
 	metroLayer: boolean;
 	wardsLayer: boolean;
 	zoomLevel: 1.5 | 2 | 3;
-	closure: "original" | "simulated" | "gnn_predicted";
+	closure: "original" | "simulated" | "gnn_predicted" | "difference";
 	closureLayers: {};
 }
 
@@ -29,7 +29,9 @@ export const mapLayerSlice = createSlice({
 		},
 		updateClosure: (
 			state,
-			action: PayloadAction<"original" | "simulated" | "gnn_predicted">
+			action: PayloadAction<
+				"original" | "simulated" | "gnn_predicted" | "difference"
+			>
 		) => {
 			state.closure = action.payload;
 		},

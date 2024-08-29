@@ -5,11 +5,7 @@ import TabsComponent from "@/ui/TabsComponent/TabsComponent";
 import { Metadata } from "next";
 import styles from "./styles.module.css";
 
-const routes = [
-	"short_term_traffic_flow",
-	"short_term_traffic_flow_comparison",
-	"o-d_estimation",
-];
+const routes = ["short_term_traffic_flow_comparison", "o-d_estimation"];
 
 export const metadata: Metadata = {
 	title: "Forecast | AI Based Demand Forecasting",

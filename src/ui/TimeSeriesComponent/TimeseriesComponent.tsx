@@ -5,7 +5,9 @@ import { LegendComponentOption, SeriesOption } from "echarts";
 import { TimeSeriesInterface } from "@/types/TimeSeriesInterface";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
 import { setTimeseriesColorsList } from "@/lib/store/timeSliderSlice/timeSliderSlice";
-import DropdownComponent, { vehicleClasses } from "./DropdownComponent";
+import VehicleClassDropdownComponent, {
+	vehicleClasses,
+} from "./VehicleClassDropdownComponent";
 
 interface Props {
 	tsLinks: {};
@@ -178,7 +180,7 @@ const TimeseriesComponent = ({ tsLinks }: Props) => {
 
 	return (
 		<div>
-			<DropdownComponent />
+			<VehicleClassDropdownComponent />
 			<ReactEcharts
 				ref={eChartsRef}
 				option={option}

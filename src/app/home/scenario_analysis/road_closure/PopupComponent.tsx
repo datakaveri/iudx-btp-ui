@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
 import { updateClosureLayers } from "@/lib/store/mapLayerSlice/mapLayerSlice";
 import { Box, Button, Typography } from "@mui/material";
-import React, { Dispatch, SetStateAction, useEffect } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { Popup } from "react-map-gl";
 
 interface Props {

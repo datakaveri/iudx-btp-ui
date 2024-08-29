@@ -25,7 +25,7 @@ export default function Page() {
 	const searchParams = useSearchParams();
 	const roadType = searchParams.get("keyword")
 		? searchParams.get("keyword")
-		: "hmt_road";
+		: "MS Ramaiah Road";
 
 	const timestamps = selectClosureData(closure, roadType).timestamps;
 	const values = selectClosureData(closure, roadType).values;

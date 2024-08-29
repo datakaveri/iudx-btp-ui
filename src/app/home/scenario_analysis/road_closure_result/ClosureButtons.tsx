@@ -34,6 +34,14 @@ const CLosureButtons = () => {
 				>
 					GNN Predicted
 				</Button>
+				<Button
+					variant={
+						closure === "difference" ? "contained" : "outlined"
+					}
+					onClick={() => dispatch(updateClosure("difference"))}
+				>
+					Difference
+				</Button>
 			</ButtonGroup>
 		</div>
 	);

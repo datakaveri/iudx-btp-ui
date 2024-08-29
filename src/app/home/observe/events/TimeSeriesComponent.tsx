@@ -3,9 +3,9 @@
 import { setBounds, setSelectedTime } from "@/lib/store/brushSlice/brushSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
 import { TimeSeriesInterface } from "@/types/TimeSeriesInterface";
-import DropdownComponent, {
+import VehicleClassDropdownComponent, {
 	vehicleClasses,
-} from "@/ui/TimeSeriesComponent/DropdownComponent";
+} from "@/ui/TimeSeriesComponent/VehicleClassDropdownComponent";
 import { Card } from "@mui/material";
 import axios from "axios";
 import { LegendComponentOption, SeriesOption } from "echarts";
@@ -172,7 +172,7 @@ const TimeSeriesComponent = () => {
 
 	return (
 		<Card variant="outlined">
-			<DropdownComponent />
+			<VehicleClassDropdownComponent />
 			<ReactEcharts
 				option={option}
 				style={{

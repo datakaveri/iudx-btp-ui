@@ -4,7 +4,7 @@ import { LayerProps } from "react-map-gl";
 export const getLayerProps = (value: number) => {
 	const scale = chroma
 		.scale(["green", "yellow", "red"])
-		.domain([0, 0.2, 0.5]);
+		.domain([0, 0.025, 0.04]);
 	const layerStyle: LayerProps = {
 		type: "fill",
 		source: "my_data",

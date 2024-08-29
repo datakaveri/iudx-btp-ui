@@ -54,7 +54,7 @@ export default function Page() {
 
 			<Map
 				mapboxAccessToken={MAPBOX_API_KEY}
-				interactiveLayerIds={["hmt_road", "msr_road"]}
+				interactiveLayerIds={["CV Raman Road", "MS Ramaiah Road"]}
 				initialViewState={{
 					latitude: 13.021773235458033,
 					longitude: 77.57145036562521,

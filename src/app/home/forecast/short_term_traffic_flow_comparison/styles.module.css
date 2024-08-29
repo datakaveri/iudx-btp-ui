@@ -23,10 +23,24 @@
 	font-size: 15px;
 }
 
-.swipeControlPanel {
+.swipeControlPanel,
+.kVehicleClassDropdown {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.kControlPanel {
 	position: absolute;
 	z-index: 3;
 	margin: 10px;
 	background-color: white;
 	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	outline: 1px solid black;
+	border-radius: 5px;
 }

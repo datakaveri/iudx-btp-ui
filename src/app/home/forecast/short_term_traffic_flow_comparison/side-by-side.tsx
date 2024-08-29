@@ -10,14 +10,16 @@ import TimeSliderComponent from "@/app/home/forecast/short_term_traffic_flow/Tim
 import TopLabel from "./TopLabel";
 import { getLayerProps } from "@/app/home/forecast/short_term_traffic_flow/getLayerProps";
 import ControlPanel from "./control-panel";
-import { Typography } from "@mui/material";
 
-import truth_data from "@/data/timed_ground_truth_NEW_sorted.json";
-import prediction_data from "@/data/timed_predictions_NEW_sorted.json";
+import truth_data from "@/data/short_term_traffic_flow_comparison/normalised_ground_truth_sorted.json";
+import prediction_data from "@/data/short_term_traffic_flow_comparison/normalised_prediction_sorted.json";
 import {
 	computeMean,
 	computeStandardDeviation,
 } from "../short_term_traffic_flow/computeMeanAndStandardDeviation";
+
+import styles from "./styles.module.css";
+import VehicleClassDropdown from "./VehicleClassDropdown";
 
 export type Mode = "side-by-side" | "split-screen";
 
@@ -72,13 +74,15 @@ const SideBySide = () => {
 		};
 	}, [width, mode]);
 
-	const zoomLevel = useAppSelector((state) => state.mapLayer.zoomLevel);
+	const vehicleClass = useAppSelector(
+		(state) => state.timeSlider.shortTermTrafficFlowVehicleClass
+	);
 
-	const timed_truth_values = truth_data.values;
+	const timed_truth_values = truth_data.values[vehicleClass];
 	const timed_truth_timestamps = truth_data.timestamps;
 	const timed_truth_geojsons = truth_data.geojsons.slice(0, 300);
 
-	const timed_predictions_values = prediction_data.values;
+	const timed_predictions_values = prediction_data.values[vehicleClass];
 	const timed_predictions_geojsons = prediction_data.geojsons.slice(0, 300);
 
 	return (
@@ -91,7 +95,7 @@ const SideBySide = () => {
 			>
 				<Map
 					id="left-map"
-					maxZoom={14}
+					// maxZoom={14}
 					{...viewState}
 					padding={leftMapPadding}
 					onMoveStart={onLeftMoveStart}
@@ -103,7 +107,10 @@ const SideBySide = () => {
 					mapboxAccessToken={MAPBOX_API_KEY}
 				>
 					<TopLabel label="Ground Truth" />
-					<ControlPanel mode={mode} onModeChange={setMode} />
+					<div className={styles.kControlPanel}>
+						<ControlPanel mode={mode} onModeChange={setMode} />
+						<VehicleClassDropdown />
+					</div>
 
 					{timed_truth_geojsons.map((feature, index) => {
 						return (
@@ -116,19 +123,19 @@ const SideBySide = () => {
 								<Layer
 									id={`new_loop-${index.toString()}`}
 									{...getLayerProps(
-										timed_truth_values[timeValue][index],
-										Math.max(
-											...timed_truth_values[timeValue]
-										),
-										Math.min(
-											...timed_truth_values[timeValue]
-										),
-										computeMean(
-											timed_truth_values[timeValue]
-										),
-										computeStandardDeviation(
-											timed_truth_values[timeValue]
-										)
+										timed_truth_values[timeValue][index]
+										// Math.max(
+										// 	...timed_truth_values[timeValue]
+										// ),
+										// Math.min(
+										// 	...timed_truth_values[timeValue]
+										// ),
+										// computeMean(
+										// 	timed_truth_values[timeValue]
+										// ),
+										// computeStandardDeviation(
+										// 	timed_truth_values[timeValue]
+										// )
 									)}
 								/>
 							</Source>

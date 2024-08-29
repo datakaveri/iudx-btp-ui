@@ -2,7 +2,8 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 import cameraDataWithPathsAndTimeSeries from "@/data/junctions/data_outs.json";
 import { getColorsList } from "./getTimeSeriesColors";
-import { vehicleClasses } from "@/ui/TimeSeriesComponent/DropdownComponent";
+import { vehicleClasses } from "@/ui/TimeSeriesComponent/VehicleClassDropdownComponent";
+import { shortTermTrafficFlowVehicleClasses } from "@/app/home/forecast/short_term_traffic_flow_comparison/VehicleClassDropdown";
 
 export interface ColorsListItem {
 	selected: boolean;
@@ -17,6 +18,7 @@ interface TimeSliderState {
 	playing: boolean;
 	colorsList: ColorsListItem[];
 	vehicleClass: string;
+	shortTermTrafficFlowVehicleClass: string;
 }
 
 const initialState: TimeSliderState = {
@@ -26,6 +28,10 @@ const initialState: TimeSliderState = {
 	playing: false,
 	colorsList: getColorsList(),
 	vehicleClass: vehicleClasses[vehicleClasses.length - 1],
+	shortTermTrafficFlowVehicleClass:
+		shortTermTrafficFlowVehicleClasses[
+			shortTermTrafficFlowVehicleClasses.length - 1
+		],
 };
 
 export const timeSliderSlice = createSlice({
@@ -53,6 +59,12 @@ export const timeSliderSlice = createSlice({
 		setVehicleClass: (state, action: PayloadAction<string>) => {
 			state.vehicleClass = action.payload;
 		},
+		setShortTermTrafficFlowVehicleClass: (
+			state,
+			action: PayloadAction<string>
+		) => {
+			state.shortTermTrafficFlowVehicleClass = action.payload;
+		},
 	},
 });
 
@@ -64,6 +76,7 @@ export const {
 	setSelectedDate,
 	setTimeseriesColorsList,
 	setVehicleClass,
+	setShortTermTrafficFlowVehicleClass,
 } = timeSliderSlice.actions;
 
 export const selectValue = (state: RootState) => state.timeSlider.value;
@@ -74,5 +87,7 @@ export const selectedDate = (state: RootState) => state.timeSlider.selectedDate;
 export const colorsList = (state: RootState) => state.timeSlider.colorsList;
 export const selectVehicleClass = (state: RootState) =>
 	state.timeSlider.vehicleClass;
+export const selectShortTermVehicleFlowVehicleClass = (state: RootState) =>
+	state.timeSlider.shortTermTrafficFlowVehicleClass;
 
 export default timeSliderSlice.reducer;

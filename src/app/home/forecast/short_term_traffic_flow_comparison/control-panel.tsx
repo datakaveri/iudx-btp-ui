@@ -17,13 +17,11 @@ function ControlPanel(props: {
 
 	return (
 		<div className={styles.swipeControlPanel}>
-			<div>
-				<label>Mode: </label>
-				<select value={props.mode} onChange={onModeChange}>
-					<option value="side-by-side">Side by side</option>
-					<option value="split-screen">Split screen</option>
-				</select>
-			</div>
+			<label>Mode: </label>
+			<select value={props.mode} onChange={onModeChange}>
+				<option value="side-by-side">Side by side</option>
+				<option value="split-screen">Split screen</option>
+			</select>
 		</div>
 	);
 }
