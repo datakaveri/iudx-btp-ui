@@ -18,6 +18,7 @@ const MapboxComponent = ({ coordinates, children, mapRef, legend }: Props) => {
 
 	return (
 		<Map
+			reuseMaps
 			mapboxAccessToken={MAPBOX_API_KEY}
 			initialViewState={{
 				latitude: calculateCentroid(coordinates)[0],

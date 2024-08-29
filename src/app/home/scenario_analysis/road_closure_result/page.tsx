@@ -36,6 +36,7 @@ export default function Page() {
 			<Typography variant="h5">Road Closure for {roadType}</Typography>
 
 			<Map
+				reuseMaps
 				mapboxAccessToken={MAPBOX_API_KEY}
 				initialViewState={{
 					latitude: 13.021773235458033,

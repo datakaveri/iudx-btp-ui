@@ -53,6 +53,7 @@ export default function Page() {
 			<Typography variant="h5">Road Closure</Typography>
 
 			<Map
+				reuseMaps
 				mapboxAccessToken={MAPBOX_API_KEY}
 				interactiveLayerIds={["CV Raman Road", "MS Ramaiah Road"]}
 				initialViewState={{

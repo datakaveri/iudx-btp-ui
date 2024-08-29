@@ -44,6 +44,7 @@ export default function Page() {
 			<Typography variant="h5">Event Simulation</Typography>
 
 			<Map
+				reuseMaps
 				mapboxAccessToken={MAPBOX_API_KEY}
 				interactiveLayerIds={["polygonLoop"]}
 				initialViewState={{

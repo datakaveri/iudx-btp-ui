@@ -87,8 +87,8 @@ const SideBySide = () => {
 				}}
 			>
 				<Map
+					reuseMaps
 					id="left-map"
-					maxZoom={14}
 					{...viewState}
 					padding={leftMapPadding}
 					onMoveStart={onLeftMoveStart}
@@ -121,7 +121,7 @@ const SideBySide = () => {
 					})}
 				</Map>
 				<Map
-					maxZoom={14}
+					reuseMaps
 					id="right-map"
 					{...viewState}
 					padding={rightMapPadding}

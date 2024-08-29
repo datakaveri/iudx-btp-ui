@@ -94,8 +94,8 @@ const SideBySide = () => {
 				}}
 			>
 				<Map
+					reuseMaps
 					id="left-map"
-					// maxZoom={14}
 					{...viewState}
 					padding={leftMapPadding}
 					onMoveStart={onLeftMoveStart}
@@ -143,7 +143,7 @@ const SideBySide = () => {
 					})}
 				</Map>
 				<Map
-					maxZoom={14}
+					reuseMaps
 					id="right-map"
 					{...viewState}
 					padding={rightMapPadding}
@@ -170,23 +170,7 @@ const SideBySide = () => {
 									{...getLayerProps(
 										timed_predictions_values[timeValue][
 											index
-										],
-										Math.max(
-											...timed_predictions_values[
-												timeValue
-											]
-										),
-										Math.min(
-											...timed_predictions_values[
-												timeValue
-											]
-										),
-										computeMean(
-											timed_predictions_values[timeValue]
-										),
-										computeStandardDeviation(
-											timed_predictions_values[timeValue]
-										)
+										]
 									)}
 								/>
 							</Source>

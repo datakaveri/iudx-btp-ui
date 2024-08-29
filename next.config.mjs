@@ -11,7 +11,7 @@ const nextConfig = {
 			{
 				source: "/home/forecast",
 				destination:
-					"/home/forecast/short_term_traffic_flow__comparison",
+					"/home/forecast/short_term_traffic_flow_comparison",
 				permanent: false,
 			},
 			{

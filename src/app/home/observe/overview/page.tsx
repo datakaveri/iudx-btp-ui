@@ -6,7 +6,7 @@ import { Marker } from "react-map-gl";
 import cameras from "@/data/cameras/cameras.json";
 import VideoCameraFrontIcon from "@mui/icons-material/VideoCameraFront";
 import MapResetButton from "@/ui/MapElements/MapResetButton/MapResetButton";
-import { MutableRefObject, Suspense, useRef, useState } from "react";
+import { MutableRefObject, Suspense, useMemo, useRef, useState } from "react";
 import {
 	FullscreenControl,
 	MapRef,
@@ -22,6 +22,32 @@ export default function Page() {
 	const [cameraPopupInfo, setCameraPopupInfo] =
 		useState<CameraPopupInfo | null>(null);
 	const mapRef: MutableRefObject<MapRef | undefined> = useRef<MapRef>();
+
+	const cameraPins = useMemo(
+		() =>
+			cameras.features.map((feature, index) => (
+				<Marker
+					key={index}
+					latitude={feature.geometry.coordinates[1]}
+					longitude={feature.geometry.coordinates[0]}
+					onClick={(e) => {
+						e.originalEvent.stopPropagation();
+						setCameraPopupInfo(feature.properties);
+					}}
+				>
+					<VideoCameraFrontIcon
+						style={{
+							color: getIconColor(feature.properties.Division),
+						}}
+						sx={{
+							cursor: "pointer",
+							width: "20px",
+						}}
+					/>
+				</Marker>
+			)),
+		[]
+	);
 
 	return (
 		<Suspense fallback={<>Loading...</>}>
@@ -39,31 +65,7 @@ export default function Page() {
 				<NavigationControl position="bottom-left" />
 				<ScaleControl />
 
-				{cameras.features.map((feature, index) => (
-					<Marker
-						key={index}
-						latitude={feature.geometry.coordinates[1]}
-						longitude={feature.geometry.coordinates[0]}
-						onClick={(e) => {
-							e.originalEvent.stopPropagation();
-							setCameraPopupInfo(feature.properties);
-						}}
-					>
-						<VideoCameraFrontIcon
-							// color=""
-							// color={getIconColor(feature.properties.Division)}
-							style={{
-								color: getIconColor(
-									feature.properties.Division
-								),
-							}}
-							sx={{
-								cursor: "pointer",
-								width: "20px",
-							}}
-						/>
-					</Marker>
-				))}
+				{cameraPins}
 
 				{cameraPopupInfo !== null ? (
 					<CameraPopupView
