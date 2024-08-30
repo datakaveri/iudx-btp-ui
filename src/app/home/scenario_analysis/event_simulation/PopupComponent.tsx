@@ -1,9 +1,8 @@
-import { useAppDispatch, useAppSelector } from "@/lib/store/hooks";
-import { updateClosureLayers } from "@/lib/store/mapLayerSlice/mapLayerSlice";
-import { Box, Button, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { Popup } from "react-map-gl";
 import InsightsIcon from "@mui/icons-material/Insights";
+import Link from "next/link";
 
 interface Props {
 	popupInfo: any;
@@ -11,8 +10,6 @@ interface Props {
 }
 
 const PopupComponent = ({ popupInfo, setPopupInfo }: Props) => {
-	const dispatch = useAppDispatch();
-
 	return (
 		<Popup
 			anchor="left"
@@ -22,15 +19,21 @@ const PopupComponent = ({ popupInfo, setPopupInfo }: Props) => {
 			onClose={() => setPopupInfo(null)}
 		>
 			<Typography variant="h6">Menu</Typography>
-			<Button
-				onClick={() => {}}
-				size="small"
-				variant="outlined"
-				color="success"
-				endIcon={<InsightsIcon />}
+			<Link
+				href={{
+					pathname: `/home/scenario_analysis/event_simulation_result`,
+				}}
 			>
-				Simulate event
-			</Button>
+				<Button
+					onClick={() => {}}
+					size="small"
+					variant="outlined"
+					color="success"
+					endIcon={<InsightsIcon />}
+				>
+					Simulate event
+				</Button>
+			</Link>
 		</Popup>
 	);
 };
