@@ -18,13 +18,13 @@ const CLosureButtons = () => {
 					variant={closure === "original" ? "contained" : "outlined"}
 					onClick={() => dispatch(updateClosure("original"))}
 				>
-					Original
+					Without Road Closure
 				</Button>
 				<Button
 					variant={closure === "simulated" ? "contained" : "outlined"}
 					onClick={() => dispatch(updateClosure("simulated"))}
 				>
-					Simulated
+					With Road Closure
 				</Button>
 				<Button
 					variant={

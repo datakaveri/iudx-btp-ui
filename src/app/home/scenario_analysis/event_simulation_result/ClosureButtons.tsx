@@ -18,13 +18,13 @@ const CLosureButtons = () => {
 					variant={closure === "original" ? "contained" : "outlined"}
 					onClick={() => dispatch(updateClosure("original"))}
 				>
-					Original
+					Without Closure
 				</Button>
 				<Button
 					variant={closure === "simulated" ? "contained" : "outlined"}
 					onClick={() => dispatch(updateClosure("simulated"))}
 				>
-					Simulated
+					With Closure
 				</Button>
 				<Button
 					variant={
@@ -32,7 +32,7 @@ const CLosureButtons = () => {
 					}
 					onClick={() => dispatch(updateClosure("gnn_predicted"))}
 				>
-					GNN Predicted
+					Predicted
 				</Button>
 				<Button
 					variant={

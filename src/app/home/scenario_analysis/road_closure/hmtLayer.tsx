@@ -9,6 +9,8 @@ const HMTLayer = () => {
 		(state) => state.mapLayer.closureLayers
 	);
 
+	console.log(closureLayers);
+
 	return (
 		<div>
 			{hmt_layer.features.map((feature, index) => (

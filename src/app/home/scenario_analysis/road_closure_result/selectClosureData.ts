@@ -1,12 +1,12 @@
-import msr_original from "@/data/road_closure/msr_original.json";
-import msr_simulated from "@/data/road_closure/msr_simulated.json";
-import msr_gnn_predicted from "@/data/road_closure/msr_predicted.json";
-import msr_diff from "@/data/road_closure/msr_diff.json";
+import msr_original from "@/data/road_closure/msr/msr_original.json";
+import msr_simulated from "@/data/road_closure/msr/msr_simulated.json";
+import msr_gnn_predicted from "@/data/road_closure/msr/msr_predicted.json";
+import msr_diff from "@/data/road_closure/msr/msr_diff.json";
 
-import cv_raman_simulated from "@/data/road_closure/cv_raman_original.json";
-import cv_raman_original from "@/data/road_closure/cv_raman_closed.json";
-import cv_raman_gnn_predicted from "@/data/road_closure/cv_raman_predicted.json";
-import cv_raman_diff from "@/data/road_closure/cv_raman_diff.json";
+import cv_raman_original from "@/data/road_closure/cv_raman/cv_raman_original.json";
+import cv_raman_simulated from "@/data/road_closure/cv_raman/cv_raman_simulated.json";
+import cv_raman_gnn_predicted from "@/data/road_closure/cv_raman/cv_raman_predicted.json";
+import cv_raman_diff from "@/data/road_closure/cv_raman/cv_raman_diff.json";
 
 export const selectClosureData = (
 	closure: "original" | "simulated" | "gnn_predicted" | "difference",
