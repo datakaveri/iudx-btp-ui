@@ -11,6 +11,7 @@ const routes = [
 	"tracking",
 	"violations",
 	"congestion",
+	"air_quality_interpolation"
 ];
 
 export const metadata: Metadata = {

@@ -6,7 +6,7 @@ interface ReIdState {
 }
 
 const initialState: ReIdState = {
-	vehicleId: "17988",
+	vehicleId: "18001",
 };
 
 export const reIdSlice = createSlice({

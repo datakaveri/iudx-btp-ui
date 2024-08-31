@@ -33,7 +33,9 @@ export default function Page() {
 
 	return (
 		<div>
-			<Typography variant="h5">Road Closure for {roadType}</Typography>
+			<Typography variant="h5">
+				Increased Volume from IISc Open Day
+			</Typography>
 
 			<Map
 				reuseMaps

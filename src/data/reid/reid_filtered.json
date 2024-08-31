@@ -1,0 +1,158 @@
+{
+    "18001": {
+        "timestamps": [
+            "2024-05-12T12:32:48",
+            "2024-05-12T12:31:19"
+        ],
+        "latlons": [
+            [
+                77.566144,
+                13.036887
+            ],
+            [
+                77.56819758000938,
+                13.03441293522282
+            ]
+        ],
+        "videos": [
+            {
+                "video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+                "seek": 17.666666666666668
+            },
+            {
+                "video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+                "seek": 7.777777777777777
+            }
+        ]
+    },
+    "18141": {
+        "timestamps": [
+            "2024-05-12T12:33:30",
+            "2024-05-12T12:32:04"
+        ],
+        "latlons": [
+            [
+                77.566144,
+                13.036887
+            ],
+            [
+                77.56819758000938,
+                13.03441293522282
+            ]
+        ],
+        "videos": [
+            {
+                "video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+                "seek": 22.333333333333332
+            },
+            {
+                "video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+                "seek": 12.777777777777779
+            }
+        ]
+    },
+    "18142": {
+        "timestamps": [
+            "2024-05-12T12:33:28",
+            "2024-05-12T12:32:03"
+        ],
+        "latlons": [
+            [
+                77.566144,
+                13.036887
+            ],
+            [
+                77.56819758000938,
+                13.03441293522282
+            ]
+        ],
+        "videos": [
+            {
+                "video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+                "seek": 22.11111111111111
+            },
+            {
+                "video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+                "seek": 12.666666666666666
+            }
+        ]
+    },
+    "18201": {
+        "timestamps": [
+            "2024-05-12T12:35:08",
+            "2024-05-12T12:33:27"
+        ],
+        "latlons": [
+            [
+                77.566144,
+                13.036887
+            ],
+            [
+                77.56819758000938,
+                13.03441293522282
+            ]
+        ],
+        "videos": [
+            {
+                "video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Devasandra+Sgnl+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+                "seek": 33.22222222222222
+            },
+            {
+                "video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Isro+Jn+Fix+01+Time+2024-05-12T12-30-02+000.mp4",
+                "seek": 22.0
+            }
+        ]
+    },
+    "32721": {
+        "timestamps": [
+            "2024-05-12T12:39:55",
+            "2024-05-12T12:31:52"
+        ],
+        "latlons": [
+            [
+                77.571478,
+                13.028447
+            ],
+            [
+                77.563501,
+                13.040655
+            ]
+        ],
+        "videos": [
+            {
+                "video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Ms+Ramaiah+Jn+Fix+2+Time+2024-05-12T12-30-02+000.mp4",
+                "seek": 65.11111111111111
+            },
+            {
+                "video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sbi+Bnk+Jn+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+                "seek": 11.444444444444445
+            }
+        ]
+    },
+    "19344": {
+        "timestamps": [
+            "2024-05-12T12:37:17",
+            "2024-05-12T12:30:46"
+        ],
+        "latlons": [
+            [
+                77.561301,
+                13.043601
+            ],
+            [
+                77.57152,
+                13.028873
+            ]
+        ],
+        "videos": [
+            {
+                "video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Kuvempu+Circle+Fix+1+Time+2024-05-12T12-30-02+000.mp4",
+                "seek": 47.55555555555556
+            },
+            {
+                "video": "https://safecityvideos.s3.ap-south-1.amazonaws.com/jsondata/reid/videos/Sty+Wll+Ldge+Fix+3+Time+2024-05-12T12-30-02+000.mp4",
+                "seek": 4.111111111111112
+            }
+        ]
+    }
+}

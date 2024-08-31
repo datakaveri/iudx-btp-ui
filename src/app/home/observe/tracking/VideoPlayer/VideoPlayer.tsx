@@ -3,7 +3,7 @@
 import { useAppSelector } from "@/lib/store/hooks";
 import React, { useState, useRef, useEffect } from "react";
 import ReactPlayer from "react-player";
-import reId_data from "@/data/reid/reid_master.json";
+import reId_data from "@/data/reid/reid_filtered.json";
 
 const VideoPlayer = () => {
 	const [duration, setDuration] = useState(0);

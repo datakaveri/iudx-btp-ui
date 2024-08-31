@@ -3,7 +3,7 @@
 import { useAppSelector } from "@/lib/store/hooks";
 import MapboxComponent from "@/ui/MapboxComponent/MapboxComponent";
 import React from "react";
-import reIdData from "@/data/reid/reid_master.json";
+import reIdData from "@/data/reid/reid_filtered.json";
 import { Marker } from "react-map-gl";
 import styles from "./styles.module.css";
 import dayjs from "dayjs";

@@ -11,12 +11,8 @@ import TopLabel from "./TopLabel";
 import { getLayerProps } from "@/app/home/forecast/short_term_traffic_flow/getLayerProps";
 import ControlPanel from "./control-panel";
 
-import truth_data from "@/data/short_term_traffic_flow_comparison/normalised_ground_truth_sorted.json";
-import prediction_data from "@/data/short_term_traffic_flow_comparison/normalised_prediction_sorted.json";
-import {
-	computeMean,
-	computeStandardDeviation,
-} from "../short_term_traffic_flow/computeMeanAndStandardDeviation";
+import truth_data from "@/data/short_term_traffic_flow_comparison/original.json";
+import prediction_data from "@/data/short_term_traffic_flow_comparison/predicted.json";
 
 import styles from "./styles.module.css";
 import VehicleClassDropdown from "./VehicleClassDropdown";
@@ -80,10 +76,10 @@ const SideBySide = () => {
 
 	const timed_truth_values = truth_data.values[vehicleClass];
 	const timed_truth_timestamps = truth_data.timestamps;
-	const timed_truth_geojsons = truth_data.geojsons.slice(0, 300);
+	const timed_truth_geojsons = truth_data.geojsons;
 
 	const timed_predictions_values = prediction_data.values[vehicleClass];
-	const timed_predictions_geojsons = prediction_data.geojsons.slice(0, 300);
+	const timed_predictions_geojsons = prediction_data.geojsons;
 
 	return (
 		<>
