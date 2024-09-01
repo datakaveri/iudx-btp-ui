@@ -15,8 +15,6 @@ const PopupComponent = ({ popupInfo, setPopupInfo }: Props) => {
 		(state) => state.mapLayer.closureLayers
 	);
 
-	console.log(popupInfo.road);
-
 	return (
 		<Popup
 			anchor="left"

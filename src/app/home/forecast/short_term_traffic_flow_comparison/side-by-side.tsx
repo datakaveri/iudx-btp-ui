@@ -81,6 +81,50 @@ const SideBySide = () => {
 	const timed_predictions_values = prediction_data.values[vehicleClass];
 	const timed_predictions_geojsons = prediction_data.geojsons;
 
+	const timedTruthFragment = useMemo(
+		() =>
+			timed_truth_geojsons.map((feature, index) => {
+				return (
+					<Source
+						key={index.toString()}
+						id={`new_loop-${index.toString()}`}
+						type="geojson"
+						data={feature.geometry}
+					>
+						<Layer
+							id={`new_loop-${index.toString()}`}
+							{...getLayerProps(
+								timed_truth_values[timeValue][index]
+							)}
+						/>
+					</Source>
+				);
+			}),
+		[timeValue, timed_truth_geojsons, timed_truth_values]
+	);
+
+	const timedPredictionsFragment = useMemo(
+		() =>
+			timed_predictions_geojsons.map((feature, index) => {
+				return (
+					<Source
+						key={index.toString()}
+						id={`new_loop-${index.toString()}`}
+						type="geojson"
+						data={feature.geometry}
+					>
+						<Layer
+							id={`new_loop-${index.toString()}`}
+							{...getLayerProps(
+								timed_predictions_values[timeValue][index]
+							)}
+						/>
+					</Source>
+				);
+			}),
+		[timeValue, timed_predictions_geojsons, timed_predictions_values]
+	);
+
 	return (
 		<>
 			<div
@@ -108,35 +152,7 @@ const SideBySide = () => {
 						<VehicleClassDropdown />
 					</div>
 
-					{timed_truth_geojsons.map((feature, index) => {
-						return (
-							<Source
-								key={index.toString()}
-								id={`new_loop-${index.toString()}`}
-								type="geojson"
-								data={feature.geometry}
-							>
-								<Layer
-									id={`new_loop-${index.toString()}`}
-									{...getLayerProps(
-										timed_truth_values[timeValue][index]
-										// Math.max(
-										// 	...timed_truth_values[timeValue]
-										// ),
-										// Math.min(
-										// 	...timed_truth_values[timeValue]
-										// ),
-										// computeMean(
-										// 	timed_truth_values[timeValue]
-										// ),
-										// computeStandardDeviation(
-										// 	timed_truth_values[timeValue]
-										// )
-									)}
-								/>
-							</Source>
-						);
-					})}
+					{timedTruthFragment}
 				</Map>
 				<Map
 					reuseMaps
@@ -153,25 +169,7 @@ const SideBySide = () => {
 				>
 					<TopLabel label={`Predictions`} />
 
-					{timed_predictions_geojsons.map((feature, index) => {
-						return (
-							<Source
-								key={index.toString()}
-								id={`new_loop-${index.toString()}`}
-								type="geojson"
-								data={feature.geometry}
-							>
-								<Layer
-									id={`new_loop-${index.toString()}`}
-									{...getLayerProps(
-										timed_predictions_values[timeValue][
-											index
-										]
-									)}
-								/>
-							</Source>
-						);
-					})}
+					{timedPredictionsFragment}
 				</Map>
 			</div>
 			<TimeSliderComponent timestamps={timed_truth_timestamps} />

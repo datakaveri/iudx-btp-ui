@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import hmt_layer from "@/data/road_closure/roads.json";
 import { Layer, Source } from "react-map-gl";
 import { getClosedLayerProps } from "./getClosedLayerProps";
@@ -9,11 +9,9 @@ const HMTLayer = () => {
 		(state) => state.mapLayer.closureLayers
 	);
 
-	console.log(closureLayers);
-
-	return (
-		<div>
-			{hmt_layer.features.map((feature, index) => (
+	const roads = useMemo(
+		() =>
+			hmt_layer.features.map((feature, index) => (
 				<Source
 					id={feature.id}
 					key={index}
@@ -25,9 +23,11 @@ const HMTLayer = () => {
 						{...getClosedLayerProps(closureLayers[feature.id])}
 					/>
 				</Source>
-			))}
-		</div>
+			)),
+		[closureLayers]
 	);
+
+	return <div>{roads}</div>;
 };
 
 export default HMTLayer;

@@ -32,8 +32,6 @@ export default function Page() {
 
 		const hoveredFeature = features && features[0];
 
-		console.log(hoveredFeature);
-
 		const point = calculateCentroid(hoveredFeature.geometry.coordinates);
 
 		event.originalEvent.stopPropagation();

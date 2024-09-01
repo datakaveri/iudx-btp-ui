@@ -8,8 +8,7 @@ import { selectClosureData } from "./selectClosureData";
 import Map, { Layer, MapRef, Source } from "react-map-gl";
 
 import { getLayerProps } from "./getLayerProps";
-import { MutableRefObject, useRef } from "react";
-import ClosedRoads from "./ClosedRoads";
+import { MutableRefObject, useMemo, useRef } from "react";
 import { MAPBOX_API_KEY } from "@/environments/environments";
 import { MAPBOX_STYLES } from "@/lib/sync-video-player/constants";
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -30,6 +29,26 @@ export default function Page() {
 	const timestamps = selectClosureData(closure, roadType).timestamps;
 	const values = selectClosureData(closure, roadType).values;
 	const geojsons = selectClosureData(closure, roadType).geojsons;
+
+	const roads = useMemo(
+		() =>
+			geojsons.map((feature, index) => {
+				return (
+					<Source
+						key={index.toString()}
+						id={`new_loop-${index.toString()}`}
+						type="geojson"
+						data={feature.geometry}
+					>
+						<Layer
+							id={`new_loop-${index.toString()}`}
+							{...getLayerProps(values[timeValue][index])}
+						/>
+					</Source>
+				);
+			}),
+		[geojsons, timeValue, values]
+	);
 
 	return (
 		<div>
@@ -58,22 +77,7 @@ export default function Page() {
 					padding: 0,
 				}}
 			>
-				{geojsons.map((feature, index) => {
-					return (
-						<Source
-							key={index.toString()}
-							id={`new_loop-${index.toString()}`}
-							type="geojson"
-							data={feature.geometry}
-						>
-							<Layer
-								id={`new_loop-${index.toString()}`}
-								{...getLayerProps(values[timeValue][index])}
-							/>
-						</Source>
-					);
-				})}
-				<ClosedRoads />
+				{roads}
 			</Map>
 
 			<TimeSliderComponent timestamps={timestamps} />

@@ -78,6 +78,50 @@ const SideBySide = () => {
 	const timed_predictions_values = selectZoomData(zoomLevel).values;
 	const timed_predictions_geojsons = selectZoomData(zoomLevel).geojsons;
 
+	const timedTruthFragment = useMemo(
+		() =>
+			timed_truth_geojsons.map((feature, index) => {
+				return (
+					<Source
+						key={index.toString()}
+						id={`new_loop-${index.toString()}`}
+						type="geojson"
+						data={feature.geometry}
+					>
+						<Layer
+							id={`new_loop-${index.toString()}`}
+							{...getLayerProps(
+								timed_truth_values[timeValue][index]
+							)}
+						/>
+					</Source>
+				);
+			}),
+		[timeValue, timed_truth_geojsons, timed_truth_values]
+	);
+
+	const timedPredictionFragment = useMemo(
+		() =>
+			timed_predictions_geojsons.map((feature, index) => {
+				return (
+					<Source
+						key={index.toString()}
+						id={`new_loop-${index.toString()}`}
+						type="geojson"
+						data={feature.geometry}
+					>
+						<Layer
+							id={`new_loop-${index.toString()}`}
+							{...getLayerProps(
+								timed_predictions_values[timeValue][index]
+							)}
+						/>
+					</Source>
+				);
+			}),
+		[timeValue, timed_predictions_geojsons, timed_predictions_values]
+	);
+
 	return (
 		<>
 			<div
@@ -101,24 +145,7 @@ const SideBySide = () => {
 				>
 					<TopLabel label="1x" />
 					<ControlPanel mode={mode} onModeChange={setMode} />
-
-					{timed_truth_geojsons.map((feature, index) => {
-						return (
-							<Source
-								key={index.toString()}
-								id={`new_loop-${index.toString()}`}
-								type="geojson"
-								data={feature.geometry}
-							>
-								<Layer
-									id={`new_loop-${index.toString()}`}
-									{...getLayerProps(
-										timed_truth_values[timeValue][index]
-									)}
-								/>
-							</Source>
-						);
-					})}
+					{timedTruthFragment}
 				</Map>
 				<Map
 					reuseMaps
@@ -135,25 +162,7 @@ const SideBySide = () => {
 				>
 					<TopLabel label={`${zoomLevel}x`} />
 
-					{timed_predictions_geojsons.map((feature, index) => {
-						return (
-							<Source
-								key={index.toString()}
-								id={`new_loop-${index.toString()}`}
-								type="geojson"
-								data={feature.geometry}
-							>
-								<Layer
-									id={`new_loop-${index.toString()}`}
-									{...getLayerProps(
-										timed_predictions_values[timeValue][
-											index
-										]
-									)}
-								/>
-							</Source>
-						);
-					})}
+					{timedPredictionFragment}
 				</Map>
 			</div>
 			<TimeSliderComponent timestamps={timed_truth_timestamps} />
